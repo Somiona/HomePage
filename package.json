@@ -1,40 +1,59 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "dependencies": {
-    "gatsby": "^2.17.1",
-    "gatsby-plugin-tslint": "^0.0.2",
-    "gatsby-plugin-typescript": "^2.1.15",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
-  },
-  "devDependencies": {
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "^16.9.2",
-    "prettier": "^1.18.2",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.6.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "name": "gatsby-starter-hello-world",
+    "private": true,
+    "description": "A simplified bare-bones starter for Gatsby",
+    "version": "0.1.0",
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+        "start": "yarn run develop",
+        "serve": "gatsby serve",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+        "type-check": "tsc --noEmit",
+        "lint": "tslint --project .",
+        "generate-scss-d-ts": "yarn tsm src/"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.25",
+        "@fortawesome/free-brands-svg-icons": "^5.11.2",
+        "@fortawesome/free-regular-svg-icons": "^5.11.2",
+        "@fortawesome/free-solid-svg-icons": "^5.11.2",
+        "@fortawesome/react-fontawesome": "^0.1.7",
+        "@types/bootstrap": "^4.3.1",
+        "@types/prismjs": "^1.16.0",
+        "@types/remarkable": "^1.7.4",
+        "@types/react": "^16.9.9",
+        "@types/react-dom": "^16.9.2",
+        "bootstrap": "^4.3.1",
+        "gatsby": "^2.17.1",
+        "gatsby-plugin-purgecss": "^4.0.1",
+        "gatsby-plugin-sass": "^2.1.20",
+        "gatsby-plugin-tslint": "^0.0.2",
+        "gatsby-plugin-typescript": "^2.1.15",
+        "prismjs": "^1.17.1",
+        "react": "^16.11.0",
+        "remarkable": "^2.0.0"
+    },
+    "devDependencies": {
+        "node-sass": "^4.13.0",
+        "prettier": "^1.18.2",
+        "react-dom": "^16.11.0",
+        "react-helmet": "^5.2.1",
+        "tslint": "^5.20.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-loader": "^3.5.4",
+        "tslint-plugin-prettier": "^2.0.1",
+        "tslint-react": "^4.1.0",
+        "typed-scss-modules": "^0.0.12",
+        "typescript": "^3.6.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    },
+    "bugs": {
+        "url": "https://github.com/gatsbyjs/gatsby/issues"
+    }
 }
