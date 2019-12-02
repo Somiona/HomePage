@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{"5bN+":function(s,o,e){s.exports={scssFooter:"footer-module--scssFooter--3u_UQ"}},ZjcU:function(s,o,e){s.exports={scssHeader:"header-module--scssHeader--37aGO"}}}]);
+//# sourceMappingURL=styles-4e1ec2e30a19291ce9a5.js.map
