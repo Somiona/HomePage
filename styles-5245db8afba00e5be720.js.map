@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/styles/components/footer.module.scss"],"names":["module","exports"],"mappings":"gFACAA,EAAOC,QAAU,CAAC,WAAa","file":"styles-5245db8afba00e5be720.js","sourcesContent":["// extracted by mini-css-extract-plugin\nmodule.exports = {\"scssFooter\":\"footer-module--scssFooter--3u_UQ\"};"],"sourceRoot":""}
