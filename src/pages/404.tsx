@@ -1,0 +1,18 @@
+import React, { FC } from "react"
+
+import MainLayout from "../components/MainLayout"
+
+interface INotFoundPage {
+    location: any;
+}
+
+const NotFoundPage: FC<INotFoundPage> = (props) => {
+    return (
+        <MainLayout location={props.location} title={"Oops"}>
+            <h1>404: Not found</h1>
+            <p>You might not want this.. Your request falls into the hell of null</p>
+        </MainLayout>
+    )
+}
+
+export default NotFoundPage

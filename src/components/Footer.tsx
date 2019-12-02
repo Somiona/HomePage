@@ -14,7 +14,13 @@ const Footer: FC<IFooterProps> = (props) => {
 }
 
 Footer.defaultProps = {
-    children: <div>Add children to customize footer</div>
+    children: (
+        <div>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </div>
+    ),
 }
 
 export default Footer

@@ -1,4 +1,6 @@
-import React, { FC, ReactNode} from "react"
+import React, { FC, ReactNode } from "react"
+import { Link } from "gatsby"
+import * as styles from "../styles/components/header.module.scss"
 
 interface IHeaderProps {
     children?: ReactNode;
@@ -6,14 +8,19 @@ interface IHeaderProps {
 
 const Header: FC<IHeaderProps> = (props) => {
     return (
-        <h1>
-            {props.children}
-        </h1>
+        <header>
+            <div className={styles.scssHeader}>
+                <Link to={"/"}>
+                    {props.children}
+                </Link>
+            </div>
+        </header>
     )
 }
 
 Header.defaultProps = {
-    children: <div>Add children to customize header</div>
+    children: <div>Somion's Blog</div>,
 }
+
 
 export default Header

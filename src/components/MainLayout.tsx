@@ -1,38 +1,44 @@
 import React, { FC, ReactNode } from "react"
+import { Hn, HtmlTitleLevel } from "../Utils/HtmlTitleLevel"
 
 import Footer from "./Footer"
 import Header from "./Header"
-import { faCheckSquare } from "@fortawesome/free-regular-svg-icons"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 interface IMainLayout {
-    children?: ReactNode;
+    location: any
+    children: ReactNode;
+    title: string;
 }
 
 const MainLayout: FC<IMainLayout> = (
     {
-        children, ...rest
+        location,
+        children,
+        title,
+        ...rest
     },
 ) => {
-    const coffee = <FontAwesomeIcon icon={faCoffee} />
-    const check = <FontAwesomeIcon icon={faCheckSquare} />
+    const rootPath = "/"
+    const level =
+        location.pathname === rootPath ?
+            HtmlTitleLevel.H1 :
+            HtmlTitleLevel.H2
+    const articleTitle = (
+        <Hn type={level}>
+            {title}
+        </Hn>
+    )
 
     return (
         <div {...rest}>
-            <Header>
-                <div style={{color: "#4bb571", display: "inline"}}>
-                    {check}
-                </div>
-                Favourite Drink:
-                <div style={{color: "brown", display: "inline"}}>
-                    {coffee}
-                </div>
-            </Header>
-            {children}
+            <Header/>
+            <main>
+                {articleTitle}
+                {children}
+            </main>
             <Footer/>
         </div>
     )
 }
 
-export default MainLayout;
+export default MainLayout
