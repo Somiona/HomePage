@@ -7,19 +7,25 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Somion's Site`,
-    author: `Somion Tian`,
-    description: ``,
-    siteUrl: `https://blog.somiona.live`,
+    title: "Somion's Site",
+    author: "Somion Tian",
+    description: "",
+    siteUrl: "https://blog.somiona.live",
   }, plugins: [
     "gatsby-plugin-typescript",
     "gatsby-plugin-tslint",
+    {
+      resolve: "gatsby-plugin-generate-typings",
+      options: {
+        dest: "./src/@types/graphql-types.d.ts",
+      },
+    },
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: "gatsby-plugin-purgecss",
       options: {
         printRejected: true, // Print removed selectors and processed file names
-        // develop: true, // Enable while using `gatsby develop`
+        // develop: true, // Enable while using "gatsby develop"
         // tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
@@ -27,44 +33,52 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content/articles`,
-        name: `articles`,
+        path: "./content/articles",
+        name: "articles",
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: "./content/assets",
+        name: "assets",
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content/data",
+        name: "data",
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 590,
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: "gatsby-remark-responsive-iframe",
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
   ],
 }

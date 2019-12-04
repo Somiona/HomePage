@@ -1,4 +1,13 @@
-.cache
 package.json
+tsconfig.json
+tslint.json
+yarn.lock
+LICENSE
 package-lock.json
+.editorconfig
+.gitignore
+README.md
+
+.cache
 public
+node_modules

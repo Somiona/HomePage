@@ -5,7 +5,9 @@ import Footer from "./Footer"
 import Header from "./Header"
 
 interface IMainLayout {
-    location: any
+    location: Location
+    // the Location object of HTML DOM.
+    // see: https://www.w3schools.com/jsref/obj_location.asp
     children: ReactNode;
     title: string;
 }
@@ -18,7 +20,9 @@ const MainLayout: FC<IMainLayout> = (
         ...rest
     },
 ) => {
-    const rootPath = "/"
+    // @ts-ignore
+    const rootPath = `${__PATH_PREFIX__}/`
+    // ``和““是不同的。``会执行里面${}的东西
     const level =
         location.pathname === rootPath ?
             HtmlTitleLevel.H1 :
