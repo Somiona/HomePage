@@ -12,6 +12,7 @@ module.exports = {
     description: "",
     siteUrl: "https://blog.somiona.live",
   }, plugins: [
+    `gatsby-plugin-catch-links`,
     "gatsby-plugin-typescript",
     "gatsby-plugin-tslint",
     {
