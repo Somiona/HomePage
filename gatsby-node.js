@@ -1,52 +1,58 @@
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const products = await graphql(`
+  const articles = await graphql(`
     {
-      allFJson {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
         edges {
           node {
-            slug
+            fields {
+              dest_url
+            }
+            excerpt(pruneLength: 100)
+            frontmatter {
+              title
+              date
+              keyWords
+            }
+            html
           }
         }
       }
     }
   `)
-  products.data.allFJson.edges.forEach(edge => {
-    const product = edge.node
+
+  const posts = articles.data.allMarkdownRemark.edges
+  posts.forEach((edge, index) => {
+    const url = edge.node.fields.dest_url
+    const prev = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
     createPage({
-      path: `/aaa/${product.slug}/`,
-      component: require.resolve("./src/templates/product.tsx"),
+      path: `${url}`,
+      component: require.resolve("./src/templates/Article.tsx"),
       context: {
-        slug: product.slug,
+        dest_url: url,
+        current: edge.node,
+        prev,
+        next
       },
     })
   })
+}
 
-  const articles = await graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-            }
-          }
-        }
-      }
-    }
-  `)
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
-  articles.data.allMarkdownRemark.edges.forEach(edge => {
-    const html = edge.node.html;
-    const title = edge.node.frontmatter.title
-    createPage({
-      path: `/articles/${title}`,
-      component: require.resolve("./src/templates/Article.tsx"),
-      context: {
-        article: html
-      }
+  if (node.internal.type === `MarkdownRemark`) {
+    const url = `/articles${createFilePath({ node, getNode })}`
+    createNodeField({
+      node,
+      name: `dest_url`,
+      value: url,
     })
-  })
+  }
 }

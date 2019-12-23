@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Somion's Site",
-    author: "Somion Tian",
+    siteName: "白咕咕のエラーはっせい記録 ☆ Somiona",
+    author: "Somiona",
     description: "",
     siteUrl: "https://blog.somiona.live",
   }, plugins: [
