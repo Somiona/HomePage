@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{pXeG:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),u=t.n(a);n.default=function(e){var n=e.pageContext;return u.a.createElement("div",null,u.a.createElement("p",null,"Name is: ",n.slug))}}}]);
-//# sourceMappingURL=component---src-templates-product-tsx-9d984fb52c31b50b2aac.js.map
