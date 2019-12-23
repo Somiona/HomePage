@@ -1,25 +1,31 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC } from "react"
 import { Link } from "gatsby"
-import * as styles from "../styles/components/header.module.scss"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+
 
 interface IHeaderProps {
-    children?: ReactNode;
+    title: string;
 }
 
-const Header: FC<IHeaderProps> = (props) => {
+const Header: FC<IHeaderProps> = ({ title }) => {
     return (
         <header>
-            <div className={styles.scssHeader}>
-                <Link to={"/"}>
-                    {props.children}
-                </Link>
-            </div>
+            <Navbar bg={"light"} expand={"lg"}>
+                <Navbar.Brand>
+                    <Link to={"/"}>
+                        {title}
+                    </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls={"basic-navbar-nav"}/>
+                <Navbar.Collapse id={"basic-navbar-nav"}>
+                    <Nav className={"mr-auto"}>
+                        <Nav.Link>Homes</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </header>
     )
-}
-
-Header.defaultProps = {
-    children: <div>Somion's Blog</div>,
 }
 
 

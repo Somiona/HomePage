@@ -3,6 +3,7 @@ import { Hn, HtmlTitleLevel } from "../Utils/HtmlTitleLevel"
 
 import Footer from "./Footer"
 import Header from "./Header"
+import useSiteMeta from "../Utils/SiteMeta"
 
 interface IMainLayout {
     location: Location
@@ -33,9 +34,11 @@ const MainLayout: FC<IMainLayout> = (
         </Hn>
     )
 
+    const siteMetadata = useSiteMeta()
+
     return (
         <div {...rest}>
-            <Header/>
+            <Header title={siteMetadata?.siteName as string}/>
             <main>
                 {articleTitle}
                 {children}

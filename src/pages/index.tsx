@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from "react"
 import MainLayout from "../components/MainLayout"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { AvaliableLinksQuery } from "../@types/graphql-types"
+import SEO from "../components/SEO"
 
 function renderLinks(): ReactNode {
     const data: AvaliableLinksQuery = useStaticQuery(
@@ -48,25 +49,22 @@ function renderLinks(): ReactNode {
 
 const Index: FC<{ location: Location }> = ({ location }) => {
     return (
-        <MainLayout location={location} title={"Main Page"}>
-            {/*here, location is indeed a Location Object of html dom
+        <>
+            <SEO location={location}/>
+            <MainLayout location={location} title={"Main Page"}>
+                {/*here, location is indeed a Location Object of html dom
                     see: https://www.w3schools.com/jsref/obj_location.asp
                 */}
-            <div>
-                Hi, this is Somion <br/>
-                <Link to={"/404"}>
-                    Here's a link to 404 page. Just for test
-                </Link> <br/>
-                <Link to={"/kjasda"}>
-                    Also, one for non-sense uri
-                </Link>
                 <div>
+                    Hi, this is Somion <br/>
                     <hr/>
-                    all Possible Links:
-                    {renderLinks()}
+                    <div>
+                        all Possible Links:
+                        {renderLinks()}
+                    </div>
                 </div>
-            </div>
-        </MainLayout>
+            </MainLayout>
+        </>
     )
 }
 
