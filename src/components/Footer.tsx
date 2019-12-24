@@ -1,26 +1,29 @@
 import React, { FC, ReactNode } from "react"
-import * as styles from "../styles/components/footer.module.scss"
+import useSiteMeta from "../Utils/SiteMeta"
+
 
 interface IFooterProps {
     children?: ReactNode;
 }
 
-const Footer: FC<IFooterProps> = (props) => {
+
+const Footer: FC<IFooterProps> = ({}) => {
+    const siteMetadata = useSiteMeta()
+    const thisYear = new Date().getFullYear()
+    const year = `${thisYear - 1} - ${thisYear}`
+
     return (
         <footer>
-            <div className={styles.scssFooter}>{props.children}</div>
+            <div className={"text-center"}>
+                <div>
+                    {`© ${year} ${siteMetadata?.author} `}
+                </div>
+                <div>
+                    Powered by <b><a href="https://www.gatsbyjs.org">Gatsby</a></b>
+                </div>
+            </div>
         </footer>
     )
-}
-
-Footer.defaultProps = {
-    children: (
-        <div>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </div>
-    ),
 }
 
 export default Footer

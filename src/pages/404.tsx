@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-import MainLayout from "../components/MainLayout"
+import MainLayout from "../components/Layouts/MainLayout"
 
 interface INotFoundPage {
     location: any;

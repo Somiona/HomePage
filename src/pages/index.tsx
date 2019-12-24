@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react"
-import MainLayout from "../components/MainLayout"
+import MainLayout from "../components/Layouts/MainLayout"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { AvaliableLinksQuery } from "../@types/graphql-types"
 import SEO from "../components/SEO"

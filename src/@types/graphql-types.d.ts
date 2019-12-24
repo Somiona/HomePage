@@ -210,16 +210,16 @@ export type DirectoryFieldsEnum =
   "parent___parent___children___children" |
   "parent___parent___internal___content" |
   "parent___parent___internal___contentDigest" |
-  'parent___parent___internal___description' |
-  'parent___parent___internal___fieldOwners' |
-  'parent___parent___internal___ignoreType' |
-  'parent___parent___internal___mediaType' |
-  'parent___parent___internal___owner' |
-  'parent___parent___internal___type' |
-  'parent___children' |
-  'parent___children___id' |
-  'parent___children___parent___id' |
-  'parent___children___parent___children' |
+  "parent___parent___internal___description" |
+  "parent___parent___internal___fieldOwners" |
+  "parent___parent___internal___ignoreType" |
+  "parent___parent___internal___mediaType" |
+  "parent___parent___internal___owner" |
+  "parent___parent___internal___type" |
+  "parent___children" |
+  "parent___children___id" |
+  "parent___children___parent___id" |
+  "parent___children___parent___children" |
   'parent___children___children' |
   'parent___children___children___id' |
   'parent___children___children___children' |
@@ -265,16 +265,16 @@ export type DirectoryFieldsEnum =
   'children___children___internal___content' |
   'children___children___internal___contentDigest' |
   'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
-  'children___internal___content' |
-  'children___internal___contentDigest' |
-  'children___internal___description' |
-  'children___internal___fieldOwners' |
-  'children___internal___ignoreType' |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
+  "children___internal___content" |
+  "children___internal___contentDigest" |
+  "children___internal___description" |
+  "children___internal___fieldOwners" |
+  "children___internal___ignoreType" |
   "children___internal___mediaType" |
   "children___internal___owner" |
   "children___internal___type" |
@@ -484,16 +484,16 @@ export type FileFieldsEnum =
   'modifiedTime' |
   'accessTime' |
   'changeTime' |
-  'birthTime' |
-  'root' |
-  'dir' |
-  'base' |
-  'ext' |
-  'name' |
-  'relativeDirectory' |
-  'dev' |
-  'mode' |
-  'nlink' |
+  "birthTime" |
+  "root" |
+  "dir" |
+  "base" |
+  "ext" |
+  "name" |
+  "relativeDirectory" |
+  "dev" |
+  "mode" |
+  "nlink" |
   "uid" |
   "gid" |
   "rdev" |
@@ -518,16 +518,16 @@ export type FileFieldsEnum =
   "childImageSharp___fixed___srcSet" |
   "childImageSharp___fixed___srcWebp" |
   "childImageSharp___fixed___srcSetWebp" |
-  'childImageSharp___fixed___originalName' |
-  'childImageSharp___resolutions___base64' |
-  'childImageSharp___resolutions___tracedSVG' |
-  'childImageSharp___resolutions___aspectRatio' |
-  'childImageSharp___resolutions___width' |
-  'childImageSharp___resolutions___height' |
-  'childImageSharp___resolutions___src' |
-  'childImageSharp___resolutions___srcSet' |
-  'childImageSharp___resolutions___srcWebp' |
-  'childImageSharp___resolutions___srcSetWebp' |
+  "childImageSharp___fixed___originalName" |
+  "childImageSharp___resolutions___base64" |
+  "childImageSharp___resolutions___tracedSVG" |
+  "childImageSharp___resolutions___aspectRatio" |
+  "childImageSharp___resolutions___width" |
+  "childImageSharp___resolutions___height" |
+  "childImageSharp___resolutions___src" |
+  "childImageSharp___resolutions___srcSet" |
+  "childImageSharp___resolutions___srcWebp" |
+  "childImageSharp___resolutions___srcSetWebp" |
   'childImageSharp___resolutions___originalName' |
   'childImageSharp___fluid___base64' |
   'childImageSharp___fluid___tracedSVG' |
@@ -1848,6 +1848,8 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
+  port?: Maybe<IntQueryOperatorInput>,
+  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1912,14 +1914,16 @@ export type QueryAllSitePageArgs = {
 };
 
 export type Site = Node & {
-  id: Scalars['ID'],
+  id: Scalars["ID"],
   parent?: Maybe<Node>,
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  polyfill?: Maybe<Scalars['Boolean']>,
-  pathPrefix?: Maybe<Scalars['String']>,
-  buildTime?: Maybe<Scalars['Date']>,
+  port?: Maybe<Scalars["Int"]>,
+  host?: Maybe<Scalars["String"]>,
+  polyfill?: Maybe<Scalars["Boolean"]>,
+  pathPrefix?: Maybe<Scalars["String"]>,
+  buildTime?: Maybe<Scalars["Date"]>,
 };
 
 
@@ -2038,19 +2042,21 @@ export type SiteFieldsEnum =
   'children___internal___type' |
   'internal___content' |
   'internal___contentDigest' |
-  'internal___description' |
-  'internal___fieldOwners' |
-  'internal___ignoreType' |
-  'internal___mediaType' |
-  'internal___owner' |
-  'internal___type' |
-  'siteMetadata___siteName' |
-  'siteMetadata___author' |
-  'siteMetadata___description' |
-  'siteMetadata___siteUrl' |
-  'polyfill' |
-  'pathPrefix' |
-  'buildTime';
+  "internal___description" |
+  "internal___fieldOwners" |
+  "internal___ignoreType" |
+  "internal___mediaType" |
+  "internal___owner" |
+  "internal___type" |
+  "siteMetadata___siteName" |
+  "siteMetadata___author" |
+  "siteMetadata___description" |
+  "siteMetadata___siteUrl" |
+  "port" |
+  "host" |
+  "polyfill" |
+  "pathPrefix" |
+  "buildTime";
 
 export type SiteFilterInput = {
   id?: Maybe<StringQueryOperatorInput>,
@@ -2058,6 +2064,8 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
+  port?: Maybe<IntQueryOperatorInput>,
+  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,

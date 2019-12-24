@@ -11,19 +11,29 @@ interface IHeaderProps {
 const Header: FC<IHeaderProps> = ({ title }) => {
     return (
         <header>
-            <Navbar bg={"light"} expand={"lg"}>
-                <Navbar.Brand>
-                    <Link to={"/"}>
+            <div className={"text-center"}>
+                <Navbar variant={"dark"} bg={"primary"} expand={"md"} fixed={"top"}>
+                    <Link to={"/"} className={"navbar-brand"}>
                         {title}
                     </Link>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls={"basic-navbar-nav"}/>
-                <Navbar.Collapse id={"basic-navbar-nav"}>
-                    <Nav className={"mr-auto"}>
-                        <Nav.Link>Homes</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+                    <Navbar.Toggle aria-controls={"top-navbar-nav"}/>
+                    <Navbar.Collapse id={"top-navbar-nav"}>
+                        <Nav className={"mr-auto"}>
+                            <Nav.Item>
+                                <Link to={"/"} className={"nav-link"}>
+                                    Home
+                                </Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link href={"#"} className={"disabled"}>About</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link href={"#"} className={"disabled"}>Tag</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </div>
         </header>
     )
 }

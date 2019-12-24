@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from "react"
-import { Hn, HtmlTitleLevel } from "../Utils/HtmlTitleLevel"
+import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
 
-import Footer from "./Footer"
-import Header from "./Header"
-import useSiteMeta from "../Utils/SiteMeta"
+import Footer from "../Footer"
+import Header from "../Header"
+import useSiteMeta from "../../Utils/SiteMeta"
 
 interface IMainLayout {
     location: Location

@@ -1,7 +1,8 @@
 import React, { FC } from "react"
 import "prismjs/themes/prism-solarizedlight.css"
 import SEO from "../components/SEO"
-import MainLayout from "../components/MainLayout"
+import MainLayout from "../components/Layouts/MainLayout"
+import PostLayout from "../components/Layouts/PostLayout"
 
 type ArticleNode = {
     fields: {
@@ -35,9 +36,9 @@ const Article: FC<IArticle> = ({ pageContext, location }) => {
         <>
             <SEO description={description} title={title} location={location} keywords={keywords}/>
             <MainLayout location={location} title={title}>
-                <article>
+                <PostLayout>
                     <section dangerouslySetInnerHTML={{ __html: article }}/>
-                </article>
+                </PostLayout>
             </MainLayout>
         </>
     )
