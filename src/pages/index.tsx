@@ -25,8 +25,7 @@ function renderLinks(): ReactNode {
                 return node.node.path
             },
         )
-        .sort()
-        .map(
+        .sort().map(
             (path) => {
                 if (typeof path === "string") {
                     return (

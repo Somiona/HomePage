@@ -6,9 +6,9 @@ interface INotFoundPage {
     location: any;
 }
 
-const NotFoundPage: FC<INotFoundPage> = (props) => {
+const NotFoundPage: FC<INotFoundPage> = ({ location }) => {
     return (
-        <MainLayout location={props.location} title={"Oops"}>
+        <MainLayout location={location} title={"Oops"}>
             <h1>404: Not found</h1>
             <p>You might not want this.. Your request falls into the hell of null</p>
         </MainLayout>

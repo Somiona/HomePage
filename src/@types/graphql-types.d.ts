@@ -220,16 +220,16 @@ export type DirectoryFieldsEnum =
   "parent___children___id" |
   "parent___children___parent___id" |
   "parent___children___parent___children" |
-  'parent___children___children' |
-  'parent___children___children___id' |
-  'parent___children___children___children' |
-  'parent___children___internal___content' |
-  'parent___children___internal___contentDigest' |
-  'parent___children___internal___description' |
-  'parent___children___internal___fieldOwners' |
-  'parent___children___internal___ignoreType' |
-  'parent___children___internal___mediaType' |
-  'parent___children___internal___owner' |
+  "parent___children___children" |
+  "parent___children___children___id" |
+  "parent___children___children___children" |
+  "parent___children___internal___content" |
+  "parent___children___internal___contentDigest" |
+  "parent___children___internal___description" |
+  "parent___children___internal___fieldOwners" |
+  "parent___children___internal___ignoreType" |
+  "parent___children___internal___mediaType" |
+  "parent___children___internal___owner" |
   'parent___children___internal___type' |
   'parent___internal___content' |
   'parent___internal___contentDigest' |
@@ -255,16 +255,16 @@ export type DirectoryFieldsEnum =
   'children___parent___internal___mediaType' |
   'children___parent___internal___owner' |
   'children___parent___internal___type' |
-  'children___children' |
-  'children___children___id' |
-  'children___children___parent___id' |
-  'children___children___parent___children' |
-  'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
+  "children___children" |
+  "children___children___id" |
+  "children___children___parent___id" |
+  "children___children___parent___children" |
+  "children___children___children" |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
   "children___children___internal___fieldOwners" |
   "children___children___internal___ignoreType" |
   "children___children___internal___mediaType" |
@@ -474,16 +474,16 @@ export type FileEdge = {
   previous?: Maybe<File>,
 };
 
-export type FileFieldsEnum = 
-  'sourceInstanceName' |
-  'absolutePath' |
-  'relativePath' |
-  'extension' |
-  'size' |
-  'prettySize' |
-  'modifiedTime' |
-  'accessTime' |
-  'changeTime' |
+export type FileFieldsEnum =
+  "sourceInstanceName" |
+  "absolutePath" |
+  "relativePath" |
+  "extension" |
+  "size" |
+  "prettySize" |
+  "modifiedTime" |
+  "accessTime" |
+  "changeTime" |
   "birthTime" |
   "root" |
   "dir" |
@@ -528,16 +528,16 @@ export type FileFieldsEnum =
   "childImageSharp___resolutions___srcSet" |
   "childImageSharp___resolutions___srcWebp" |
   "childImageSharp___resolutions___srcSetWebp" |
-  'childImageSharp___resolutions___originalName' |
-  'childImageSharp___fluid___base64' |
-  'childImageSharp___fluid___tracedSVG' |
-  'childImageSharp___fluid___aspectRatio' |
-  'childImageSharp___fluid___src' |
-  'childImageSharp___fluid___srcSet' |
-  'childImageSharp___fluid___srcWebp' |
-  'childImageSharp___fluid___srcSetWebp' |
-  'childImageSharp___fluid___sizes' |
-  'childImageSharp___fluid___originalImg' |
+  "childImageSharp___resolutions___originalName" |
+  "childImageSharp___fluid___base64" |
+  "childImageSharp___fluid___tracedSVG" |
+  "childImageSharp___fluid___aspectRatio" |
+  "childImageSharp___fluid___src" |
+  "childImageSharp___fluid___srcSet" |
+  "childImageSharp___fluid___srcWebp" |
+  "childImageSharp___fluid___srcSetWebp" |
+  "childImageSharp___fluid___sizes" |
+  "childImageSharp___fluid___originalImg" |
   'childImageSharp___fluid___originalName' |
   'childImageSharp___fluid___presentationWidth' |
   'childImageSharp___fluid___presentationHeight' |
@@ -2032,16 +2032,16 @@ export type SiteFieldsEnum =
   'children___children___internal___mediaType' |
   'children___children___internal___owner' |
   'children___children___internal___type' |
-  'children___internal___content' |
-  'children___internal___contentDigest' |
-  'children___internal___description' |
-  'children___internal___fieldOwners' |
-  'children___internal___ignoreType' |
-  'children___internal___mediaType' |
-  'children___internal___owner' |
-  'children___internal___type' |
-  'internal___content' |
-  'internal___contentDigest' |
+  "children___internal___content" |
+  "children___internal___contentDigest" |
+  "children___internal___description" |
+  "children___internal___fieldOwners" |
+  "children___internal___ignoreType" |
+  "children___internal___mediaType" |
+  "children___internal___owner" |
+  "children___internal___type" |
+  "internal___content" |
+  "internal___contentDigest" |
   "internal___description" |
   "internal___fieldOwners" |
   "internal___ignoreType" |

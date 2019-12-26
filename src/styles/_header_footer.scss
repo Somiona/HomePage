@@ -1,0 +1,51 @@
+$Header-Padding-Top: 60px;
+$Max-NavBreak-Width: 480px;
+$Next-NavBreak-Width: 270px;
+$Final-NavBreak-Width: 190px;
+
+$SiteName-Author-Delimiter: "☆";
+$After-Author-Decorator: "♪(^∇^*)";
+
+main > .container {
+  padding: $Header-Padding-Top 15px 0;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+//star between site name and author when screen enough big
+.header-title::after {
+  content: " ";
+}
+
+.header-author::before {
+  content: $SiteName-Author-Delimiter + " ";
+}
+
+//when using cellphone, mostly, hide site name and change decoration
+@media screen and (max-width: $Max-NavBreak-Width) {
+  .header-title {
+    display: none;
+  }
+  .header-author::after {
+    content: " " + $After-Author-Decorator;
+  }
+  .header-author::before {
+    display: none;
+  }
+}
+
+//well, smaller screen
+@media screen and (max-width: $Next-NavBreak-Width) {
+  .header-author::after {
+    display: none;
+  }
+}
+
+//hmm I believe no one would hit this
+@media screen and (max-width: $Final-NavBreak-Width) {
+  .header-author {
+    display: none;
+  }
+}

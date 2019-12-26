@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteName: "白咕咕のエラーはっせい記録 ☆ Somiona",
+    siteName: "白咕咕のエラーはっせい記録",
     author: "Somiona",
     description: "",
     siteUrl: "https://blog.somiona.live",

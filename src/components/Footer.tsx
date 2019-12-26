@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from "react"
-import useSiteMeta from "../Utils/SiteMeta"
 
 
 interface IFooterProps {
@@ -7,20 +6,11 @@ interface IFooterProps {
 }
 
 
-const Footer: FC<IFooterProps> = ({}) => {
-    const siteMetadata = useSiteMeta()
-    const thisYear = new Date().getFullYear()
-    const year = `${thisYear - 1} - ${thisYear}`
-
+const Footer: FC<IFooterProps> = ({ children }) => {
     return (
         <footer>
             <div className={"text-center"}>
-                <div>
-                    {`© ${year} ${siteMetadata?.author} `}
-                </div>
-                <div>
-                    Powered by <b><a href="https://www.gatsbyjs.org">Gatsby</a></b>
-                </div>
+                {children}
             </div>
         </footer>
     )

@@ -13,7 +13,9 @@
         "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
         "type-check": "tsc --noEmit",
         "lint": "tslint --project .",
-        "generate-scss-d-ts": "yarn tsm src/"
+        "generate-scss-d-ts": "yarn tsm src/",
+        "serve-public": "pushd .\\public && serve",
+        "product-test": "yarn run build && yarn run serve-public"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.26",

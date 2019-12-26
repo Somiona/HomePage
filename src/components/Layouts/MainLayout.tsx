@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from "react"
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
-
 import Footer from "../Footer"
 import Header from "../Header"
-import useSiteMeta from "../../Utils/SiteMeta"
+import Container from "react-bootstrap/Container"
+import { FooterContent, HeaderTitle } from "../HeaderAndFooterContent"
 
 interface IMainLayout {
     location: Location
@@ -34,16 +34,22 @@ const MainLayout: FC<IMainLayout> = (
         </Hn>
     )
 
-    const siteMetadata = useSiteMeta()
-
     return (
         <div {...rest}>
-            <Header title={siteMetadata?.siteName as string}/>
-            <main>
-                {articleTitle}
-                {children}
+            <Header>
+                <HeaderTitle/>
+            </Header>
+
+            <main role={"main"} className={"flex-shrink-0"}>
+                <Container>
+                    {articleTitle}
+                    {children}
+                </Container>
             </main>
-            <Footer/>
+
+            <Footer>
+                <FooterContent/>
+            </Footer>
         </div>
     )
 }

@@ -2,16 +2,5 @@
 $pink: #ff78af;
 $primary: $pink;
 
-@import "custom_vars";
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
-$adjust-height-considering-navbar: $navbar-brand-height * 2;
-
-main {
-  margin-top: $adjust-height-considering-navbar;
-  margin-bottom: $adjust-height-considering-navbar;
-}
-
-footer {
-  margin-bottom: $adjust-height-considering-navbar;
-}
+@import "./header_footer";
