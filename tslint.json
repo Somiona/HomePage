@@ -11,6 +11,7 @@
     ],
     "jsRules": {},
     "rules": {
-        "jsx-no-lambda": false
+        "jsx-no-lambda": false,
+        "no-submodule-imports": false
     }
 }

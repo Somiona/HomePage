@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react"
 import { Link } from "gatsby"
+import React, { FC, ReactNode } from "react"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 

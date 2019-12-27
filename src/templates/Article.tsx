@@ -1,10 +1,10 @@
-import React, { FC } from "react"
 import "prismjs/themes/prism-solarizedlight.css"
-import SEO from "../components/SEO"
+import React, { FC } from "react"
 import MainLayout from "../components/Layouts/MainLayout"
 import PostLayout from "../components/Layouts/PostLayout"
+import SEO from "../components/SEO"
 
-type ArticleNode = {
+interface IArticleNode {
     fields: {
         dest_url: string
     }
@@ -20,9 +20,9 @@ type ArticleNode = {
 interface IArticle {
     pageContext: {
         dest_url: string,
-        current: ArticleNode,
-        prev: ArticleNode,
-        next: ArticleNode
+        current: IArticleNode,
+        prev: IArticleNode,
+        next: IArticleNode
     }
     location: Location
 }

@@ -1,13 +1,13 @@
 import React, { FC } from "react"
 import Helmet from "react-helmet"
-import useSiteMeta from "../Utils/SiteMeta"
 import withDefaultProps from "../Utils/DefaultPropsUtil"
+import useSiteMeta from "../Utils/SiteMeta"
 
 type LangSpec = "zh" | "en"
 type TypeSpec = "article" | "website"
 type KwdType = string | string[]
 
-//default props
+// default props
 type DefaultProps = Readonly<typeof defaultProps>
 type ISEOData = {
     description?: string,
@@ -15,9 +15,9 @@ type ISEOData = {
     location: Location
 } & DefaultProps
 const defaultProps = {
+    keywords: "" as KwdType,
     lang: "zh" as LangSpec,
     type: "article" as TypeSpec,
-    keywords: "" as KwdType,
 }
 
 function isString(x: any): x is string {
@@ -26,7 +26,7 @@ function isString(x: any): x is string {
 
 const SEO_: FC<ISEOData> = (props) => {
 
-    //functions
+    // functions
     const stringOrDefault = (x: Maybe<string>) => {
         if (isString(x)) {
             return x as string
@@ -35,7 +35,7 @@ const SEO_: FC<ISEOData> = (props) => {
         }
     }
 
-    //data
+    // data
     const { description, keywords, lang, type, title, location } = props
     const siteMetadata = useSiteMeta()
     const siteName = siteMetadata?.siteName

@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               date
               keyWords
+              series
             }
             html
           }

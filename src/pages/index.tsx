@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from "react"
-import MainLayout from "../components/Layouts/MainLayout"
 import { graphql, Link, useStaticQuery } from "gatsby"
+import React, { FC, ReactNode } from "react"
 import { AvaliableLinksQuery } from "../@types/graphql-types"
+import MainLayout from "../components/Layouts/MainLayout"
 import SEO from "../components/SEO"
 
 function renderLinks(): ReactNode {

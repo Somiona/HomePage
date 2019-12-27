@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { SiteMetaQuery } from "../@types/graphql-types"
 
 
