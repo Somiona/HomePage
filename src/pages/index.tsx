@@ -27,7 +27,7 @@ function renderLinks(): ReactNode {
         )
         .sort().map(
             (path) => {
-                if (typeof path === "string") {
+                if (typeof path === "string" && path.includes("/articles/")) {
                     return (
                         <li>
                             <Link to={path}>
@@ -55,7 +55,7 @@ const Index: FC<{ location: Location }> = ({ location }) => {
                     see: https://www.w3schools.com/jsref/obj_location.asp
                 */}
                 <div>
-                    Hi, this is Somion <br/>
+                    Hi, this is Somiona <br/>
                     <hr/>
                     <div>
                         all Possible Links:
