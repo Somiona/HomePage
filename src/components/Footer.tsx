@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react"
+import Container from "react-bootstrap/Container"
 
 
 interface IFooterProps {
@@ -8,10 +9,10 @@ interface IFooterProps {
 
 const Footer: FC<IFooterProps> = ({ children }) => {
     return (
-        <footer>
-            <div className={"text-center"}>
+        <footer className={"footer mt-auto py-3"}>
+            <Container className={"text-center"}>
                 {children}
-            </div>
+            </Container>
         </footer>
     )
 }

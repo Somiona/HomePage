@@ -18,7 +18,6 @@ const MainLayout: FC<IMainLayout> = (
         location,
         children,
         title,
-        ...rest
     },
 ) => {
     // @ts-ignore
@@ -35,12 +34,12 @@ const MainLayout: FC<IMainLayout> = (
     )
 
     return (
-        <div {...rest}>
+        <div className={"flex-column d-flex min-vh-100"}>
             <Header>
                 <HeaderTitle/>
             </Header>
 
-            <main role={"main"} className={"flex-shrink-0"}>
+            <main role={"main"} className={"main flex-shrink-0 flex-grow-1"}>
                 <Container>
                     {articleTitle}
                     {children}

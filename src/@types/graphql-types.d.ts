@@ -230,31 +230,31 @@ export type DirectoryFieldsEnum =
   "parent___children___internal___ignoreType" |
   "parent___children___internal___mediaType" |
   "parent___children___internal___owner" |
-  'parent___children___internal___type' |
-  'parent___internal___content' |
-  'parent___internal___contentDigest' |
-  'parent___internal___description' |
-  'parent___internal___fieldOwners' |
-  'parent___internal___ignoreType' |
-  'parent___internal___mediaType' |
-  'parent___internal___owner' |
-  'parent___internal___type' |
-  'children' |
+  "parent___children___internal___type" |
+  "parent___internal___content" |
+  "parent___internal___contentDigest" |
+  "parent___internal___description" |
+  "parent___internal___fieldOwners" |
+  "parent___internal___ignoreType" |
+  "parent___internal___mediaType" |
+  "parent___internal___owner" |
+  "parent___internal___type" |
+  "children" |
   'children___id' |
   'children___parent___id' |
   'children___parent___parent___id' |
   'children___parent___parent___children' |
   'children___parent___children' |
-  'children___parent___children___id' |
-  'children___parent___children___children' |
-  'children___parent___internal___content' |
-  'children___parent___internal___contentDigest' |
-  'children___parent___internal___description' |
-  'children___parent___internal___fieldOwners' |
-  'children___parent___internal___ignoreType' |
-  'children___parent___internal___mediaType' |
-  'children___parent___internal___owner' |
-  'children___parent___internal___type' |
+  "children___parent___children___id" |
+  "children___parent___children___children" |
+  "children___parent___internal___content" |
+  "children___parent___internal___contentDigest" |
+  "children___parent___internal___description" |
+  "children___parent___internal___fieldOwners" |
+  "children___parent___internal___ignoreType" |
+  "children___parent___internal___mediaType" |
+  "children___parent___internal___owner" |
+  "children___parent___internal___type" |
   "children___children" |
   "children___children___id" |
   "children___children___parent___id" |
@@ -538,16 +538,16 @@ export type FileFieldsEnum =
   "childImageSharp___fluid___srcSetWebp" |
   "childImageSharp___fluid___sizes" |
   "childImageSharp___fluid___originalImg" |
-  'childImageSharp___fluid___originalName' |
-  'childImageSharp___fluid___presentationWidth' |
-  'childImageSharp___fluid___presentationHeight' |
-  'childImageSharp___sizes___base64' |
-  'childImageSharp___sizes___tracedSVG' |
-  'childImageSharp___sizes___aspectRatio' |
-  'childImageSharp___sizes___src' |
-  'childImageSharp___sizes___srcSet' |
-  'childImageSharp___sizes___srcWebp' |
-  'childImageSharp___sizes___srcSetWebp' |
+  "childImageSharp___fluid___originalName" |
+  "childImageSharp___fluid___presentationWidth" |
+  "childImageSharp___fluid___presentationHeight" |
+  "childImageSharp___sizes___base64" |
+  "childImageSharp___sizes___tracedSVG" |
+  "childImageSharp___sizes___aspectRatio" |
+  "childImageSharp___sizes___src" |
+  "childImageSharp___sizes___srcSet" |
+  "childImageSharp___sizes___srcWebp" |
+  "childImageSharp___sizes___srcSetWebp" |
   'childImageSharp___sizes___sizes' |
   'childImageSharp___sizes___originalImg' |
   'childImageSharp___sizes___originalName' |
@@ -2022,16 +2022,16 @@ export type SiteFieldsEnum =
   'children___children___parent___id' |
   'children___children___parent___children' |
   'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
   "children___internal___content" |
   "children___internal___contentDigest" |
   "children___internal___description" |
