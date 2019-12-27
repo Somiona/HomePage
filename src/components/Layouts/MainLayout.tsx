@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from "react"
+import Container from "react-bootstrap/Container"
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
 import Footer from "../Footer"
 import Header from "../Header"
-import Container from "react-bootstrap/Container"
 import { FooterContent, HeaderTitle } from "../HeaderAndFooterContent"
 
 interface IMainLayout {
@@ -38,7 +38,7 @@ const MainLayout: FC<IMainLayout> = (
             <Header>
                 <HeaderTitle/>
             </Header>
-
+            <nav className={"index-bg d-flex min-vh-100 align-items-center"}/>
             <main role={"main"} className={"main flex-shrink-0 flex-grow-1"}>
                 <Container>
                     {articleTitle}
