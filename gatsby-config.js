@@ -111,6 +111,34 @@ module.exports = {
         allowAdFeatures: false,
         forceSSL: true,
       },
+    }, {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 500,
+        exclude: [
+          "/404",
+          "/404.html",
+          "/dev-404-page",
+          "/offline-plugin-app-shell-fallback",
+        ],
+      },
+    }, {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: [
+              "/404",
+              "/404.html",
+              "/assets",
+              "/images",
+            ],
+            crawlDelay: 5,
+          },
+        ],
+      },
     },
   ],
 }

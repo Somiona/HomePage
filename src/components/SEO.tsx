@@ -45,7 +45,7 @@ const SEO_: FC<ISEOData> = (props) => {
     const metaDescription: string = stringOrDefault(_des)
     let kwd: string = isString(keywords) ? keywords : keywords.join(",")
     if (kwd === "") {
-        kwd = siteMetadata?.keyWords
+        kwd = siteMetadata?.keyWords as string
     }
 
     return (
