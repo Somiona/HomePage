@@ -610,16 +610,16 @@ export type FileFieldsEnum =
   'parent___parent___children___children' |
   'parent___parent___internal___content' |
   'parent___parent___internal___contentDigest' |
-  'parent___parent___internal___description' |
-  'parent___parent___internal___fieldOwners' |
-  'parent___parent___internal___ignoreType' |
-  'parent___parent___internal___mediaType' |
-  'parent___parent___internal___owner' |
-  'parent___parent___internal___type' |
-  'parent___children' |
-  'parent___children___id' |
-  'parent___children___parent___id' |
-  'parent___children___parent___children' |
+  "parent___parent___internal___description" |
+  "parent___parent___internal___fieldOwners" |
+  "parent___parent___internal___ignoreType" |
+  "parent___parent___internal___mediaType" |
+  "parent___parent___internal___owner" |
+  "parent___parent___internal___type" |
+  "parent___children" |
+  "parent___children___id" |
+  "parent___children___parent___id" |
+  "parent___children___parent___children" |
   "parent___children___children" |
   "parent___children___children___id" |
   "parent___children___children___children" |
@@ -1527,16 +1527,16 @@ export type MarkdownRemarkFieldsEnum =
   "children___parent___internal___owner" |
   "children___parent___internal___type" |
   "children___children" |
-  'children___children___id' |
-  'children___children___parent___id' |
-  'children___children___parent___children' |
-  'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
+  "children___children___id" |
+  "children___children___parent___id" |
+  "children___children___parent___children" |
+  "children___children___children" |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
+  "children___children___internal___fieldOwners" |
   'children___children___internal___ignoreType' |
   'children___children___internal___mediaType' |
   'children___children___internal___owner' |
@@ -1972,16 +1972,16 @@ export type SiteFieldsEnum =
   'parent___parent___children___children' |
   'parent___parent___internal___content' |
   'parent___parent___internal___contentDigest' |
-  'parent___parent___internal___description' |
-  'parent___parent___internal___fieldOwners' |
-  'parent___parent___internal___ignoreType' |
-  'parent___parent___internal___mediaType' |
-  'parent___parent___internal___owner' |
-  'parent___parent___internal___type' |
-  'parent___children' |
-  'parent___children___id' |
-  'parent___children___parent___id' |
-  'parent___children___parent___children' |
+  "parent___parent___internal___description" |
+  "parent___parent___internal___fieldOwners" |
+  "parent___parent___internal___ignoreType" |
+  "parent___parent___internal___mediaType" |
+  "parent___parent___internal___owner" |
+  "parent___parent___internal___type" |
+  "parent___children" |
+  "parent___children___id" |
+  "parent___children___parent___id" |
+  "parent___children___parent___children" |
   "parent___children___children" |
   "parent___children___children___id" |
   "parent___children___children___children" |
@@ -2184,16 +2184,16 @@ export type SitePageFieldsEnum =
   'parent___parent___internal___owner' |
   'parent___parent___internal___type' |
   'parent___children' |
-  'parent___children___id' |
-  'parent___children___parent___id' |
-  'parent___children___parent___children' |
-  'parent___children___children' |
-  'parent___children___children___id' |
-  'parent___children___children___children' |
-  'parent___children___internal___content' |
-  'parent___children___internal___contentDigest' |
-  'parent___children___internal___description' |
-  'parent___children___internal___fieldOwners' |
+  "parent___children___id" |
+  "parent___children___parent___id" |
+  "parent___children___parent___children" |
+  "parent___children___children" |
+  "parent___children___children___id" |
+  "parent___children___children___children" |
+  "parent___children___internal___content" |
+  "parent___children___internal___contentDigest" |
+  "parent___children___internal___description" |
+  "parent___children___internal___fieldOwners" |
   "parent___children___internal___ignoreType" |
   "parent___children___internal___mediaType" |
   "parent___children___internal___owner" |
@@ -2315,6 +2315,8 @@ export type SitePageFieldsEnum =
   "pluginCreator___pluginOptions___plugins___browserAPIs" |
   "pluginCreator___pluginOptions___plugins___pluginFilepath" |
   "pluginCreator___pluginOptions___dest" |
+  "pluginCreator___pluginOptions___printRejected" |
+  "pluginCreator___pluginOptions___ignore" |
   "pluginCreator___pluginOptions___path" |
   "pluginCreator___pluginOptions___name" |
   "pluginCreator___pluginOptions___maxWidth" |
@@ -2458,16 +2460,16 @@ export type SitePluginFieldsEnum =
   'parent___children___children___children' |
   'parent___children___internal___content' |
   'parent___children___internal___contentDigest' |
-  'parent___children___internal___description' |
-  'parent___children___internal___fieldOwners' |
-  'parent___children___internal___ignoreType' |
-  'parent___children___internal___mediaType' |
-  'parent___children___internal___owner' |
-  'parent___children___internal___type' |
-  'parent___internal___content' |
-  'parent___internal___contentDigest' |
-  'parent___internal___description' |
-  'parent___internal___fieldOwners' |
+  "parent___children___internal___description" |
+  "parent___children___internal___fieldOwners" |
+  "parent___children___internal___ignoreType" |
+  "parent___children___internal___mediaType" |
+  "parent___children___internal___owner" |
+  "parent___children___internal___type" |
+  "parent___internal___content" |
+  "parent___internal___contentDigest" |
+  "parent___internal___description" |
+  "parent___internal___fieldOwners" |
   "parent___internal___ignoreType" |
   "parent___internal___mediaType" |
   "parent___internal___owner" |
@@ -2532,6 +2534,8 @@ export type SitePluginFieldsEnum =
   "pluginOptions___plugins___browserAPIs" |
   "pluginOptions___plugins___pluginFilepath" |
   "pluginOptions___dest" |
+  "pluginOptions___printRejected" |
+  "pluginOptions___ignore" |
   "pluginOptions___path" |
   "pluginOptions___name" |
   "pluginOptions___maxWidth" |
@@ -2670,6 +2674,8 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>,
   dest?: Maybe<Scalars["String"]>,
+  printRejected?: Maybe<Scalars["Boolean"]>,
+  ignore?: Maybe<Array<Maybe<Scalars["String"]>>>,
   path?: Maybe<Scalars["String"]>,
   name?: Maybe<Scalars["String"]>,
   maxWidth?: Maybe<Scalars["Int"]>,
@@ -2692,6 +2698,8 @@ export type SitePluginPluginOptions = {
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>,
   dest?: Maybe<StringQueryOperatorInput>,
+  printRejected?: Maybe<BooleanQueryOperatorInput>,
+  ignore?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   name?: Maybe<StringQueryOperatorInput>,
   maxWidth?: Maybe<IntQueryOperatorInput>,

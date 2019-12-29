@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react"
 import Container from "react-bootstrap/Container"
+import "../../styles/bootstrap4_custom.scss"
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
 import FullPageBio from "../Bio/FullPageBio"
 import Footer from "../Footer"
@@ -10,7 +11,7 @@ interface IMainLayout {
     location: Location
     // the Location object of HTML DOM.
     // see: https://www.w3schools.com/jsref/obj_location.asp
-    children: ReactNode;
+    children?: ReactNode;
     title: string;
 }
 
