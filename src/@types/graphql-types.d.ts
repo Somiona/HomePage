@@ -590,16 +590,16 @@ export type FileFieldsEnum =
   'childImageSharp___children___internal___fieldOwners' |
   'childImageSharp___children___internal___ignoreType' |
   'childImageSharp___children___internal___mediaType' |
-  'childImageSharp___children___internal___owner' |
-  'childImageSharp___children___internal___type' |
-  'childImageSharp___internal___content' |
-  'childImageSharp___internal___contentDigest' |
-  'childImageSharp___internal___description' |
-  'childImageSharp___internal___fieldOwners' |
-  'childImageSharp___internal___ignoreType' |
-  'childImageSharp___internal___mediaType' |
-  'childImageSharp___internal___owner' |
-  'childImageSharp___internal___type' |
+  "childImageSharp___children___internal___owner" |
+  "childImageSharp___children___internal___type" |
+  "childImageSharp___internal___content" |
+  "childImageSharp___internal___contentDigest" |
+  "childImageSharp___internal___description" |
+  "childImageSharp___internal___fieldOwners" |
+  "childImageSharp___internal___ignoreType" |
+  "childImageSharp___internal___mediaType" |
+  "childImageSharp___internal___owner" |
+  "childImageSharp___internal___type" |
   "id" |
   "parent___id" |
   "parent___parent___id" |
@@ -1547,16 +1547,16 @@ export type MarkdownRemarkFieldsEnum =
   "children___internal___fieldOwners" |
   "children___internal___ignoreType" |
   "children___internal___mediaType" |
-  'children___internal___owner' |
-  'children___internal___type' |
-  'internal___content' |
-  'internal___contentDigest' |
-  'internal___description' |
-  'internal___fieldOwners' |
-  'internal___ignoreType' |
-  'internal___mediaType' |
-  'internal___owner' |
-  'internal___type';
+  "children___internal___owner" |
+  "children___internal___type" |
+  "internal___content" |
+  "internal___contentDigest" |
+  "internal___description" |
+  "internal___fieldOwners" |
+  "internal___ignoreType" |
+  "internal___mediaType" |
+  "internal___owner" |
+  "internal___type";
 
 export type MarkdownRemarkFieldsFilterInput = {
   dest_url?: Maybe<StringQueryOperatorInput>,
@@ -1852,8 +1852,6 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1923,8 +1921,6 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars["Int"]>,
-  host?: Maybe<Scalars["String"]>,
   polyfill?: Maybe<Scalars["Boolean"]>,
   pathPrefix?: Maybe<Scalars["String"]>,
   buildTime?: Maybe<Scalars["Date"]>,
@@ -2057,8 +2053,6 @@ export type SiteFieldsEnum =
   "siteMetadata___description" |
   "siteMetadata___siteUrl" |
   "siteMetadata___keyWords" |
-  "port" |
-  "host" |
   "polyfill" |
   "pathPrefix" |
   "buildTime";
@@ -2069,8 +2063,6 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
@@ -2174,14 +2166,14 @@ export type SitePageEdge = {
   previous?: Maybe<SitePage>,
 };
 
-export type SitePageFieldsEnum = 
-  'id' |
-  'parent___id' |
-  'parent___parent___id' |
-  'parent___parent___parent___id' |
-  'parent___parent___parent___children' |
-  'parent___parent___children' |
-  'parent___parent___children___id' |
+export type SitePageFieldsEnum =
+  "id" |
+  "parent___id" |
+  "parent___parent___id" |
+  "parent___parent___parent___id" |
+  "parent___parent___parent___children" |
+  "parent___parent___children" |
+  "parent___parent___children___id" |
   "parent___parent___children___children" |
   "parent___parent___internal___content" |
   "parent___parent___internal___contentDigest" |
@@ -2450,16 +2442,16 @@ export type SitePluginFieldsEnum =
   'parent___parent___id' |
   'parent___parent___parent___id' |
   'parent___parent___parent___children' |
-  'parent___parent___children' |
-  'parent___parent___children___id' |
-  'parent___parent___children___children' |
-  'parent___parent___internal___content' |
-  'parent___parent___internal___contentDigest' |
-  'parent___parent___internal___description' |
-  'parent___parent___internal___fieldOwners' |
-  'parent___parent___internal___ignoreType' |
-  'parent___parent___internal___mediaType' |
-  'parent___parent___internal___owner' |
+  "parent___parent___children" |
+  "parent___parent___children___id" |
+  "parent___parent___children___children" |
+  "parent___parent___internal___content" |
+  "parent___parent___internal___contentDigest" |
+  "parent___parent___internal___description" |
+  "parent___parent___internal___fieldOwners" |
+  "parent___parent___internal___ignoreType" |
+  "parent___parent___internal___mediaType" |
+  "parent___parent___internal___owner" |
   "parent___parent___internal___type" |
   "parent___children" |
   "parent___children___id" |
