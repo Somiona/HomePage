@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{xSjX:function(n,e,t){"use strict";t.r(e);var r=t("q1tI"),u=t.n(r);e.default=function(n){return function(n){if(null==n)throw new TypeError("Cannot destructure undefined")}(n),u.a.createElement(u.a.Fragment,null)}}}]);
+//# sourceMappingURL=component---src-pages-tags-tsx-b664508e0e29345c387a.js.map
