@@ -1,6 +1,5 @@
 import React, { FC, ReactNode } from "react"
 import Container from "react-bootstrap/Container"
-import "../../styles/bootstrap4_custom.scss"
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
 import FullPageBio from "../Bio/FullPageBio"
 import Footer from "../Footer"

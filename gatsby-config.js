@@ -26,7 +26,7 @@ module.exports = {
         // tailwind: true, // Enable tailwindcss support
         whitelist: cssWhiteList, // Don't remove this selector
         whitelistPatterns: cssWhitePattern,
-        ignore: ["/ignored.css", "prismjs/", "docsearch.js/"], // Ignore files/folders
+        ignore: ["prismjs/", "docsearch.js/"], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },

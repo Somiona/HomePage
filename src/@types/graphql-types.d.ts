@@ -570,16 +570,16 @@ export type FileFieldsEnum =
   'childImageSharp___parent___children___id' |
   'childImageSharp___parent___children___children' |
   'childImageSharp___parent___internal___content' |
-  'childImageSharp___parent___internal___contentDigest' |
-  'childImageSharp___parent___internal___description' |
-  'childImageSharp___parent___internal___fieldOwners' |
-  'childImageSharp___parent___internal___ignoreType' |
-  'childImageSharp___parent___internal___mediaType' |
-  'childImageSharp___parent___internal___owner' |
-  'childImageSharp___parent___internal___type' |
-  'childImageSharp___children' |
-  'childImageSharp___children___id' |
-  'childImageSharp___children___parent___id' |
+  "childImageSharp___parent___internal___contentDigest" |
+  "childImageSharp___parent___internal___description" |
+  "childImageSharp___parent___internal___fieldOwners" |
+  "childImageSharp___parent___internal___ignoreType" |
+  "childImageSharp___parent___internal___mediaType" |
+  "childImageSharp___parent___internal___owner" |
+  "childImageSharp___parent___internal___type" |
+  "childImageSharp___children" |
+  "childImageSharp___children___id" |
+  "childImageSharp___children___parent___id" |
   "childImageSharp___children___parent___children" |
   "childImageSharp___children___children" |
   "childImageSharp___children___children___id" |
@@ -2322,22 +2322,14 @@ export type SitePageFieldsEnum =
   "pluginCreator___pluginOptions___plugins___version" |
   "pluginCreator___pluginOptions___plugins___browserAPIs" |
   "pluginCreator___pluginOptions___plugins___pluginFilepath" |
-  "pluginCreator___pluginOptions___dest" |
+  "pluginCreator___pluginOptions___printRejected" |
+  "pluginCreator___pluginOptions___develop" |
+  "pluginCreator___pluginOptions___whitelist" |
+  "pluginCreator___pluginOptions___ignore" |
+  "pluginCreator___pluginOptions___maxWidth" |
+  "pluginCreator___pluginOptions___wrapperStyle" |
   "pluginCreator___pluginOptions___path" |
   "pluginCreator___pluginOptions___name" |
-  "pluginCreator___pluginOptions___maxWidth" |
-  "pluginCreator___pluginOptions___pathPrefix" |
-  "pluginCreator___pluginOptions___wrapperStyle" |
-  "pluginCreator___pluginOptions___backgroundColor" |
-  "pluginCreator___pluginOptions___linkImagesToOriginal" |
-  "pluginCreator___pluginOptions___showCaptions" |
-  "pluginCreator___pluginOptions___markdownCaptions" |
-  "pluginCreator___pluginOptions___withWebp" |
-  "pluginCreator___pluginOptions___tracedSVG" |
-  "pluginCreator___pluginOptions___loading" |
-  "pluginCreator___pluginOptions___disableBgImageOnAlpha" |
-  "pluginCreator___pluginOptions___disableBgImage" |
-  "pluginCreator___pluginOptions___ignoreFileExtensions" |
   "pluginCreator___pluginOptions___trackingId" |
   "pluginCreator___pluginOptions___head" |
   "pluginCreator___pluginOptions___anonymize" |
@@ -2354,6 +2346,7 @@ export type SitePageFieldsEnum =
   "pluginCreator___pluginOptions___policy___allow" |
   "pluginCreator___pluginOptions___policy___disallow" |
   "pluginCreator___pluginOptions___policy___crawlDelay" |
+  "pluginCreator___pluginOptions___dest" |
   "pluginCreator___pluginOptions___pathCheck" |
   "pluginCreator___nodeAPIs" |
   "pluginCreator___browserAPIs" |
@@ -2547,36 +2540,17 @@ export type SitePluginFieldsEnum =
   "pluginOptions___plugins___name" |
   "pluginOptions___plugins___version" |
   "pluginOptions___plugins___pluginOptions___maxWidth" |
-  "pluginOptions___plugins___pluginOptions___pathPrefix" |
   "pluginOptions___plugins___pluginOptions___wrapperStyle" |
-  "pluginOptions___plugins___pluginOptions___backgroundColor" |
-  "pluginOptions___plugins___pluginOptions___linkImagesToOriginal" |
-  "pluginOptions___plugins___pluginOptions___showCaptions" |
-  "pluginOptions___plugins___pluginOptions___markdownCaptions" |
-  "pluginOptions___plugins___pluginOptions___withWebp" |
-  "pluginOptions___plugins___pluginOptions___tracedSVG" |
-  "pluginOptions___plugins___pluginOptions___loading" |
-  "pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha" |
-  "pluginOptions___plugins___pluginOptions___disableBgImage" |
-  "pluginOptions___plugins___pluginOptions___ignoreFileExtensions" |
   "pluginOptions___plugins___browserAPIs" |
   "pluginOptions___plugins___pluginFilepath" |
-  "pluginOptions___dest" |
+  "pluginOptions___printRejected" |
+  "pluginOptions___develop" |
+  "pluginOptions___whitelist" |
+  "pluginOptions___ignore" |
+  "pluginOptions___maxWidth" |
+  "pluginOptions___wrapperStyle" |
   "pluginOptions___path" |
   "pluginOptions___name" |
-  "pluginOptions___maxWidth" |
-  "pluginOptions___pathPrefix" |
-  "pluginOptions___wrapperStyle" |
-  "pluginOptions___backgroundColor" |
-  "pluginOptions___linkImagesToOriginal" |
-  "pluginOptions___showCaptions" |
-  "pluginOptions___markdownCaptions" |
-  "pluginOptions___withWebp" |
-  "pluginOptions___tracedSVG" |
-  "pluginOptions___loading" |
-  "pluginOptions___disableBgImageOnAlpha" |
-  "pluginOptions___disableBgImage" |
-  "pluginOptions___ignoreFileExtensions" |
   "pluginOptions___trackingId" |
   "pluginOptions___head" |
   "pluginOptions___anonymize" |
@@ -2593,6 +2567,7 @@ export type SitePluginFieldsEnum =
   "pluginOptions___policy___allow" |
   "pluginOptions___policy___disallow" |
   "pluginOptions___policy___crawlDelay" |
+  "pluginOptions___dest" |
   "pluginOptions___pathCheck" |
   "nodeAPIs" |
   "browserAPIs" |
@@ -2710,22 +2685,14 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>,
-  dest?: Maybe<Scalars["String"]>,
+  printRejected?: Maybe<Scalars["Boolean"]>,
+  develop?: Maybe<Scalars["Boolean"]>,
+  whitelist?: Maybe<Array<Maybe<Scalars["String"]>>>,
+  ignore?: Maybe<Array<Maybe<Scalars["String"]>>>,
+  maxWidth?: Maybe<Scalars["Int"]>,
+  wrapperStyle?: Maybe<Scalars["String"]>,
   path?: Maybe<Scalars["String"]>,
   name?: Maybe<Scalars["String"]>,
-  maxWidth?: Maybe<Scalars["Int"]>,
-  pathPrefix?: Maybe<Scalars["String"]>,
-  wrapperStyle?: Maybe<Scalars["String"]>,
-  backgroundColor?: Maybe<Scalars["String"]>,
-  linkImagesToOriginal?: Maybe<Scalars["Boolean"]>,
-  showCaptions?: Maybe<Scalars["Boolean"]>,
-  markdownCaptions?: Maybe<Scalars["Boolean"]>,
-  withWebp?: Maybe<Scalars["Boolean"]>,
-  tracedSVG?: Maybe<Scalars["Boolean"]>,
-  loading?: Maybe<Scalars["String"]>,
-  disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>,
-  disableBgImage?: Maybe<Scalars["Boolean"]>,
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars["String"]>>>,
   trackingId?: Maybe<Scalars["String"]>,
   head?: Maybe<Scalars["Boolean"]>,
   anonymize?: Maybe<Scalars["Boolean"]>,
@@ -2738,27 +2705,20 @@ export type SitePluginPluginOptions = {
   forceSSL?: Maybe<Scalars["Boolean"]>,
   sitemapSize?: Maybe<Scalars["Int"]>,
   policy?: Maybe<Array<Maybe<SitePluginPluginOptionsPolicy>>>,
+  dest?: Maybe<Scalars["String"]>,
   pathCheck?: Maybe<Scalars["Boolean"]>,
 };
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>,
-  dest?: Maybe<StringQueryOperatorInput>,
+  printRejected?: Maybe<BooleanQueryOperatorInput>,
+  develop?: Maybe<BooleanQueryOperatorInput>,
+  whitelist?: Maybe<StringQueryOperatorInput>,
+  ignore?: Maybe<StringQueryOperatorInput>,
+  maxWidth?: Maybe<IntQueryOperatorInput>,
+  wrapperStyle?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   name?: Maybe<StringQueryOperatorInput>,
-  maxWidth?: Maybe<IntQueryOperatorInput>,
-  pathPrefix?: Maybe<StringQueryOperatorInput>,
-  wrapperStyle?: Maybe<StringQueryOperatorInput>,
-  backgroundColor?: Maybe<StringQueryOperatorInput>,
-  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>,
-  showCaptions?: Maybe<BooleanQueryOperatorInput>,
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>,
-  withWebp?: Maybe<BooleanQueryOperatorInput>,
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>,
-  loading?: Maybe<StringQueryOperatorInput>,
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>,
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>,
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>,
   trackingId?: Maybe<StringQueryOperatorInput>,
   head?: Maybe<BooleanQueryOperatorInput>,
   anonymize?: Maybe<BooleanQueryOperatorInput>,
@@ -2771,6 +2731,7 @@ export type SitePluginPluginOptionsFilterInput = {
   forceSSL?: Maybe<BooleanQueryOperatorInput>,
   sitemapSize?: Maybe<IntQueryOperatorInput>,
   policy?: Maybe<SitePluginPluginOptionsPolicyFilterListInput>,
+  dest?: Maybe<StringQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
 };
 
@@ -2800,34 +2761,12 @@ export type SitePluginPluginOptionsPluginsFilterListInput = {
 
 export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars["Int"]>,
-  pathPrefix?: Maybe<Scalars["String"]>,
   wrapperStyle?: Maybe<Scalars["String"]>,
-  backgroundColor?: Maybe<Scalars["String"]>,
-  linkImagesToOriginal?: Maybe<Scalars["Boolean"]>,
-  showCaptions?: Maybe<Scalars["Boolean"]>,
-  markdownCaptions?: Maybe<Scalars["Boolean"]>,
-  withWebp?: Maybe<Scalars["Boolean"]>,
-  tracedSVG?: Maybe<Scalars["Boolean"]>,
-  loading?: Maybe<Scalars["String"]>,
-  disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>,
-  disableBgImage?: Maybe<Scalars["Boolean"]>,
-  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars["String"]>>>,
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>,
-  pathPrefix?: Maybe<StringQueryOperatorInput>,
   wrapperStyle?: Maybe<StringQueryOperatorInput>,
-  backgroundColor?: Maybe<StringQueryOperatorInput>,
-  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>,
-  showCaptions?: Maybe<BooleanQueryOperatorInput>,
-  markdownCaptions?: Maybe<BooleanQueryOperatorInput>,
-  withWebp?: Maybe<BooleanQueryOperatorInput>,
-  tracedSVG?: Maybe<BooleanQueryOperatorInput>,
-  loading?: Maybe<StringQueryOperatorInput>,
-  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>,
-  disableBgImage?: Maybe<BooleanQueryOperatorInput>,
-  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SitePluginPluginOptionsPolicy = {

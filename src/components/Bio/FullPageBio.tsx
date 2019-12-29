@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import "../../styles/bio/_full_page.scss"
 
 const FullPageBio: FC<{}> = () => {
     return (
