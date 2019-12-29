@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
-import React, { FC, ReactNode } from "react"
+import React, { ReactNode } from "react"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import withDefaultProps from "../Utils/DefaultPropsUtil"
-import NavBar from "./NavBar"
 
 const defaultProps = {
     topTrans: false,
@@ -13,15 +12,48 @@ type IHeaderProps = {
     children: ReactNode;
 } & Readonly<typeof defaultProps>
 
-const HeaderD: FC<IHeaderProps> = ({ children, topTrans }) => {
-    return (
-        <header>
-            <NavBar topTrans={topTrans}>
+class HeaderD extends React.Component<IHeaderProps, { trans: boolean }> {
+    constructor(props: IHeaderProps) {
+        super(props)
+        const { topTrans } = props
+        this.handleScroll = this.handleScroll.bind(this)
+        this.render = this.render.bind(this)
+
+        this.state = {
+            trans: topTrans,
+        }
+
+        if (typeof window !== "undefined") {
+            if (topTrans && window) {
+                window.addEventListener("scroll", this.handleScroll)
+            }
+        }
+    }
+
+    public handleScroll() {
+        if (typeof window !== "undefined") {
+            if (window) {
+                if (window.scrollY <= 60) {
+                    this.setState(() => ({
+                        trans: true,
+                    }))
+                } else {
+                    this.setState(() => ({
+                        trans: false,
+                    }))
+                }
+            }
+        }
+    }
+
+    public render() {
+        return (
+            <Navbar variant={"dark"} bg={this.state.trans ? "transparent" : "primary"} expand={"md"} fixed={"top"}>
                 <Link to={"/"} className={"navbar-brand"}>
-                    {children}
+                    {this.props.children}
                 </Link>
-                <Navbar.Toggle aria-controls={"top-navbar-nav"}/>
-                <Navbar.Collapse id={"top-navbar-nav"}>
+                <Navbar.Toggle aria-controls={"navCollapse"}/>
+                <Navbar.Collapse id={"navCollapse"}>
                     <Nav className={"mr-auto"}>
                         <Nav.Item>
                             <Link to={"/"} className={"nav-link"}>
@@ -36,10 +68,11 @@ const HeaderD: FC<IHeaderProps> = ({ children, topTrans }) => {
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
-            </NavBar>
-        </header>
-    )
+            </Navbar>
+        )
+    }
 }
+
 
 const Header = withDefaultProps(
     defaultProps,

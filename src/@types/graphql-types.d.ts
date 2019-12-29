@@ -650,16 +650,16 @@ export type FileFieldsEnum =
   'children___parent___internal___content' |
   'children___parent___internal___contentDigest' |
   'children___parent___internal___description' |
-  'children___parent___internal___fieldOwners' |
-  'children___parent___internal___ignoreType' |
-  'children___parent___internal___mediaType' |
-  'children___parent___internal___owner' |
-  'children___parent___internal___type' |
-  'children___children' |
-  'children___children___id' |
-  'children___children___parent___id' |
-  'children___children___parent___children' |
-  'children___children___children' |
+  "children___parent___internal___fieldOwners" |
+  "children___parent___internal___ignoreType" |
+  "children___parent___internal___mediaType" |
+  "children___parent___internal___owner" |
+  "children___parent___internal___type" |
+  "children___children" |
+  "children___children___id" |
+  "children___children___parent___id" |
+  "children___children___parent___children" |
+  "children___children___children" |
   "children___children___children___id" |
   "children___children___children___children" |
   "children___children___internal___content" |
@@ -721,16 +721,16 @@ export type FileFieldsEnum =
   "childMarkdownRemark___parent___internal___owner" |
   "childMarkdownRemark___parent___internal___type" |
   "childMarkdownRemark___children" |
-  'childMarkdownRemark___children___id' |
-  'childMarkdownRemark___children___parent___id' |
-  'childMarkdownRemark___children___parent___children' |
-  'childMarkdownRemark___children___children' |
-  'childMarkdownRemark___children___children___id' |
-  'childMarkdownRemark___children___children___children' |
-  'childMarkdownRemark___children___internal___content' |
-  'childMarkdownRemark___children___internal___contentDigest' |
-  'childMarkdownRemark___children___internal___description' |
-  'childMarkdownRemark___children___internal___fieldOwners' |
+  "childMarkdownRemark___children___id" |
+  "childMarkdownRemark___children___parent___id" |
+  "childMarkdownRemark___children___parent___children" |
+  "childMarkdownRemark___children___children" |
+  "childMarkdownRemark___children___children___id" |
+  "childMarkdownRemark___children___children___children" |
+  "childMarkdownRemark___children___internal___content" |
+  "childMarkdownRemark___children___internal___contentDigest" |
+  "childMarkdownRemark___children___internal___description" |
+  "childMarkdownRemark___children___internal___fieldOwners" |
   'childMarkdownRemark___children___internal___ignoreType' |
   'childMarkdownRemark___children___internal___mediaType' |
   'childMarkdownRemark___children___internal___owner' |
@@ -1487,16 +1487,16 @@ export type MarkdownRemarkFieldsEnum =
   "parent___parent___internal___mediaType" |
   "parent___parent___internal___owner" |
   "parent___parent___internal___type" |
-  'parent___children' |
-  'parent___children___id' |
-  'parent___children___parent___id' |
-  'parent___children___parent___children' |
-  'parent___children___children' |
-  'parent___children___children___id' |
-  'parent___children___children___children' |
-  'parent___children___internal___content' |
-  'parent___children___internal___contentDigest' |
-  'parent___children___internal___description' |
+  "parent___children" |
+  "parent___children___id" |
+  "parent___children___parent___id" |
+  "parent___children___parent___children" |
+  "parent___children___children" |
+  "parent___children___children___id" |
+  "parent___children___children___children" |
+  "parent___children___internal___content" |
+  "parent___children___internal___contentDigest" |
+  "parent___children___internal___description" |
   'parent___children___internal___fieldOwners' |
   'parent___children___internal___ignoreType' |
   'parent___children___internal___mediaType' |
@@ -1852,8 +1852,6 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1923,8 +1921,6 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars["Int"]>,
-  host?: Maybe<Scalars["String"]>,
   polyfill?: Maybe<Scalars["Boolean"]>,
   pathPrefix?: Maybe<Scalars["String"]>,
   buildTime?: Maybe<Scalars["Date"]>,
@@ -2016,16 +2012,16 @@ export type SiteFieldsEnum =
   'children___parent___internal___content' |
   'children___parent___internal___contentDigest' |
   'children___parent___internal___description' |
-  'children___parent___internal___fieldOwners' |
-  'children___parent___internal___ignoreType' |
-  'children___parent___internal___mediaType' |
-  'children___parent___internal___owner' |
-  'children___parent___internal___type' |
-  'children___children' |
-  'children___children___id' |
-  'children___children___parent___id' |
-  'children___children___parent___children' |
-  'children___children___children' |
+  "children___parent___internal___fieldOwners" |
+  "children___parent___internal___ignoreType" |
+  "children___parent___internal___mediaType" |
+  "children___parent___internal___owner" |
+  "children___parent___internal___type" |
+  "children___children" |
+  "children___children___id" |
+  "children___children___parent___id" |
+  "children___children___parent___children" |
+  "children___children___children" |
   "children___children___children___id" |
   "children___children___children___children" |
   "children___children___internal___content" |
@@ -2056,8 +2052,6 @@ export type SiteFieldsEnum =
   "siteMetadata___author" |
   "siteMetadata___description" |
   "siteMetadata___siteUrl" |
-  "port" |
-  "host" |
   "polyfill" |
   "pathPrefix" |
   "buildTime";
@@ -2068,8 +2062,6 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
@@ -2231,16 +2223,16 @@ export type SitePageFieldsEnum =
   'children___parent___internal___type' |
   'children___children' |
   'children___children___id' |
-  'children___children___parent___id' |
-  'children___children___parent___children' |
-  'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
+  "children___children___parent___id" |
+  "children___children___parent___children" |
+  "children___children___children" |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
   "children___children___internal___mediaType" |
   "children___children___internal___owner" |
   "children___children___internal___type" |
@@ -2322,8 +2314,6 @@ export type SitePageFieldsEnum =
   "pluginCreator___pluginOptions___plugins___browserAPIs" |
   "pluginCreator___pluginOptions___plugins___pluginFilepath" |
   "pluginCreator___pluginOptions___dest" |
-  "pluginCreator___pluginOptions___printRejected" |
-  "pluginCreator___pluginOptions___ignore" |
   "pluginCreator___pluginOptions___path" |
   "pluginCreator___pluginOptions___name" |
   "pluginCreator___pluginOptions___maxWidth" |
@@ -2339,6 +2329,17 @@ export type SitePageFieldsEnum =
   "pluginCreator___pluginOptions___disableBgImageOnAlpha" |
   "pluginCreator___pluginOptions___disableBgImage" |
   "pluginCreator___pluginOptions___ignoreFileExtensions" |
+  "pluginCreator___pluginOptions___trackingId" |
+  "pluginCreator___pluginOptions___head" |
+  "pluginCreator___pluginOptions___anonymize" |
+  "pluginCreator___pluginOptions___respectDNT" |
+  "pluginCreator___pluginOptions___exclude" |
+  "pluginCreator___pluginOptions___pageTransitionDelay" |
+  "pluginCreator___pluginOptions___sampleRate" |
+  "pluginCreator___pluginOptions___siteSpeedSampleRate" |
+  "pluginCreator___pluginOptions___cookieDomain" |
+  "pluginCreator___pluginOptions___allowAdFeatures" |
+  "pluginCreator___pluginOptions___forceSSL" |
   "pluginCreator___pluginOptions___pathCheck" |
   "pluginCreator___nodeAPIs" |
   "pluginCreator___browserAPIs" |
@@ -2359,9 +2360,9 @@ export type SitePageFieldsEnum =
   "pluginCreator___packageJson___peerDependencies" |
   "pluginCreator___packageJson___peerDependencies___name" |
   "pluginCreator___packageJson___peerDependencies___version" |
-  'pluginCreator___packageJson___keywords' |
-  'pluginCreatorId' |
-  'componentPath';
+  "pluginCreator___packageJson___keywords" |
+  "pluginCreatorId" |
+  "componentPath";
 
 export type SitePageFilterInput = {
   id?: Maybe<StringQueryOperatorInput>,
@@ -2502,16 +2503,16 @@ export type SitePluginFieldsEnum =
   'children___children___internal___content' |
   'children___children___internal___contentDigest' |
   'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
-  'children___internal___content' |
-  'children___internal___contentDigest' |
-  'children___internal___description' |
-  'children___internal___fieldOwners' |
-  'children___internal___ignoreType' |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
+  "children___internal___content" |
+  "children___internal___contentDigest" |
+  "children___internal___description" |
+  "children___internal___fieldOwners" |
+  "children___internal___ignoreType" |
   "children___internal___mediaType" |
   "children___internal___owner" |
   "children___internal___type" |
@@ -2547,8 +2548,6 @@ export type SitePluginFieldsEnum =
   "pluginOptions___plugins___browserAPIs" |
   "pluginOptions___plugins___pluginFilepath" |
   "pluginOptions___dest" |
-  "pluginOptions___printRejected" |
-  "pluginOptions___ignore" |
   "pluginOptions___path" |
   "pluginOptions___name" |
   "pluginOptions___maxWidth" |
@@ -2564,6 +2563,17 @@ export type SitePluginFieldsEnum =
   "pluginOptions___disableBgImageOnAlpha" |
   "pluginOptions___disableBgImage" |
   "pluginOptions___ignoreFileExtensions" |
+  "pluginOptions___trackingId" |
+  "pluginOptions___head" |
+  "pluginOptions___anonymize" |
+  "pluginOptions___respectDNT" |
+  "pluginOptions___exclude" |
+  "pluginOptions___pageTransitionDelay" |
+  "pluginOptions___sampleRate" |
+  "pluginOptions___siteSpeedSampleRate" |
+  "pluginOptions___cookieDomain" |
+  "pluginOptions___allowAdFeatures" |
+  "pluginOptions___forceSSL" |
   "pluginOptions___pathCheck" |
   "nodeAPIs" |
   "browserAPIs" |
@@ -2584,7 +2594,7 @@ export type SitePluginFieldsEnum =
   "packageJson___peerDependencies" |
   "packageJson___peerDependencies___name" |
   "packageJson___peerDependencies___version" |
-  'packageJson___keywords';
+  "packageJson___keywords";
 
 export type SitePluginFilterInput = {
   id?: Maybe<StringQueryOperatorInput>,
@@ -2682,8 +2692,6 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>,
   dest?: Maybe<Scalars["String"]>,
-  printRejected?: Maybe<Scalars["Boolean"]>,
-  ignore?: Maybe<Array<Maybe<Scalars["String"]>>>,
   path?: Maybe<Scalars["String"]>,
   name?: Maybe<Scalars["String"]>,
   maxWidth?: Maybe<Scalars["Int"]>,
@@ -2699,14 +2707,23 @@ export type SitePluginPluginOptions = {
   disableBgImageOnAlpha?: Maybe<Scalars["Boolean"]>,
   disableBgImage?: Maybe<Scalars["Boolean"]>,
   ignoreFileExtensions?: Maybe<Array<Maybe<Scalars["String"]>>>,
+  trackingId?: Maybe<Scalars["String"]>,
+  head?: Maybe<Scalars["Boolean"]>,
+  anonymize?: Maybe<Scalars["Boolean"]>,
+  respectDNT?: Maybe<Scalars["Boolean"]>,
+  exclude?: Maybe<Array<Maybe<Scalars["String"]>>>,
+  pageTransitionDelay?: Maybe<Scalars["Int"]>,
+  sampleRate?: Maybe<Scalars["Int"]>,
+  siteSpeedSampleRate?: Maybe<Scalars["Int"]>,
+  cookieDomain?: Maybe<Scalars["String"]>,
+  allowAdFeatures?: Maybe<Scalars["Boolean"]>,
+  forceSSL?: Maybe<Scalars["Boolean"]>,
   pathCheck?: Maybe<Scalars["Boolean"]>,
 };
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>,
   dest?: Maybe<StringQueryOperatorInput>,
-  printRejected?: Maybe<BooleanQueryOperatorInput>,
-  ignore?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   name?: Maybe<StringQueryOperatorInput>,
   maxWidth?: Maybe<IntQueryOperatorInput>,
@@ -2722,6 +2739,17 @@ export type SitePluginPluginOptionsFilterInput = {
   disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>,
   disableBgImage?: Maybe<BooleanQueryOperatorInput>,
   ignoreFileExtensions?: Maybe<StringQueryOperatorInput>,
+  trackingId?: Maybe<StringQueryOperatorInput>,
+  head?: Maybe<BooleanQueryOperatorInput>,
+  anonymize?: Maybe<BooleanQueryOperatorInput>,
+  respectDNT?: Maybe<BooleanQueryOperatorInput>,
+  exclude?: Maybe<StringQueryOperatorInput>,
+  pageTransitionDelay?: Maybe<IntQueryOperatorInput>,
+  sampleRate?: Maybe<IntQueryOperatorInput>,
+  siteSpeedSampleRate?: Maybe<IntQueryOperatorInput>,
+  cookieDomain?: Maybe<StringQueryOperatorInput>,
+  allowAdFeatures?: Maybe<BooleanQueryOperatorInput>,
+  forceSSL?: Maybe<BooleanQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
 };
 
