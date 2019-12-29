@@ -32,8 +32,11 @@ class HeaderD extends React.Component<IHeaderProps, { trans: boolean }> {
 
     public handleScroll() {
         if (typeof window !== "undefined") {
+            const getHeight = () => {
+                return window.innerHeight
+            }
             if (window) {
-                if (window.scrollY <= 60) {
+                if (window.scrollY <= getHeight() / 3) {
                     this.setState(() => ({
                         trans: true,
                     }))

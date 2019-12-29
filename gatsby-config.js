@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"]
+const cssWhitePattern = [/^nav/, /^bg-/]
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -15,47 +18,16 @@ module.exports = {
     siteUrl: "https://blog.somiona.live",
     keyWords: "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
   }, plugins: [
-    `gatsby-plugin-catch-links`,
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-tslint",
-    {
-      resolve: "gatsby-plugin-generate-typings",
-      options: {
-        dest: "./src/@types/graphql-types.d.ts",
-      },
-    },
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-purgecss",
       options: {
         printRejected: true, // Print removed selectors and processed file names
         develop: true, // Enable while using "gatsby develop"
         // tailwind: true, // Enable tailwindcss support
-        whitelist: ["fixed-top", "collapsed", "container", "collapse"], // Don't remove this selector
-        whitelistPatterns: [/^nav/, /^bg-/],
+        whitelist: cssWhiteList, // Don't remove this selector
+        whitelistPatterns: cssWhitePattern,
         ignore: ["/ignored.css", "prismjs/", "docsearch.js/"], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: "./content/articles",
-        name: "articles",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: "./content/assets",
-        name: "assets",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: "./content/data",
-        name: "data",
       },
     },
     {
@@ -80,11 +52,27 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content/articles",
+        name: "articles",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content/assets",
+        name: "assets",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content/data",
+        name: "data",
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -112,7 +100,8 @@ module.exports = {
         allowAdFeatures: false,
         forceSSL: true,
       },
-    }, {
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         sitemapSize: 500,
@@ -123,7 +112,8 @@ module.exports = {
           "/offline-plugin-app-shell-fallback",
         ],
       },
-    }, {
+    },
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         policy: [
@@ -141,5 +131,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-generate-typings",
+      options: {
+        dest: "./src/@types/graphql-types.d.ts",
+      },
+    },
+    `gatsby-plugin-catch-links`,
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-tslint",
+    "gatsby-plugin-sass",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
   ],
 }
