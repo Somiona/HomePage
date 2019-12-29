@@ -660,16 +660,16 @@ export type FileFieldsEnum =
   'children___children___parent___id' |
   'children___children___parent___children' |
   'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
   "children___internal___content" |
   "children___internal___contentDigest" |
   "children___internal___description" |
@@ -711,16 +711,16 @@ export type FileFieldsEnum =
   "childMarkdownRemark___parent___parent___children" |
   "childMarkdownRemark___parent___children" |
   "childMarkdownRemark___parent___children___id" |
-  'childMarkdownRemark___parent___children___children' |
-  'childMarkdownRemark___parent___internal___content' |
-  'childMarkdownRemark___parent___internal___contentDigest' |
-  'childMarkdownRemark___parent___internal___description' |
-  'childMarkdownRemark___parent___internal___fieldOwners' |
-  'childMarkdownRemark___parent___internal___ignoreType' |
-  'childMarkdownRemark___parent___internal___mediaType' |
-  'childMarkdownRemark___parent___internal___owner' |
-  'childMarkdownRemark___parent___internal___type' |
-  'childMarkdownRemark___children' |
+  "childMarkdownRemark___parent___children___children" |
+  "childMarkdownRemark___parent___internal___content" |
+  "childMarkdownRemark___parent___internal___contentDigest" |
+  "childMarkdownRemark___parent___internal___description" |
+  "childMarkdownRemark___parent___internal___fieldOwners" |
+  "childMarkdownRemark___parent___internal___ignoreType" |
+  "childMarkdownRemark___parent___internal___mediaType" |
+  "childMarkdownRemark___parent___internal___owner" |
+  "childMarkdownRemark___parent___internal___type" |
+  "childMarkdownRemark___children" |
   'childMarkdownRemark___children___id' |
   'childMarkdownRemark___children___parent___id' |
   'childMarkdownRemark___children___parent___children' |
@@ -1477,16 +1477,16 @@ export type MarkdownRemarkFieldsEnum =
   "parent___parent___parent___id" |
   "parent___parent___parent___children" |
   "parent___parent___children" |
-  'parent___parent___children___id' |
-  'parent___parent___children___children' |
-  'parent___parent___internal___content' |
-  'parent___parent___internal___contentDigest' |
-  'parent___parent___internal___description' |
-  'parent___parent___internal___fieldOwners' |
-  'parent___parent___internal___ignoreType' |
-  'parent___parent___internal___mediaType' |
-  'parent___parent___internal___owner' |
-  'parent___parent___internal___type' |
+  "parent___parent___children___id" |
+  "parent___parent___children___children" |
+  "parent___parent___internal___content" |
+  "parent___parent___internal___contentDigest" |
+  "parent___parent___internal___description" |
+  "parent___parent___internal___fieldOwners" |
+  "parent___parent___internal___ignoreType" |
+  "parent___parent___internal___mediaType" |
+  "parent___parent___internal___owner" |
+  "parent___parent___internal___type" |
   'parent___children' |
   'parent___children___id' |
   'parent___children___parent___id' |
@@ -2026,16 +2026,16 @@ export type SiteFieldsEnum =
   'children___children___parent___id' |
   'children___children___parent___children' |
   'children___children___children' |
-  'children___children___children___id' |
-  'children___children___children___children' |
-  'children___children___internal___content' |
-  'children___children___internal___contentDigest' |
-  'children___children___internal___description' |
-  'children___children___internal___fieldOwners' |
-  'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
+  "children___children___children___id" |
+  "children___children___children___children" |
+  "children___children___internal___content" |
+  "children___children___internal___contentDigest" |
+  "children___children___internal___description" |
+  "children___children___internal___fieldOwners" |
+  "children___children___internal___ignoreType" |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
   "children___internal___content" |
   "children___internal___contentDigest" |
   "children___internal___description" |
@@ -2241,16 +2241,16 @@ export type SitePageFieldsEnum =
   'children___children___internal___description' |
   'children___children___internal___fieldOwners' |
   'children___children___internal___ignoreType' |
-  'children___children___internal___mediaType' |
-  'children___children___internal___owner' |
-  'children___children___internal___type' |
-  'children___internal___content' |
-  'children___internal___contentDigest' |
-  'children___internal___description' |
-  'children___internal___fieldOwners' |
-  'children___internal___ignoreType' |
-  'children___internal___mediaType' |
-  'children___internal___owner' |
+  "children___children___internal___mediaType" |
+  "children___children___internal___owner" |
+  "children___children___internal___type" |
+  "children___internal___content" |
+  "children___internal___contentDigest" |
+  "children___internal___description" |
+  "children___internal___fieldOwners" |
+  "children___internal___ignoreType" |
+  "children___internal___mediaType" |
+  "children___internal___owner" |
   "children___internal___type" |
   "internal___content" |
   "internal___contentDigest" |
@@ -2292,26 +2292,26 @@ export type SitePageFieldsEnum =
   "pluginCreator___children___id" |
   "pluginCreator___children___parent___id" |
   "pluginCreator___children___parent___children" |
-  'pluginCreator___children___children' |
-  'pluginCreator___children___children___id' |
-  'pluginCreator___children___children___children' |
-  'pluginCreator___children___internal___content' |
-  'pluginCreator___children___internal___contentDigest' |
-  'pluginCreator___children___internal___description' |
-  'pluginCreator___children___internal___fieldOwners' |
-  'pluginCreator___children___internal___ignoreType' |
-  'pluginCreator___children___internal___mediaType' |
-  'pluginCreator___children___internal___owner' |
-  'pluginCreator___children___internal___type' |
-  'pluginCreator___internal___content' |
-  'pluginCreator___internal___contentDigest' |
-  'pluginCreator___internal___description' |
-  'pluginCreator___internal___fieldOwners' |
-  'pluginCreator___internal___ignoreType' |
-  'pluginCreator___internal___mediaType' |
-  'pluginCreator___internal___owner' |
-  'pluginCreator___internal___type' |
-  'pluginCreator___resolve' |
+  "pluginCreator___children___children" |
+  "pluginCreator___children___children___id" |
+  "pluginCreator___children___children___children" |
+  "pluginCreator___children___internal___content" |
+  "pluginCreator___children___internal___contentDigest" |
+  "pluginCreator___children___internal___description" |
+  "pluginCreator___children___internal___fieldOwners" |
+  "pluginCreator___children___internal___ignoreType" |
+  "pluginCreator___children___internal___mediaType" |
+  "pluginCreator___children___internal___owner" |
+  "pluginCreator___children___internal___type" |
+  "pluginCreator___internal___content" |
+  "pluginCreator___internal___contentDigest" |
+  "pluginCreator___internal___description" |
+  "pluginCreator___internal___fieldOwners" |
+  "pluginCreator___internal___ignoreType" |
+  "pluginCreator___internal___mediaType" |
+  "pluginCreator___internal___owner" |
+  "pluginCreator___internal___type" |
+  "pluginCreator___resolve" |
   "pluginCreator___name" |
   "pluginCreator___version" |
   "pluginCreator___pluginOptions___plugins" |
@@ -2349,16 +2349,16 @@ export type SitePageFieldsEnum =
   "pluginCreator___packageJson___version" |
   "pluginCreator___packageJson___main" |
   "pluginCreator___packageJson___author" |
-  'pluginCreator___packageJson___license' |
-  'pluginCreator___packageJson___dependencies' |
-  'pluginCreator___packageJson___dependencies___name' |
-  'pluginCreator___packageJson___dependencies___version' |
-  'pluginCreator___packageJson___devDependencies' |
-  'pluginCreator___packageJson___devDependencies___name' |
-  'pluginCreator___packageJson___devDependencies___version' |
-  'pluginCreator___packageJson___peerDependencies' |
-  'pluginCreator___packageJson___peerDependencies___name' |
-  'pluginCreator___packageJson___peerDependencies___version' |
+  "pluginCreator___packageJson___license" |
+  "pluginCreator___packageJson___dependencies" |
+  "pluginCreator___packageJson___dependencies___name" |
+  "pluginCreator___packageJson___dependencies___version" |
+  "pluginCreator___packageJson___devDependencies" |
+  "pluginCreator___packageJson___devDependencies___name" |
+  "pluginCreator___packageJson___devDependencies___version" |
+  "pluginCreator___packageJson___peerDependencies" |
+  "pluginCreator___packageJson___peerDependencies___name" |
+  "pluginCreator___packageJson___peerDependencies___version" |
   'pluginCreator___packageJson___keywords' |
   'pluginCreatorId' |
   'componentPath';
@@ -2512,16 +2512,16 @@ export type SitePluginFieldsEnum =
   'children___internal___description' |
   'children___internal___fieldOwners' |
   'children___internal___ignoreType' |
-  'children___internal___mediaType' |
-  'children___internal___owner' |
-  'children___internal___type' |
-  'internal___content' |
-  'internal___contentDigest' |
-  'internal___description' |
-  'internal___fieldOwners' |
-  'internal___ignoreType' |
-  'internal___mediaType' |
-  'internal___owner' |
+  "children___internal___mediaType" |
+  "children___internal___owner" |
+  "children___internal___type" |
+  "internal___content" |
+  "internal___contentDigest" |
+  "internal___description" |
+  "internal___fieldOwners" |
+  "internal___ignoreType" |
+  "internal___mediaType" |
+  "internal___owner" |
   "internal___type" |
   "resolve" |
   "name" |
@@ -2574,16 +2574,16 @@ export type SitePluginFieldsEnum =
   "packageJson___version" |
   "packageJson___main" |
   "packageJson___author" |
-  'packageJson___license' |
-  'packageJson___dependencies' |
-  'packageJson___dependencies___name' |
-  'packageJson___dependencies___version' |
-  'packageJson___devDependencies' |
-  'packageJson___devDependencies___name' |
-  'packageJson___devDependencies___version' |
-  'packageJson___peerDependencies' |
-  'packageJson___peerDependencies___name' |
-  'packageJson___peerDependencies___version' |
+  "packageJson___license" |
+  "packageJson___dependencies" |
+  "packageJson___dependencies___name" |
+  "packageJson___dependencies___version" |
+  "packageJson___devDependencies" |
+  "packageJson___devDependencies___name" |
+  "packageJson___devDependencies___version" |
+  "packageJson___peerDependencies" |
+  "packageJson___peerDependencies___name" |
+  "packageJson___peerDependencies___version" |
   'packageJson___keywords';
 
 export type SitePluginFilterInput = {

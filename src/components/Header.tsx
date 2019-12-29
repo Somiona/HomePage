@@ -2,16 +2,21 @@ import { Link } from "gatsby"
 import React, { FC, ReactNode } from "react"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
+import withDefaultProps from "../Utils/DefaultPropsUtil"
+import NavBar from "./NavBar"
 
-
-interface IHeaderProps {
-    children: ReactNode;
+const defaultProps = {
+    topTrans: false,
 }
 
-const Header: FC<IHeaderProps> = ({ children }) => {
+type IHeaderProps = {
+    children: ReactNode;
+} & Readonly<typeof defaultProps>
+
+const HeaderD: FC<IHeaderProps> = ({ children, topTrans }) => {
     return (
         <header>
-            <Navbar variant={"dark"} bg={"primary"} expand={"md"} fixed={"top"}>
+            <NavBar topTrans={topTrans}>
                 <Link to={"/"} className={"navbar-brand"}>
                     {children}
                 </Link>
@@ -31,10 +36,14 @@ const Header: FC<IHeaderProps> = ({ children }) => {
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+            </NavBar>
         </header>
     )
 }
 
+const Header = withDefaultProps(
+    defaultProps,
+    HeaderD,
+)
 
 export default Header
