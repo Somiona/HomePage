@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /404.html
+Disallow: /assets
+Disallow: /images
+Crawl-delay: 5
+Sitemap: https://blog.somiona.live/sitemap.xml
+Host: https://blog.somiona.live
