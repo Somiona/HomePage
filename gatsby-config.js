@@ -85,9 +85,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-155100629-1 ",
+        trackingId: "UA-155100629-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
@@ -103,7 +103,6 @@ module.exports = {
         // Set Variation ID. 0 for original 1,2,3....
         // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
         // Any additional optional fields
-        sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "blog.somiona.live",
         allowAdFeatures: false,
