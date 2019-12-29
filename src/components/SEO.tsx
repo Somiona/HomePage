@@ -40,8 +40,13 @@ const SEO_: FC<ISEOData> = (props) => {
     const siteMetadata = useSiteMeta()
     const siteName = siteMetadata?.siteName
     const author = siteMetadata?.author
-    const metaDescription: string = stringOrDefault(description || siteMetadata!.description)
-    const kwd: string = isString(keywords) ? keywords : keywords.join(",")
+    // tslint:disable-next-line:variable-name
+    const _des = description ? description : siteMetadata?.description
+    const metaDescription: string = stringOrDefault(_des)
+    let kwd: string = isString(keywords) ? keywords : keywords.join(",")
+    if (kwd === "") {
+        kwd = siteMetadata?.keyWords
+    }
 
     return (
         <Helmet

@@ -12,6 +12,7 @@ const useSiteMeta = () => {
                         description
                         author
                         siteUrl
+                        keyWords
                     }
                 }
             }

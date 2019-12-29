@@ -9,8 +9,11 @@ module.exports = {
   siteMetadata: {
     siteName: "白咕咕のエラーはっせい記録",
     author: "Somiona",
-    description: "",
+    description: "Somiona's blog here. Computing and Mathematics undergraduate. " +
+      "Some class Notes, java, rust, html, reactjs, sass, gatsby and more. " +
+      "这里是索麦恩的个人博客，由Gatsby构建。一些学习笔记，生活记录",
     siteUrl: "https://blog.somiona.live",
+    keyWords: "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
   }, plugins: [
     `gatsby-plugin-catch-links`,
     "gatsby-plugin-typescript",
