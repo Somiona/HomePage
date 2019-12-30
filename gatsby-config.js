@@ -18,6 +18,15 @@ module.exports = {
     siteUrl: "https://blog.somiona.live",
     keyWords: "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
   }, plugins: [
+    `gatsby-plugin-catch-links`,
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-tslint",
+    "gatsby-plugin-sass",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-purgecss",
       options: {
@@ -137,14 +146,5 @@ module.exports = {
         dest: "./src/@types/graphql-types.d.ts",
       },
     },
-    `gatsby-plugin-catch-links`,
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-tslint",
-    "gatsby-plugin-sass",
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-react-helmet",
   ],
 }

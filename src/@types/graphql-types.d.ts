@@ -560,16 +560,16 @@ export type FileFieldsEnum =
   'childImageSharp___resize___tracedSVG' |
   'childImageSharp___resize___width' |
   'childImageSharp___resize___height' |
-  'childImageSharp___resize___aspectRatio' |
-  'childImageSharp___resize___originalName' |
-  'childImageSharp___id' |
-  'childImageSharp___parent___id' |
-  'childImageSharp___parent___parent___id' |
-  'childImageSharp___parent___parent___children' |
-  'childImageSharp___parent___children' |
-  'childImageSharp___parent___children___id' |
-  'childImageSharp___parent___children___children' |
-  'childImageSharp___parent___internal___content' |
+  "childImageSharp___resize___aspectRatio" |
+  "childImageSharp___resize___originalName" |
+  "childImageSharp___id" |
+  "childImageSharp___parent___id" |
+  "childImageSharp___parent___parent___id" |
+  "childImageSharp___parent___parent___children" |
+  "childImageSharp___parent___children" |
+  "childImageSharp___parent___children___id" |
+  "childImageSharp___parent___children___children" |
+  "childImageSharp___parent___internal___content" |
   "childImageSharp___parent___internal___contentDigest" |
   "childImageSharp___parent___internal___description" |
   "childImageSharp___parent___internal___fieldOwners" |
@@ -1852,8 +1852,6 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1923,8 +1921,6 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars["Int"]>,
-  host?: Maybe<Scalars["String"]>,
   polyfill?: Maybe<Scalars["Boolean"]>,
   pathPrefix?: Maybe<Scalars["String"]>,
   buildTime?: Maybe<Scalars["Date"]>,
@@ -2057,8 +2053,6 @@ export type SiteFieldsEnum =
   "siteMetadata___description" |
   "siteMetadata___siteUrl" |
   "siteMetadata___keyWords" |
-  "port" |
-  "host" |
   "polyfill" |
   "pathPrefix" |
   "buildTime";
@@ -2069,8 +2063,6 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
