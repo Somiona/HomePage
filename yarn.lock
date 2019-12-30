@@ -6092,6 +6092,13 @@ gatsby-plugin-manifest@^2.2.34:
     semver "^5.7.1"
     sharp "^0.23.4"
 
+gatsby-plugin-minify-classnames@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-minify-classnames/-/gatsby-plugin-minify-classnames-0.1.2.tgz#64b2f9f1e979217ee0ed39fe72b0752b9ed9cc72"
+  integrity sha512-0wANA/6azi7wPLGECK8jS+Dc69o6cf/7l/M86mGmMdc0XoNRWNKHiOgADGJw0OlnteGu3dnP3zw9vDGIsnupcA==
+  dependencies:
+    incstr "^1.2.3"
+
 gatsby-plugin-offline@^3.0.30:
   version "3.0.30"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.0.30.tgz#6dcca79fa94568ff19336c70091b859b44749aca"
@@ -7554,6 +7561,11 @@ in-publish@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.0.tgz#e20ff5e3a2afc2690320b6dc552682a9c7fadf51"
   integrity sha1-4g/146KvwmkDILbcVSaCqcf631E=
+
+incstr@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/incstr/-/incstr-1.2.3.tgz#8f105bbec9bebe5fa777e52b3f516cee071c67cf"
+  integrity sha512-ySi29Lzdc3QnB1LzZgRf5kl59m5tPucNagrAyJJ9rWz4+Pa6IxAHSNyUHYvEvaj6QPwWAY2/thi3Rxt45qi3HQ==
 
 indent-string@^2.1.0:
   version "2.1.0"

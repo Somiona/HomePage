@@ -28,6 +28,12 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-plugin-minify-classnames`,
+      options: {
+        develop: true, // Enable on `gatsby develop`
+      },
+    },
+    {
       resolve: "gatsby-plugin-purgecss",
       options: {
         printRejected: true, // Print removed selectors and processed file names

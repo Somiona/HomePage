@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react"
-import Container from "react-bootstrap/Container"
+import MainContent from "../../styles/layouts/_main.module.scss"
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel"
 import FullPageBio from "../Bio/FullPageBio"
 import Footer from "../Footer"
@@ -38,10 +38,10 @@ const MainLayout: FC<IMainLayout> = (
             </Header>
             {isRoot ? <FullPageBio/> : null}
             <main role={"main"} className={"main flex-shrink-0 flex-grow-1"}>
-                <Container>
+                <div className={`container ${MainContent.mainContent}`}>
                     {articleTitle}
                     {children}
-                </Container>
+                </div>
             </main>
 
             <Footer>
