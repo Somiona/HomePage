@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import React, { FC } from "react"
 import useSiteMeta from "../Utils/SiteMeta"
 
@@ -23,6 +24,11 @@ export const FooterContent: FC<{}> = () => {
             </div>
             <div>
                 Powered by <b><a href="https://www.gatsbyjs.org">Gatsby</a></b>
+            </div>
+            <div>
+                <OutboundLink href={"https://www.pixiv.net/artworks/75393550"}>Main Background Picture </OutboundLink>
+                BY
+                <OutboundLink href={"https://www.pixiv.net/member.php?id=16600489"}> Leiq @ Pixiv</OutboundLink>
             </div>
         </>
     )

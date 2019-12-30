@@ -18,7 +18,7 @@ module.exports = {
     siteUrl: "https://blog.somiona.live",
     keyWords: "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
   }, plugins: [
-    `gatsby-plugin-catch-links`,
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-typescript",
     "gatsby-plugin-tslint",
     "gatsby-plugin-sass",
