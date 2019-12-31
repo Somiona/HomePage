@@ -34,11 +34,14 @@ module.exports = {
 Bootstrap默认使用`jQuery`处理页面元素, 但既然使用了gatsby, 不如直接使用`ReactJS`来处理。所以安装
 Bootstrap, 以及react-bootstrap。同时, 因为Bootstrap的体积过大, 可以安装gatsby-plugin-purgecss来去除
 多余的selectors。
+
 ```bash
 yarn add bootstrap4 react-bootstrap gatsby-plugin-purgecss
 ```
+
 先配置一下purgecss, 这里可以参考一下[官方文档](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge#content---from-purgecss),
 修改`gatsby-config.js`:
+
 ```javascript
 //在`cssWhiteList`里添加想要忽略的selector
 const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"];
@@ -62,9 +65,11 @@ module.exports = {
     ]
 };
 ```
+
 然后在src里创建一个styles文件夹, 新建`_custom_vars.scss`以及`bootstrap4_custom.scss`
 其中, optional段可以根据需要来import, 而自定义的variables要放在custom_vars。能够修改的变量可以看
 `node_modules/bootstrap/scss/_variables.scss`这个文件, 注意, 我们不能在import对应的文件之前引用变量。
+
 ```scss
 //bootstrap4_custom.scss
 @import "custom_vars";
@@ -110,12 +115,16 @@ module.exports = {
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/print";
 ```
+
 然后在项目根目录创建`gatsby-browser.js`, 把刚刚创建的scss作为全局样式。
+
 ```javascript
 import "./src/styles/bootstrap4_custom.scss"
 ```
+
 到这里, 就可以愉快的使用Bootstrap啦, react-bootstrap提供了很多component可以用来解放双手, 例如: 
-```javascript
+
+```typescript jsx
 import React from "react"
 //官方推荐直接从对应的submodule import
 import Navbar from "react-bootstrap/Navbar"
@@ -127,6 +136,7 @@ const Comp = (props) => {
     )
 };
 ```
+
 注意, purgecss的工作原理是检查源代码里的className property, 这个和react-bootstrap的实现方式有些冲突。
 所以为了避免对应的样式被清理掉, 一定要在gatsby-config里设置好whitelist。
 
@@ -136,25 +146,25 @@ const Comp = (props) => {
 1. 从.cache文件夹下复制`default-html.js` 到src文件夹下
 2. 重命名为`html.js`
 3. 修改代码 ([感谢Glinkis的思路](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598))：
-```javascript
-//上面不动
-export default function HTML(props) {
-    const processHeadComp = (headComponents) => {
-        if (process.env.NODE_ENV === "production") {
-            for (const component of headComponents) {
-                if (component.type === "style") {
-                    const index = headComponents.indexOf(component)
-                    const link = <link rel={"stylesheet"} href={component.props["data-href"]}/>
-                    headComponents.splice(index, 1, link)
+    ```typescript jsx
+    //上面不动
+    export default function HTML(props) {
+        const processHeadComp = (headComponents) => {
+            if (process.env.NODE_ENV === "production") {
+                for (const component of headComponents) {
+                    if (component.type === "style") {
+                        const index = headComponents.indexOf(component)
+                        const link = <link rel={"stylesheet"} href={component.props["data-href"]}/>
+                        headComponents.splice(index, 1, link)
+                    }
                 }
             }
         }
+    
+        processHeadComp(props.headComponents)
+    
+        return //下面保留原有代码不变
     }
-
-    processHeadComp(props.headComponents)
-
-    return //下面保留原有代码不变
-}
-```
+    ```
 
 这样, 在production环境下生成的html就会自动引用sass生成的css文件啦。

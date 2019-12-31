@@ -483,16 +483,16 @@ export type DuotoneGradient = {
 
 export type File = Node & {
   sourceInstanceName: Scalars['String'],
-  absolutePath: Scalars['String'],
-  relativePath: Scalars['String'],
-  extension: Scalars['String'],
-  size: Scalars['Int'],
-  prettySize: Scalars['String'],
-  modifiedTime: Scalars['Date'],
-  accessTime: Scalars['Date'],
-  changeTime: Scalars['Date'],
-  birthTime: Scalars['Date'],
-  root: Scalars['String'],
+  absolutePath: Scalars["String"],
+  relativePath: Scalars["String"],
+  extension: Scalars["String"],
+  size: Scalars["Int"],
+  prettySize: Scalars["String"],
+  modifiedTime: Scalars["Date"],
+  accessTime: Scalars["Date"],
+  changeTime: Scalars["Date"],
+  birthTime: Scalars["Date"],
+  root: Scalars["String"],
   dir: Scalars["String"],
   base: Scalars["String"],
   ext: Scalars["String"],
@@ -655,16 +655,16 @@ export type FileFieldsEnum =
   'childImageSharp___fixed___srcSetWebp' |
   'childImageSharp___fixed___originalName' |
   'childImageSharp___resolutions___base64' |
-  'childImageSharp___resolutions___tracedSVG' |
-  'childImageSharp___resolutions___aspectRatio' |
-  'childImageSharp___resolutions___width' |
-  'childImageSharp___resolutions___height' |
-  'childImageSharp___resolutions___src' |
-  'childImageSharp___resolutions___srcSet' |
-  'childImageSharp___resolutions___srcWebp' |
-  'childImageSharp___resolutions___srcSetWebp' |
-  'childImageSharp___resolutions___originalName' |
-  'childImageSharp___fluid___base64' |
+  "childImageSharp___resolutions___tracedSVG" |
+  "childImageSharp___resolutions___aspectRatio" |
+  "childImageSharp___resolutions___width" |
+  "childImageSharp___resolutions___height" |
+  "childImageSharp___resolutions___src" |
+  "childImageSharp___resolutions___srcSet" |
+  "childImageSharp___resolutions___srcWebp" |
+  "childImageSharp___resolutions___srcSetWebp" |
+  "childImageSharp___resolutions___originalName" |
+  "childImageSharp___fluid___base64" |
   "childImageSharp___fluid___tracedSVG" |
   "childImageSharp___fluid___aspectRatio" |
   "childImageSharp___fluid___src" |
@@ -2045,6 +2045,8 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
+  port?: Maybe<IntQueryOperatorInput>,
+  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -2114,6 +2116,8 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
+  port?: Maybe<Scalars["Int"]>,
+  host?: Maybe<Scalars["String"]>,
   polyfill?: Maybe<Scalars["Boolean"]>,
   pathPrefix?: Maybe<Scalars["String"]>,
   buildTime?: Maybe<Scalars["Date"]>,
@@ -2246,6 +2250,8 @@ export type SiteFieldsEnum =
   "siteMetadata___description" |
   "siteMetadata___siteUrl" |
   "siteMetadata___keyWords" |
+  "port" |
+  "host" |
   "polyfill" |
   "pathPrefix" |
   "buildTime";
@@ -2256,6 +2262,8 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
+  port?: Maybe<IntQueryOperatorInput>,
+  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
