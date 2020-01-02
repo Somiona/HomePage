@@ -482,7 +482,7 @@ export type DuotoneGradient = {
 };
 
 export type File = Node & {
-  sourceInstanceName: Scalars['String'],
+  sourceInstanceName: Scalars["String"],
   absolutePath: Scalars["String"],
   relativePath: Scalars["String"],
   extension: Scalars["String"],
@@ -645,16 +645,16 @@ export type FileFieldsEnum =
   'blocks' |
   'publicURL' |
   'childImageSharp___fixed___base64' |
-  'childImageSharp___fixed___tracedSVG' |
-  'childImageSharp___fixed___aspectRatio' |
-  'childImageSharp___fixed___width' |
-  'childImageSharp___fixed___height' |
-  'childImageSharp___fixed___src' |
-  'childImageSharp___fixed___srcSet' |
-  'childImageSharp___fixed___srcWebp' |
-  'childImageSharp___fixed___srcSetWebp' |
-  'childImageSharp___fixed___originalName' |
-  'childImageSharp___resolutions___base64' |
+  "childImageSharp___fixed___tracedSVG" |
+  "childImageSharp___fixed___aspectRatio" |
+  "childImageSharp___fixed___width" |
+  "childImageSharp___fixed___height" |
+  "childImageSharp___fixed___src" |
+  "childImageSharp___fixed___srcSet" |
+  "childImageSharp___fixed___srcWebp" |
+  "childImageSharp___fixed___srcSetWebp" |
+  "childImageSharp___fixed___originalName" |
+  "childImageSharp___resolutions___base64" |
   "childImageSharp___resolutions___tracedSVG" |
   "childImageSharp___resolutions___aspectRatio" |
   "childImageSharp___resolutions___width" |

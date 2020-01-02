@@ -2,7 +2,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { FC, ReactNode } from "react"
 import { AvaliableLinksQuery } from "../@types/graphql-types"
 import MainLayout from "../components/Layouts/MainLayout"
-import SEO from "../components/SEO"
+import SEO from "../components/Utils/SEO"
 
 const Index: FC<{ location: Location }> = ({ location }) => {
     return (

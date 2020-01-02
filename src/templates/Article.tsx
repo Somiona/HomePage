@@ -2,7 +2,7 @@ import "prismjs/themes/prism-solarizedlight.css"
 import React, { FC } from "react"
 import MainLayout from "../components/Layouts/MainLayout"
 import PostLayout from "../components/Layouts/PostLayout"
-import SEO from "../components/SEO"
+import SEO from "../components/Utils/SEO"
 
 interface IArticleNode {
     fields: {

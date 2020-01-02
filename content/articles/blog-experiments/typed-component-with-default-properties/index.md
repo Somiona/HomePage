@@ -1,5 +1,5 @@
 ---
-title: 给React Component @ Typescript添加默认参数的正确姿势
+title: Gatsby踩坑记 2.给React Component @ Typescript添加默认参数的正确姿势
 date: 2019-12-31T16:41:15-05:00
 keyWords: Typescript,Reactjs,Component,默认参数,default Props
 series: Typescript,Reactjs,Gatsby踩坑记

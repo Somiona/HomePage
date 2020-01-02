@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import Helmet from "react-helmet"
-import withDefaultProps from "../Utils/DefaultPropsUtil"
-import useSiteMeta from "../Utils/SiteMeta"
+import withDefaultProps from "../../Utils/DefaultPropsUtil"
+import useSiteMeta from "../../Utils/SiteMeta"
 
 type LangSpec = "zh" | "en";
 type TypeSpec = "article" | "website";
