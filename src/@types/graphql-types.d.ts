@@ -635,16 +635,16 @@ export type FileFieldsEnum =
   'ino' |
   'atimeMs' |
   'mtimeMs' |
-  'ctimeMs' |
-  'atime' |
-  'mtime' |
-  'ctime' |
-  'birthtime' |
-  'birthtimeMs' |
-  'blksize' |
-  'blocks' |
-  'publicURL' |
-  'childImageSharp___fixed___base64' |
+  "ctimeMs" |
+  "atime" |
+  "mtime" |
+  "ctime" |
+  "birthtime" |
+  "birthtimeMs" |
+  "blksize" |
+  "blocks" |
+  "publicURL" |
+  "childImageSharp___fixed___base64" |
   "childImageSharp___fixed___tracedSVG" |
   "childImageSharp___fixed___aspectRatio" |
   "childImageSharp___fixed___width" |

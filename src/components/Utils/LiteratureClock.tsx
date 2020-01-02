@@ -81,10 +81,10 @@ class LiteratureClock extends Component<{}, IStatLiteratureClock> {
                     {quote.quote_time_case}
                 </span>
                 {quote.quote_last}
+                <footer className={"text-white literature-author blockquote-footer text-right"}>
+                    {quote.author} @ <cite title={quote.title}>{quote.title}</cite>
+                </footer>
             </div>
-            <footer className={"text-white literature-author blockquote-footer text-right"}>
-                {quote.author} @ <cite title={quote.title}>{quote.title}</cite>
-            </footer>
         </blockquote>
     }
 

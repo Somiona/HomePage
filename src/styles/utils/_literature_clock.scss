@@ -1,5 +1,7 @@
+@import "src/styles/custom_vars";
+
 .literature-main {
-  text-shadow: 3px 3px 10px rgba(black, 0.9);
+  text-shadow: 3px 3px 5px rgba(black, 0.6);
   padding: 1rem;
 }
 
@@ -18,4 +20,10 @@
 
 .literature-author {
   font-size: 1rem;
+}
+
+@media screen and (max-width: $Max-NavBreak-Width) {
+  .literature-quote {
+    display: none;
+  }
 }
