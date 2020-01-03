@@ -1,5 +1,9 @@
 @import "src/styles/custom_vars";
 
+.header {
+  z-index: 20;
+}
+
 //star between site name and author when screen enough big
 .header-title::after {
   content: " ";

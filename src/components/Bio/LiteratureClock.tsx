@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import "../../styles/utils/_literature_clock.scss"
-import Time from "./Time"
+import "../../styles/bio/_literature_clock.scss"
+import Time from "../Utils/Time"
 
 interface IQuote {
     time: string
@@ -16,15 +16,18 @@ interface IStatLiteratureClock {
     quote: IQuote
 }
 
-class LiteratureClock extends Component<{}, IStatLiteratureClock> {
+interface IPropLiteratureCLock {
+    className?: string
+}
+
+class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClock> {
     // @ts-ignore
     private timerID: NodeJS.Timeout
 
-    constructor(props: {}) {
+    constructor(props: IPropLiteratureCLock) {
         super(props)
-        const now = this.nowTime()
         this.state = {
-            currentTime: now,
+            currentTime: new Time(0, 0),
             quote: {
                 time: "",
                 // tslint:disable-next-line:object-literal-sort-keys
@@ -73,19 +76,21 @@ class LiteratureClock extends Component<{}, IStatLiteratureClock> {
         const time = this.state.currentTime.toString()
         const quote = this.state.quote
 
-        return <blockquote className={"literature-main rounded text-white m-auto text-center"}>
-            <div className={"literature-timer"}>{time}</div>
-            <div className={"literature-quote text-wrap"}>
-                {quote.quote_first}
-                <span className={"literature-time-case"}>
+        return (
+            <blockquote className={`literature-main ${this.props.className}`}>
+                <div className={"literature-timer"}>{time}</div>
+                <div className={"literature-quote text-wrap"}>
+                    {quote.quote_first}
+                    <span className={"literature-time-case"}>
                     {quote.quote_time_case}
                 </span>
-                {quote.quote_last}
-                <footer className={"text-white literature-author blockquote-footer text-right"}>
-                    {quote.author} @ <cite title={quote.title}>{quote.title}</cite>
-                </footer>
-            </div>
-        </blockquote>
+                    {quote.quote_last}
+                    <footer className={"text-white literature-author blockquote-footer text-right"}>
+                        {quote.author} @ <cite title={quote.title}>{quote.title}</cite>
+                    </footer>
+                </div>
+            </blockquote>
+        )
     }
 
     private tick() {

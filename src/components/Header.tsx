@@ -37,7 +37,7 @@ class HeaderD extends React.Component<IHeaderProps, { trans: boolean }> {
                 return window.innerHeight
             }
             if (window) {
-                if (window.scrollY <= getHeight() / 3) {
+                if (window.scrollY <= getHeight() / 5) {
                     this.setState(() => ({
                         trans: true,
                     }))
@@ -52,27 +52,29 @@ class HeaderD extends React.Component<IHeaderProps, { trans: boolean }> {
 
     public render() {
         return (
-            <Navbar variant={"dark"} bg={this.state.trans ? "transparent" : "primary"} expand={"md"} fixed={"top"}>
-                <Link to={"/"} className={"navbar-brand"}>
-                    {this.props.children}
-                </Link>
-                <Navbar.Toggle aria-controls={"navCollapse"}/>
-                <Navbar.Collapse id={"navCollapse"}>
-                    <Nav className={"mr-auto"}>
-                        <Nav.Item>
-                            <Link to={"/"} className={"nav-link"}>
-                                Home
-                            </Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href={"#"} className={"disabled"}>About</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href={"#"} className={"disabled"}>Tag</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+            <header className={"header"}>
+                <Navbar variant={"dark"} bg={this.state.trans ? "transparent" : "primary"} expand={"md"} fixed={"top"}>
+                    <Link to={"/"} className={"navbar-brand"}>
+                        {this.props.children}
+                    </Link>
+                    <Navbar.Toggle aria-controls={"navCollapse"}/>
+                    <Navbar.Collapse id={"navCollapse"}>
+                        <Nav className={"mr-auto"}>
+                            <Nav.Item>
+                                <Link to={"/"} className={"nav-link"}>
+                                    Home
+                                </Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link href={"#"} className={"disabled"}>About</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link href={"#"} className={"disabled"}>Tag</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </header>
         )
     }
 }

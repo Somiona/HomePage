@@ -1,6 +1,7 @@
-@import "src/styles/custom_vars";
+@import "../custom_vars";
 
 .literature-main {
+
   text-shadow: 3px 3px 5px rgba(black, 0.6);
   padding: 1rem;
 }
@@ -10,12 +11,12 @@
 }
 
 .literature-quote {
-  width: 60vw;
-  font-size: 1.5rem;
+  width: 80vw;
+  font-size: 1.3rem;
 }
 
 .literature-time-case {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 .literature-author {
