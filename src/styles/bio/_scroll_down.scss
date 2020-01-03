@@ -1,3 +1,38 @@
 .scroll-down-icon {
   font-size: 2rem;
+  animation: moveDown 2.2s infinite, opaci 2.2s ease-in infinite;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+
+  60% {
+    transform: translateY(3vh);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes opaci {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 100;
+  }
+
+  80% {
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
