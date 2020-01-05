@@ -41,16 +41,20 @@ class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClo
     }
 
     public fetchQuote() {
-        const time = this.state.currentTime.toString()
+        const time = this.nowTime().toString()
         const url =
             "https://raw.githubusercontent.com/lbngoc/literature-clock" +
             `/master/docs/times/${time}.json`
+
         fetch(url)
-            .then((response): Promise<IQuote[]> => {
+            .then((response) => {
                 return response.json()
             })
             .then((resultJson) => {
-                const finalQuote = resultJson[0]
+                const i = Math.floor((Math.random() * resultJson.length))
+                return resultJson[i]
+            })
+            .then((finalQuote) => {
                 this.setState({
                     quote: finalQuote,
                 })

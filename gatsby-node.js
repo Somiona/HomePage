@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
         dest_url: url,
         current: edge.node,
         prev,
-        next
+        next,
       },
     })
   })
@@ -54,6 +54,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       name: `dest_url`,
       value: url,
+    })
+  }
+}
+
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+  if (getConfig().mode === "production") {
+    actions.setWebpackConfig({
+      devtool: false,
     })
   }
 }
