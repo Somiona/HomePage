@@ -2,8 +2,8 @@
     "name": "somiona_blog",
     "private": true,
     "description": "Daily records, constructed inside a unfinished website",
-    "version": "1.0.0",
-    "license": "GPLv3",
+    "version": "1.1.0",
+    "license": "MIT",
     "scripts": {
         "build": "gatsby build",
         "develop": "gatsby develop",
