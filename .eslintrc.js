@@ -13,7 +13,7 @@ module.exports = {
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "tsconfig.json",
+        "project": "./tsconfig.json",
         "sourceType": "module"
     },
     "plugins": [
@@ -21,6 +21,7 @@ module.exports = {
         "@typescript-eslint/tslint"
     ],
     "rules": {
+        "@typescript-eslint/interface-name-prefix": "warning",
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -86,9 +87,6 @@ module.exports = {
             "undefined"
         ],
         "id-match": "error",
-        "import/no-extraneous-dependencies": "error",
-        "import/no-internal-modules": "off",
-        "import/order": "error",
         "linebreak-style": "off",
         "max-classes-per-file": [
             "error",
@@ -137,7 +135,6 @@ module.exports = {
             "error",
             "never"
         ],
-        "prefer-arrow/prefer-arrow-functions": "error",
         "prefer-object-spread": "error",
         "quote-props": "off",
         "radix": "error",
@@ -146,6 +143,7 @@ module.exports = {
             "off",
             "never"
         ],
+        "react/prop-types": "off",
         "spaced-comment": "error",
         "use-isnan": "error",
         "valid-typeof": "off",

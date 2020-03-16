@@ -20,7 +20,6 @@ module.exports = {
   }, plugins: [
     "gatsby-plugin-catch-links",
     "gatsby-plugin-typescript",
-    "gatsby-plugin-tslint",
     "gatsby-plugin-sass",
     "gatsby-transformer-sharp",
     "gatsby-transformer-json",
