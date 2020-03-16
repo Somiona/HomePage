@@ -5,49 +5,52 @@ keyWords: Gatsby,remove inline css,purge css,customize
 series: Gatsby踩坑记
 ---
 
->最近懒得手写大量的css, 准备用上Bootstrap偷懒一下。然而bootstrap的体积很大, 
->会显著的增加网站的数据量。同时, 因为gatsby会将所有的css处理成inline形式放置在`<head>`标签里
->以尝试优化性能([see here](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-333407589)),
->这会让页面加载速度在网络不好的情况下略卡。
+> 最近懒得手写大量的 css, 准备用上 Bootstrap 偷懒一下。然而 bootstrap 的体积很大,
+> 会显著的增加网站的数据量。同时, 因为 gatsby 会将所有的 css 处理成 inline 形式放置在`<head>`标签里
+> 以尝试优化性能([see here](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-333407589)),
+> 这会让页面加载速度在网络不好的情况下略卡。
 
-Bootstrap4官方支持用scss来自定义样式, 所以为了能使用这个功能, 先配置一下scss。
+Bootstrap4 官方支持用 scss 来自定义样式, 所以为了能使用这个功能, 先配置一下 scss。
 
-## 配置SCSS
+## 配置 SCSS
 
-gatsby社区有一个“drop to work”的插件可以用, 直接安装后便可以将scss文件直接当成css文件来使用。
+gatsby 社区有一个“drop to work”的插件可以用, 直接安装后便可以将 scss 文件直接当成 css 文件来使用。
+
 ```bash
 yarn add gatsby-plugin-sass
 yarn add -D node-sass
 ```
-然后修改`gatsby-config.js`, 添加下面一段。注意, 为了避免bug, 这个插件请尽可能放在前面。
+
+然后修改`gatsby-config.js`, 添加下面一段。注意, 为了避免 bug, 这个插件请尽可能放在前面。
+
 ```javascript
-module.exports = { 
+module.exports = {
     plugins: [
         //sass支持, 其他例如purgecss、remark之类的插件一定要在这个之后加载
         "gatsby-plugin-sass",
-    ]
-};
+    ],
+}
 ```
 
 ## 配置 Bootstrap4
 
-Bootstrap默认使用`jQuery`处理页面元素, 但既然使用了gatsby, 不如直接使用`ReactJS`来处理。所以安装
-Bootstrap, 以及react-bootstrap。同时, 因为Bootstrap的体积过大, 可以安装gatsby-plugin-purgecss来去除
-多余的selectors。
+Bootstrap 默认使用`jQuery`处理页面元素, 但既然使用了 gatsby, 不如直接使用`ReactJS`来处理。所以安装
+Bootstrap, 以及 react-bootstrap。同时, 因为 Bootstrap 的体积过大, 可以安装 gatsby-plugin-purgecss 来去除
+多余的 selectors。
 
 ```bash
 yarn add bootstrap4 react-bootstrap gatsby-plugin-purgecss
 ```
 
-先配置一下purgecss, 这里可以参考一下[官方文档](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge#content---from-purgecss),
+先配置一下 purgecss, 这里可以参考一下[官方文档](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge#content---from-purgecss),
 修改`gatsby-config.js`:
 
 ```javascript
 //在`cssWhiteList`里添加想要忽略的selector
-const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"];
-const cssWhitePattern = [/^nav/, /^bg-/];
+const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"]
+const cssWhitePattern = [/^nav/, /^bg-/]
 
-module.exports = { 
+module.exports = {
     plugins: [
         {
             resolve: "gatsby-plugin-purgecss",
@@ -61,14 +64,14 @@ module.exports = {
                 ignore: ["prismjs/", "docsearch.js/"], // Ignore files/folders
                 // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
             },
-        }
-    ]
-};
+        },
+    ],
+}
 ```
 
-然后在src里创建一个styles文件夹, 新建`_custom_vars.scss`以及`bootstrap4_custom.scss`
-其中, optional段可以根据需要来import, 而自定义的variables要放在custom_vars。能够修改的变量可以看
-`node_modules/bootstrap/scss/_variables.scss`这个文件, 注意, 我们不能在import对应的文件之前引用变量。
+然后在 src 里创建一个 styles 文件夹, 新建`_custom_vars.scss`以及`bootstrap4_custom.scss`
+其中, optional 段可以根据需要来 import, 而自定义的 variables 要放在 custom_vars。能够修改的变量可以看
+`node_modules/bootstrap/scss/_variables.scss`这个文件, 注意, 我们不能在 import 对应的文件之前引用变量。
 
 ```scss
 //bootstrap4_custom.scss
@@ -116,55 +119,53 @@ module.exports = {
 @import "node_modules/bootstrap/scss/print";
 ```
 
-然后在项目根目录创建`gatsby-browser.js`, 把刚刚创建的scss作为全局样式。
+然后在项目根目录创建`gatsby-browser.js`, 把刚刚创建的 scss 作为全局样式。
 
 ```javascript
 import "./src/styles/bootstrap4_custom.scss"
 ```
 
-到这里, 就可以愉快的使用Bootstrap啦, react-bootstrap提供了很多component可以用来解放双手, 例如: 
+到这里, 就可以愉快的使用 Bootstrap 啦, react-bootstrap 提供了很多 component 可以用来解放双手, 例如:
 
 ```typescript jsx
 import React from "react"
 //官方推荐直接从对应的submodule import
 import Navbar from "react-bootstrap/Navbar"
-const Comp = (props) => {
-    return (
-        <Navbar>
-            {/*other code*/}
-        </Navbar>
-    )
-};
+const Comp = props => {
+    return <Navbar>{/*other code*/}</Navbar>
+}
 ```
 
-注意, purgecss的工作原理是检查源代码里的className property, 这个和react-bootstrap的实现方式有些冲突。
-所以为了避免对应的样式被清理掉, 一定要在gatsby-config里设置好whitelist。
+注意, purgecss 的工作原理是检查源代码里的 className property, 这个和 react-bootstrap 的实现方式有些冲突。
+所以为了避免对应的样式被清理掉, 一定要在 gatsby-config 里设置好 whitelist。
 
-## 更改Gatsby默认css行为
+## 更改 Gatsby 默认 css 行为
 
-如果看过gatsby生成的网页, 会发现每个页面都有重复的inline css。可以通过[自定义html.js](https://www.gatsbyjs.org/docs/custom-html/)来更改这个行为:
-1. 从.cache文件夹下复制`default-html.js` 到src文件夹下
+如果看过 gatsby 生成的网页, 会发现每个页面都有重复的 inline css。可以通过[自定义 html.js](https://www.gatsbyjs.org/docs/custom-html/)来更改这个行为:
+
+1. 从.cache 文件夹下复制`default-html.js` 到 src 文件夹下
 2. 重命名为`html.js`
-3. 修改代码 ([感谢Glinkis的思路](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598))：
+3. 修改代码 ([感谢 Glinkis 的思路](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598))：
+
     ```typescript jsx
     //上面不动
     export default function HTML(props) {
-        const processHeadComp = (headComponents) => {
+        const processHeadComp = headComponents => {
             if (process.env.NODE_ENV === "production") {
                 for (const component of headComponents) {
                     if (component.type === "style") {
                         const index = headComponents.indexOf(component)
-                        const link = <link rel={"stylesheet"} href={component.props["data-href"]}/>
+                        const link = <link rel={"stylesheet"} href={component.props["data-href"]} />
                         headComponents.splice(index, 1, link)
                     }
                 }
             }
         }
-    
+
         processHeadComp(props.headComponents)
-    
+
         return //下面保留原有代码不变
     }
     ```
 
-这样, 在production环境下生成的html就会自动引用sass生成的css文件啦。
+这样, 在 production 环境下生成的 html 就会自动引用 sass 生成的 css 文件啦。

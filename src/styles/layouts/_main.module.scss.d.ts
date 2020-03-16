@@ -1,1 +1,1 @@
-export const mainContent: string
+export const mainContent: string;

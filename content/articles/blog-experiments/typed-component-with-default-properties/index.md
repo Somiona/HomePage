@@ -5,7 +5,7 @@ keyWords: Typescript,Reactjs,Component,默认参数,default Props
 series: Typescript,Reactjs,Gatsby踩坑记
 ---
 
-利用Typescript的类型系统，可以写出更好的、tslint友好的默认参数。
+利用 Typescript 的类型系统，可以写出更好的、tslint 友好的默认参数。
 
 ## 核心代码:
 
@@ -24,82 +24,77 @@ const withDefaultProps = <P extends object, DP extends Partial<P> = Partial<P>>(
 }
 
 export default withDefaultProps
-
 ```
 
-这段代码可以通过传入的默认参数，给component对应的参数位设置为字面值类型。
+这段代码可以通过传入的默认参数，给 component 对应的参数位设置为字面值类型。
 
 ##使用方法
 
 1. 定义`defaultProps`的值:
     ```typescript
     const defaultProps = {
-        hide: true    
-    };
+        hide: true,
+    }
     ```
-2. 定义component的props类型:
+2. 定义 component 的 props 类型:
     ```typescript
     type IExample = {
         motd: string
-    } & Readonly<typeof defaultProps>;
+    } & Readonly<typeof defaultProps>
     ```
-    注意这里要用type而不是interface。
-3. 定义component，这个不是直接用来导出的。这里用functional component作为例子:
+    注意这里要用 type 而不是 interface。
+3. 定义 component，这个不是直接用来导出的。这里用 functional component 作为例子:
+
     ```typescript
-    import React, {FC} from "react";
-    
-    const TExample: FC<IExample> = (props) => {
+    import React, { FC } from "react"
+
+    const TExample: FC<IExample> = props => {
         return (
-            <div style={props.hide ? {display: "none"} : {}}>
+            <div style={props.hide ? { display: "none" } : {}}>
                 <p>{props.motd}</p>
             </div>
-        );
-    };
+        )
+    }
     ```
-4. 最后调用withDefaultProps, 并且export
+
+4. 最后调用 withDefaultProps, 并且 export
     ```typescript
     import withDefaultProps from "./DefaultPropsUtil"
-    const Example = withDefaultProps(
-        defaultProps,
-        TExample
-    );
-    export default Example;
+    const Example = withDefaultProps(defaultProps, TExample)
+    export default Example
     ```
 
 ## 更复杂的例子:
 
-这个博客的SEO部分使用了这个方法:
+这个博客的 SEO 部分使用了这个方法:
 
 ```typescript
 // SEO.tsx
-import React, { FC } from "react";
-import withDefaultProps from "./DefaultPropsUtil";
+import React, { FC } from "react"
+import withDefaultProps from "./DefaultPropsUtil"
 
-type LangSpec = "zh" | "en";
-type TypeSpec = "article" | "website";
-type KwdType = string | string[];
+type LangSpec = "zh" | "en"
+type TypeSpec = "article" | "website"
+type KwdType = string | string[]
 
 // default props
 const defaultProps = {
     keywords: "" as KwdType,
     lang: "zh" as LangSpec,
     type: "article" as TypeSpec,
-};
-type DefaultProps = Readonly<typeof defaultProps>;
+}
+type DefaultProps = Readonly<typeof defaultProps>
 type ISEOData = {
-    description?: string,
-    title?: string,
+    description?: string
+    title?: string
     location: Location
-} & DefaultProps;
+} & DefaultProps
 
-const SEO_: FC<ISEOData> = (props) => {
+const SEO_: FC<ISEOData> = props => {
     // do whatever you want
 }
 
-const SEO = withDefaultProps(
-    defaultProps,
-    SEO_,
-)
+const SEO = withDefaultProps(defaultProps, SEO_)
 
-export default SEO;
+export default SEO
 ```

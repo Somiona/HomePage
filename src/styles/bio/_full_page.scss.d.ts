@@ -1,2 +1,2 @@
-export const indexBg: string
-export const scrollDown: string
+export const indexBg: string;
+export const scrollDown: string;

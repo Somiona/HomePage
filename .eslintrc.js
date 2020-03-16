@@ -1,48 +1,45 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
+    env: {
+        browser: true,
+        es6: true,
+        node: true,
     },
-    "extends": [
+    extends: [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:react/recommended",
         "prettier/@typescript-eslint",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json",
-        "sourceType": "module"
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        project: "./tsconfig.json",
+        sourceType: "module",
     },
-    "plugins": [
-        "@typescript-eslint",
-        "@typescript-eslint/tslint"
-    ],
-    "rules": {
+    plugins: ["@typescript-eslint", "@typescript-eslint/tslint"],
+    rules: {
         "@typescript-eslint/interface-name-prefix": "warning",
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
             "error",
             {
-                "accessibility": "explicit"
-            }
+                accessibility: "explicit",
+            },
         ],
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/member-delimiter-style": [
             "off",
             {
-                "multiline": {
-                    "delimiter": "none",
-                    "requireLast": true
+                multiline: {
+                    delimiter: "none",
+                    requireLast: true,
                 },
-                "singleline": {
-                    "delimiter": "semi",
-                    "requireLast": false
-                }
-            }
+                singleline: {
+                    delimiter: "semi",
+                    requireLast: false,
+                },
+            },
         ],
         "@typescript-eslint/member-ordering": "error",
         "@typescript-eslint/no-explicit-any": "off",
@@ -51,28 +48,19 @@ module.exports = {
         "@typescript-eslint/prefer-for-of": "error",
         "@typescript-eslint/prefer-function-type": "error",
         "@typescript-eslint/quotes": "off",
-        "@typescript-eslint/semi": [
-            "off",
-            null
-        ],
+        "@typescript-eslint/semi": ["off", null],
         "@typescript-eslint/type-annotation-spacing": "off",
         "@typescript-eslint/unified-signatures": "error",
         "arrow-body-style": "error",
-        "arrow-parens": [
-            "off",
-            "as-needed"
-        ],
-        "camelcase": "error",
+        "arrow-parens": ["off", "as-needed"],
+        camelcase: "error",
         "comma-dangle": "off",
-        "complexity": "off",
+        complexity: "off",
         "constructor-super": "error",
-        "curly": "error",
+        curly: "error",
         "dot-notation": "error",
         "eol-last": "off",
-        "eqeqeq": [
-            "error",
-            "smart"
-        ],
+        eqeqeq: ["error", "smart"],
         "guard-for-in": "error",
         "id-blacklist": [
             "error",
@@ -84,14 +72,11 @@ module.exports = {
             "Boolean",
             "boolean",
             "Undefined",
-            "undefined"
+            "undefined",
         ],
         "id-match": "error",
         "linebreak-style": "off",
-        "max-classes-per-file": [
-            "error",
-            1
-        ],
+        "max-classes-per-file": ["error", 1],
         "max-len": "off",
         "new-parens": "off",
         "newline-per-chained-call": "off",
@@ -118,8 +103,8 @@ module.exports = {
         "no-shadow": [
             "error",
             {
-                "hoist": "all"
-            }
+                hoist: "all",
+            },
         ],
         "no-sparse-arrays": "error",
         "no-template-curly-in-string": "error",
@@ -131,18 +116,12 @@ module.exports = {
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "object-shorthand": "error",
-        "one-var": [
-            "error",
-            "never"
-        ],
+        "one-var": ["error", "never"],
         "prefer-object-spread": "error",
         "quote-props": "off",
-        "radix": "error",
+        radix: "error",
         "space-before-function-paren": "off",
-        "space-in-parens": [
-            "off",
-            "never"
-        ],
+        "space-in-parens": ["off", "never"],
         "react/prop-types": "off",
         "spaced-comment": "error",
         "use-isnan": "error",
@@ -150,11 +129,8 @@ module.exports = {
         "@typescript-eslint/tslint/config": [
             "error",
             {
-                "rules": {
-                    "jsdoc-format": [
-                        true,
-                        "check-multiline-start"
-                    ],
+                rules: {
+                    "jsdoc-format": [true, "check-multiline-start"],
                     "jsx-boolean-value": true,
                     "jsx-key": true,
                     "jsx-no-bind": true,
@@ -162,9 +138,9 @@ module.exports = {
                     "jsx-self-close": true,
                     "no-reference-import": true,
                     "object-literal-sort-keys": true,
-                    "prefer-conditional-expression": true
-                }
-            }
-        ]
-    }
-};
+                    "prefer-conditional-expression": true,
+                },
+            },
+        ],
+    },
+}
