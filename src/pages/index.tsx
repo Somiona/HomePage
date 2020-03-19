@@ -28,7 +28,7 @@ const Index: FC<{ location: Location }> = ({ location }) => {
 export default Index
 
 function renderLinks(): ReactNode {
-    const data: AvaliableLinksQuery = useStaticQuery(
+    const data: AvaliableLinksQuery = useStaticQuery<GatsbyTypes.AvaliableLinksQuery>(
         graphql`
             query AvaliableLinks {
                 allSitePage {

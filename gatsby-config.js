@@ -138,9 +138,12 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-generate-typings",
+            resolve: "gatsby-plugin-typegen",
             options: {
-                dest: "./src/@types/graphql-types.d.ts",
+                outputPath: "src/@types/graphql-types.d.ts",
+                emitSchema: {
+                    "src/@types/gatsby-introspection.json": true
+                }
             },
         },
     ],

@@ -1,5 +1,6 @@
 ## Customs
 src/@types/graphql-types.d.ts
+src/@types/gatsby-introspection.json
 
 
 ## Gatsby Auto Generated

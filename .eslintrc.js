@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     env: {
         browser: true,
@@ -16,8 +18,16 @@ module.exports = {
         project: "./tsconfig.json",
         sourceType: "module",
     },
-    plugins: ["@typescript-eslint", "@typescript-eslint/tslint"],
+    plugins: ["@typescript-eslint", "@typescript-eslint/tslint", "react-hooks", "graphql"],
     rules: {
+        "graphql/template-strings": [
+            "error",
+            {
+                env: "relay",
+                tagName: "graphql",
+                schemaJsonFilepath: path.resolve(__dirname, "src/@types/gatsby-introspection.json"),
+            },
+        ],
         "@typescript-eslint/interface-name-prefix": "warning",
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
