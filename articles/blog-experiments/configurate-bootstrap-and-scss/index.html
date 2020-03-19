@@ -1,54 +1,54 @@
-<!DOCTYPE html><html lang="zh"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" href="/styles.300770142a6a6df16e87.css"/><meta name="generator" content="Gatsby 2.18.17"/><title data-react-helmet="true">Gatsby踩坑 1.配置Bootstrap4以及SCSS | 白咕咕のエラーはっせい記録</title><link data-react-helmet="true" rel="canonical"/><meta data-react-helmet="true" name="description" content="最近懒得手写大量的css, 准备用上Bootstrap偷懒一下。然而bootstrap的体积很大, 
-会显著的增加网站的数据量。同时, 因为gatsby会将所有的css处理成inline…"/><meta data-react-helmet="true" name="author" content="Somiona"/><meta data-react-helmet="true" name="keywords" content="Gatsby,remove inline css,purge css,customizeblog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass"/><meta data-react-helmet="true" charSet="UTF-8"/><meta data-react-helmet="true" property="og:description" content="最近懒得手写大量的css, 准备用上Bootstrap偷懒一下。然而bootstrap的体积很大, 
-会显著的增加网站的数据量。同时, 因为gatsby会将所有的css处理成inline…"/><meta data-react-helmet="true" property="og:title" content="Gatsby踩坑 1.配置Bootstrap4以及SCSS"/><meta data-react-helmet="true" property="og:locale" content="zh"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:site_name" content="白咕咕のエラーはっせい記録"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-2843406e6e364cc73fcc.js"/><link as="script" rel="preload" href="/app-010f61e94110441385c3.js"/><link as="script" rel="preload" href="/styles-713b1bcd01e9ee4d745a.js"/><link as="script" rel="preload" href="/commons-658c227ff8eeac79e9bc.js"/><link as="script" rel="preload" href="/component---src-templates-article-tsx-05e084f5f635337d7e68.js"/><link as="fetch" rel="preload" href="/page-data\articles\blog-experiments\configurate-bootstrap-and-scss\page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="flex-column d-flex min-vh-100"><header class="header"><nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top"><a class="navbar-brand" href="/"><span class="header-title">白咕咕のエラーはっせい記録</span><span class="header-author">Somiona</span></a><button aria-controls="navCollapse" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button><div class="navbar-collapse collapse" id="navCollapse"><div class="mr-auto navbar-nav"><div class="nav-item"><a class="nav-link" href="/">Home</a></div><div class="nav-item"><a href="#" data-rb-event-key="#" class="disabled nav-link" role="button">About</a></div><div class="nav-item"><a href="#" data-rb-event-key="#" class="disabled nav-link" role="button">Tag</a></div></div></div></nav></header><main role="main" class="main flex-shrink-0 flex-grow-1"><div class="container b_b"><h2>Gatsby踩坑 1.配置Bootstrap4以及SCSS</h2><div><article><section><blockquote>
-<p>最近懒得手写大量的css, 准备用上Bootstrap偷懒一下。然而bootstrap的体积很大,
-会显著的增加网站的数据量。同时, 因为gatsby会将所有的css处理成inline形式放置在<code class="language-text">&lt;head&gt;</code>标签里
+<!DOCTYPE html><html lang="zh"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" href="/styles.02c1275b6acec171235e.css"/><meta name="generator" content="Gatsby 2.19.48"/><title data-react-helmet="true">Gatsby踩坑 1.配置Bootstrap4以及SCSS | 白咕咕のエラーはっせい記録</title><link data-react-helmet="true" rel="canonical"/><meta data-react-helmet="true" name="description" content="最近懒得手写大量的 css, 准备用上 Bootstrap 偷懒一下。然而 bootstrap 的体积很大,
+会显著的增加网站的数据量。同时, 因为 gatsby 会将所有的 css…"/><meta data-react-helmet="true" name="author" content="Somiona"/><meta data-react-helmet="true" name="keywords" content="Gatsby,remove inline css,purge css,customizeblog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass"/><meta data-react-helmet="true" charSet="UTF-8"/><meta data-react-helmet="true" property="og:description" content="最近懒得手写大量的 css, 准备用上 Bootstrap 偷懒一下。然而 bootstrap 的体积很大,
+会显著的增加网站的数据量。同时, 因为 gatsby 会将所有的 css…"/><meta data-react-helmet="true" property="og:title" content="Gatsby踩坑 1.配置Bootstrap4以及SCSS"/><meta data-react-helmet="true" property="og:locale" content="zh"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:site_name" content="白咕咕のエラーはっせい記録"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-f1c72be9494ef8a9203d.js"/><link as="script" rel="preload" href="/app-bb0d272c5f7c9bb871ca.js"/><link as="script" rel="preload" href="/styles-da0aa2fc101467fc5e2c.js"/><link as="script" rel="preload" href="/commons-8568557127b4a2565fc6.js"/><link as="script" rel="preload" href="/component---src-templates-article-tsx-bc97995116f427a96eac.js"/><link as="fetch" rel="preload" href="/page-data\articles\blog-experiments\configurate-bootstrap-and-scss\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="flex-column d-flex min-vh-100"><header class="header"><nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top"><a class="navbar-brand" href="/"><span class="header-title">白咕咕のエラーはっせい記録</span><span class="header-author">Somiona</span></a><button aria-controls="navCollapse" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></button><div class="navbar-collapse collapse" id="navCollapse"><div class="mr-auto navbar-nav"><div class="nav-item"><a class="nav-link" href="/">Home</a></div><div class="nav-item"><a href="#" data-rb-event-key="#" class="disabled nav-link" role="button">About</a></div><div class="nav-item"><a href="#" data-rb-event-key="#" class="disabled nav-link" role="button">Tag</a></div></div></div></nav></header><main role="main" class="main flex-shrink-0 flex-grow-1"><div class="container b_b"><h2>Gatsby踩坑 1.配置Bootstrap4以及SCSS</h2><div><article><section><blockquote>
+<p>最近懒得手写大量的 css, 准备用上 Bootstrap 偷懒一下。然而 bootstrap 的体积很大,
+会显著的增加网站的数据量。同时, 因为 gatsby 会将所有的 css 处理成 inline 形式放置在<code class="language-text">&lt;head&gt;</code>标签里
 以尝试优化性能(<a href="https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-333407589">see here</a>),
 这会让页面加载速度在网络不好的情况下略卡。</p>
 </blockquote>
-<p>Bootstrap4官方支持用scss来自定义样式, 所以为了能使用这个功能, 先配置一下scss。</p>
-<h2>配置SCSS</h2>
-<p>gatsby社区有一个“drop to work”的插件可以用, 直接安装后便可以将scss文件直接当成css文件来使用。</p>
+<p>Bootstrap4 官方支持用 scss 来自定义样式, 所以为了能使用这个功能, 先配置一下 scss。</p>
+<h2>配置 SCSS</h2>
+<p>gatsby 社区有一个“drop to work”的插件可以用, 直接安装后便可以将 scss 文件直接当成 css 文件来使用。</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> gatsby-plugin-sass
 <span class="token function">yarn</span> <span class="token function">add</span> -D node-sass</code></pre></div>
-<p>然后修改<code class="language-text">gatsby-config.js</code>, 添加下面一段。注意, 为了避免bug, 这个插件请尽可能放在前面。</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> 
-    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+<p>然后修改<code class="language-text">gatsby-config.js</code>, 添加下面一段。注意, 为了避免 bug, 这个插件请尽可能放在前面。</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token comment">//sass支持, 其他例如purgecss、remark之类的插件一定要在这个之后加载</span>
         <span class="token string">"gatsby-plugin-sass"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <h2>配置 Bootstrap4</h2>
-<p>Bootstrap默认使用<code class="language-text">jQuery</code>处理页面元素, 但既然使用了gatsby, 不如直接使用<code class="language-text">ReactJS</code>来处理。所以安装
-Bootstrap, 以及react-bootstrap。同时, 因为Bootstrap的体积过大, 可以安装gatsby-plugin-purgecss来去除
-多余的selectors。</p>
+<p>Bootstrap 默认使用<code class="language-text">jQuery</code>处理页面元素, 但既然使用了 gatsby, 不如直接使用<code class="language-text">ReactJS</code>来处理。所以安装
+Bootstrap, 以及 react-bootstrap。同时, 因为 Bootstrap 的体积过大, 可以安装 gatsby-plugin-purgecss 来去除
+多余的 selectors。</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> bootstrap4 react-bootstrap gatsby-plugin-purgecss</code></pre></div>
-<p>先配置一下purgecss, 这里可以参考一下<a href="https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge#content---from-purgecss">官方文档</a>,
+<p>先配置一下 purgecss, 这里可以参考一下<a href="https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge#content---from-purgecss">官方文档</a>,
 修改<code class="language-text">gatsby-config.js</code>:</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//在`cssWhiteList`里添加想要忽略的selector</span>
 <span class="token keyword">const</span> cssWhiteList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"fixed-top"</span><span class="token punctuation">,</span> <span class="token string">"collapsed"</span><span class="token punctuation">,</span> <span class="token string">"container"</span><span class="token punctuation">,</span> <span class="token string">"collapse"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> cssWhitePattern <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token regex">/^nav/</span><span class="token punctuation">,</span> <span class="token regex">/^bg-/</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> 
-    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">{</span>
-            resolve<span class="token punctuation">:</span> <span class="token string">"gatsby-plugin-purgecss"</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                printRejected<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Print removed selectors and processed file names</span>
+            resolve<span class="token operator">:</span> <span class="token string">"gatsby-plugin-purgecss"</span><span class="token punctuation">,</span>
+            options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                printRejected<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Print removed selectors and processed file names</span>
                 <span class="token comment">//gatsby develop的时候仍然启用, 这个可以帮助测试whitelist</span>
-                develop<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Enable while using "gatsby develop"</span>
+                develop<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Enable while using "gatsby develop"</span>
                 <span class="token comment">// tailwind: true, // Enable tailwindcss support</span>
-                whitelist<span class="token punctuation">:</span> cssWhiteList<span class="token punctuation">,</span> <span class="token comment">// Don't remove this selector</span>
-                whitelistPatterns<span class="token punctuation">:</span> cssWhitePattern<span class="token punctuation">,</span>
-                ignore<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"prismjs/"</span><span class="token punctuation">,</span> <span class="token string">"docsearch.js/"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Ignore files/folders</span>
+                whitelist<span class="token operator">:</span> cssWhiteList<span class="token punctuation">,</span> <span class="token comment">// Don't remove this selector</span>
+                whitelistPatterns<span class="token operator">:</span> cssWhitePattern<span class="token punctuation">,</span>
+                ignore<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"prismjs/"</span><span class="token punctuation">,</span> <span class="token string">"docsearch.js/"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Ignore files/folders</span>
                 <span class="token comment">// purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>然后在src里创建一个styles文件夹, 新建<code class="language-text">_custom_vars.scss</code>以及<code class="language-text">bootstrap4_custom.scss</code>
-其中, optional段可以根据需要来import, 而自定义的variables要放在custom<em>vars。能够修改的变量可以看
-`node</em>modules/bootstrap/scss/_variables.scss`这个文件, 注意, 我们不能在import对应的文件之前引用变量。</p>
+<p>然后在 src 里创建一个 styles 文件夹, 新建<code class="language-text">_custom_vars.scss</code>以及<code class="language-text">bootstrap4_custom.scss</code>
+其中, optional 段可以根据需要来 import, 而自定义的 variables 要放在 custom<em>vars。能够修改的变量可以看
+`node</em>modules/bootstrap/scss/_variables.scss`这个文件, 注意, 我们不能在 import 对应的文件之前引用变量。</p>
 <div class="gatsby-highlight" data-language="scss"><pre class="language-scss"><code class="language-scss"><span class="token comment">//bootstrap4_custom.scss</span>
 <span class="token keyword">@import</span> <span class="token string">"custom_vars"</span><span class="token punctuation">;</span>
 
@@ -92,49 +92,45 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token keyword">@import</span> <span class="token string">"node_modules/bootstrap/scss/spinners"</span><span class="token punctuation">;</span>
 <span class="token keyword">@import</span> <span class="token string">"node_modules/bootstrap/scss/utilities"</span><span class="token punctuation">;</span>
 <span class="token keyword">@import</span> <span class="token string">"node_modules/bootstrap/scss/print"</span><span class="token punctuation">;</span></code></pre></div>
-<p>然后在项目根目录创建<code class="language-text">gatsby-browser.js</code>, 把刚刚创建的scss作为全局样式。</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"./src/styles/bootstrap4_custom.scss"</span></code></pre></div>
-<p>到这里, 就可以愉快的使用Bootstrap啦, react-bootstrap提供了很多component可以用来解放双手, 例如: </p>
-<div class="gatsby-highlight" data-language="typescriptjsx"><pre class="language-typescriptjsx"><code class="language-typescriptjsx">import React from &quot;react&quot;
+<p>然后在项目根目录创建<code class="language-text">gatsby-browser.js</code>, 把刚刚创建的 scss 作为全局样式。</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"./src/styles/bootstrap4_custom.scss"</span><span class="token punctuation">;</span></code></pre></div>
+<p>到这里, 就可以愉快的使用 Bootstrap 啦, react-bootstrap 提供了很多 component 可以用来解放双手, 例如:</p>
+<div class="gatsby-highlight" data-language="typescriptjsx"><pre class="language-typescriptjsx"><code class="language-typescriptjsx">import React from &quot;react&quot;;
 //官方推荐直接从对应的submodule import
-import Navbar from &quot;react-bootstrap/Navbar&quot;
-const Comp = (props) =&gt; {
-    return (
-        &lt;Navbar&gt;
-            {/*other code*/}
-        &lt;/Navbar&gt;
-    )
+import Navbar from &quot;react-bootstrap/Navbar&quot;;
+const Comp = props =&gt; {
+    return &lt;Navbar&gt;{/*other code*/}&lt;/Navbar&gt;;
 };</code></pre></div>
-<p>注意, purgecss的工作原理是检查源代码里的className property, 这个和react-bootstrap的实现方式有些冲突。
-所以为了避免对应的样式被清理掉, 一定要在gatsby-config里设置好whitelist。</p>
-<h2>更改Gatsby默认css行为</h2>
-<p>如果看过gatsby生成的网页, 会发现每个页面都有重复的inline css。可以通过<a href="https://www.gatsbyjs.org/docs/custom-html/">自定义html.js</a>来更改这个行为:</p>
+<p>注意, purgecss 的工作原理是检查源代码里的 className property, 这个和 react-bootstrap 的实现方式有些冲突。
+所以为了避免对应的样式被清理掉, 一定要在 gatsby-config 里设置好 whitelist。</p>
+<h2>更改 Gatsby 默认 css 行为</h2>
+<p>如果看过 gatsby 生成的网页, 会发现每个页面都有重复的 inline css。可以通过<a href="https://www.gatsbyjs.org/docs/custom-html/">自定义 html.js</a>来更改这个行为:</p>
 <ol>
-<li>从.cache文件夹下复制<code class="language-text">default-html.js</code> 到src文件夹下</li>
+<li>从.cache 文件夹下复制<code class="language-text">default-html.js</code> 到 src 文件夹下</li>
 <li>重命名为<code class="language-text">html.js</code></li>
 <li>
-<p>修改代码 (<a href="https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598">感谢Glinkis的思路</a>)：</p>
+<p>修改代码 (<a href="https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598">感谢 Glinkis 的思路</a>)：</p>
 <div class="gatsby-highlight" data-language="typescriptjsx"><pre class="language-typescriptjsx"><code class="language-typescriptjsx">//上面不动
 export default function HTML(props) {
-    const processHeadComp = (headComponents) =&gt; {
+    const processHeadComp = headComponents =&gt; {
         if (process.env.NODE_ENV === &quot;production&quot;) {
             for (const component of headComponents) {
                 if (component.type === &quot;style&quot;) {
-                    const index = headComponents.indexOf(component)
-                    const link = &lt;link rel={&quot;stylesheet&quot;} href={component.props[&quot;data-href&quot;]}/&gt;
-                    headComponents.splice(indexundefined 1undefined link)
+                    const index = headComponents.indexOf(component);
+                    const link = &lt;link rel={&quot;stylesheet&quot;} href={component.props[&quot;data-href&quot;]} /&gt;;
+                    headComponents.splice(index, 1, link);
                 }
             }
         }
-    }
+    };
 
-    processHeadComp(props.headComponents)
+    processHeadComp(props.headComponents);
 
-    return //下面保留原有代码不变
+    return; //下面保留原有代码不变
 }</code></pre></div>
 </li>
 </ol>
-<p>这样, 在production环境下生成的html就会自动引用sass生成的css文件啦。</p></section></article></div></div></main><footer class="footer mt-auto py-3"><div class="text-center container"><div>© 2019 - 2020 Somiona </div><div>Powered by <b><a href="https://www.gatsbyjs.org">Gatsby</a></b></div><div><a href="https://www.pixiv.net/artworks/75393550">Main Background Picture </a>BY<a href="https://www.pixiv.net/member.php?id=16600489"> Leiq @ Pixiv</a></div></div></footer></div></div></div><script>
+<p>这样, 在 production 环境下生成的 html 就会自动引用 sass 生成的 css 文件啦。</p></section></article></div></div></main><footer class="footer mt-auto py-3"><div class="text-center container"><div>© 2019 - 2020 Somiona </div><div>Powered by<!-- --> <b><a href="https://www.gatsbyjs.org">Gatsby</a></b></div><div><a href="https://www.pixiv.net/artworks/75393550">Main Background Picture </a>BY<a href="https://www.pixiv.net/member.php?id=16600489"> Leiq @ Pixiv</a></div></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
   window.excludeGAPaths=[/^(?:\/preview\/(?:(?!(?:\/|^)\.).)*?)$/,/^(?:assets\/)$/,/^(?:images\/)$/];
   function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-155100629-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
   if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
@@ -152,4 +148,4 @@ export default function HTML(props) {
       ga('set', 'allowAdFeatures', 'false');
 ga('set', 'forceSSL', 'true');
 
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/articles/blog-experiments/configurate-bootstrap-and-scss/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-010f61e94110441385c3.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-a7388efdc62430243a75.js"],"component---src-templates-article-tsx":["/component---src-templates-article-tsx-05e084f5f635337d7e68.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-6d5db1843c185c3ca802.js"],"component---src-pages-articles-tsx":["/component---src-pages-articles-tsx-516e67bca92bfcc24e6b.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-ec90f829ad7277974a75.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-9ecfdde0b7522307cd2c.js"]};/*]]>*/</script><script src="/component---src-templates-article-tsx-05e084f5f635337d7e68.js" async=""></script><script src="/commons-658c227ff8eeac79e9bc.js" async=""></script><script src="/styles-713b1bcd01e9ee4d745a.js" async=""></script><script src="/app-010f61e94110441385c3.js" async=""></script><script src="/webpack-runtime-2843406e6e364cc73fcc.js" async=""></script></body></html>
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/articles/blog-experiments/configurate-bootstrap-and-scss/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-bb0d272c5f7c9bb871ca.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-b042de31443a9c771a3a.js"],"component---src-templates-article-tsx":["/component---src-templates-article-tsx-bc97995116f427a96eac.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-28012133c97ed381c1cd.js"],"component---src-pages-articles-tsx":["/component---src-pages-articles-tsx-0eb54996625fd806b6fc.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-495f7582b3130308ee5f.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-2e042ae39d22aa947144.js"]};/*]]>*/</script><script src="/component---src-templates-article-tsx-bc97995116f427a96eac.js" async=""></script><script src="/commons-8568557127b4a2565fc6.js" async=""></script><script src="/styles-da0aa2fc101467fc5e2c.js" async=""></script><script src="/app-bb0d272c5f7c9bb871ca.js" async=""></script><script src="/webpack-runtime-f1c72be9494ef8a9203d.js" async=""></script></body></html>
