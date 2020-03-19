@@ -4,8 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"]
-const cssWhitePattern = [/^nav/, /^bg-/]
+const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"];
+const cssWhitePattern = [/^nav/, /^bg-/];
 
 module.exports = {
     /* Your site config here */
@@ -142,9 +142,9 @@ module.exports = {
             options: {
                 outputPath: "src/@types/graphql-types.d.ts",
                 emitSchema: {
-                    "src/@types/gatsby-introspection.json": true
-                }
+                    "src/@types/gatsby-introspection.json": true,
+                },
             },
         },
     ],
-}
+};

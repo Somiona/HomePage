@@ -1,17 +1,13 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC, ReactNode } from "react";
 
 interface IPostLayout {
-    children?: ReactNode
+    children?: ReactNode;
 }
 
-const PostLayout: FC<IPostLayout> = ({ children }) => {
-    return (
-        <div>
-            <article>
-                {children}
-            </article>
-        </div>
-    )
-}
+const PostLayout: FC<IPostLayout> = ({ children }) => (
+    <div>
+        <article>{children}</article>
+    </div>
+);
 
-export default PostLayout
+export default PostLayout;

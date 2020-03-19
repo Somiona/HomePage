@@ -1,7 +1,7 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage } = actions;
 
     const articles = await graphql(`
         {
@@ -23,13 +23,13 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
         }
-    `)
+    `);
 
-    const posts = articles.data.allMarkdownRemark.edges
+    const posts = articles.data.allMarkdownRemark.edges;
     posts.forEach((edge, index) => {
-        const url = edge.node.fields.dest_url
-        const prev = index === posts.length - 1 ? null : posts[index + 1].node
-        const next = index === 0 ? null : posts[index - 1].node
+        const url = edge.node.fields.dest_url;
+        const prev = index === posts.length - 1 ? null : posts[index + 1].node;
+        const next = index === 0 ? null : posts[index - 1].node;
         createPage({
             path: `${url}`,
             component: require.resolve("./src/templates/Article.tsx"),
@@ -39,27 +39,27 @@ exports.createPages = async ({ graphql, actions }) => {
                 prev,
                 next,
             },
-        })
-    })
-}
+        });
+    });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-    const { createNodeField } = actions
+    const { createNodeField } = actions;
 
     if (node.internal.type === `MarkdownRemark`) {
-        const url = `/articles${createFilePath({ node, getNode })}`
+        const url = `/articles${createFilePath({ node, getNode })}`;
         createNodeField({
             node,
             name: `dest_url`,
             value: url,
-        })
+        });
     }
-}
+};
 
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
     if (getConfig().mode === "production") {
         actions.setWebpackConfig({
             devtool: false,
-        })
+        });
     }
-}
+};

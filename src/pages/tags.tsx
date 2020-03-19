@@ -1,20 +1,16 @@
-import React, { FC } from "react"
-import MainLayout from "../components/Layouts/MainLayout"
-import SEO from "../components/Utils/SEO"
+import React, { FC } from "react";
+import MainLayout from "../components/Layouts/MainLayout";
+import SEO from "../components/Utils/SEO";
 
 interface ITags {
-    location: Location
+    location: Location;
 }
 
-const Tags: FC<ITags> = (
-    { location },
-) => {
-    return (
-        <>
-            <SEO location={location}/>
-            <MainLayout location={location} title={"Tags"}/>
-        </>
-    )
-}
+const Tags: FC<ITags> = ({ location }) => (
+    <>
+        <SEO location={location} />
+        <MainLayout location={location} title={"Tags"} />
+    </>
+);
 
-export default Tags
+export default Tags;

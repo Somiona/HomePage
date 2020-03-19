@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
     env: {
@@ -28,7 +28,7 @@ module.exports = {
                 schemaJsonFilepath: path.resolve(__dirname, "src/@types/gatsby-introspection.json"),
             },
         ],
-        "@typescript-eslint/interface-name-prefix": "warning",
+        "@typescript-eslint/interface-name-prefix": "warn",
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -153,4 +153,4 @@ module.exports = {
             },
         ],
     },
-}
+};

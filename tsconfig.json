@@ -79,11 +79,14 @@
         // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     },
     "include": [
-        "./src/**/*"
+        "./**/*"
     ],
     "exclude": [
         "./node_modules/**/*",
         "./public/**/*",
-        "./.cache/**/*"
+        "./.cache/**/*",
+        "./.theia/**/*",
+        "./.idea/**/*",
+        "./.vscode/**/*"
     ]
 }

@@ -7,61 +7,61 @@ series: Typescript,Reactjs,Gatsby踩坑记
 
 利用 Typescript 的类型系统，可以写出更好的、tslint 友好的默认参数。
 
-## 核心代码:
+## 核心代码
 
 ```typescript
 //DefaultPropsUtil.tsx
-import React from "react"
+import React from "react";
 
 const withDefaultProps = <P extends object, DP extends Partial<P> = Partial<P>>(
     defaultProps: DP,
     Cmp: React.ComponentType<P>
 ) => {
-    type RequiredProps = Omit<P, keyof DP>
-    type Props = Partial<DP> & RequiredProps
-    Cmp.defaultProps = defaultProps
-    return (Cmp as React.ComponentType<any>) as React.ComponentType<Props>
-}
+    type RequiredProps = Omit<P, keyof DP>;
+    type Props = Partial<DP> & RequiredProps;
+    Cmp.defaultProps = defaultProps;
+    return (Cmp as React.ComponentType<any>) as React.ComponentType<Props>;
+};
 
-export default withDefaultProps
+export default withDefaultProps;
 ```
 
 这段代码可以通过传入的默认参数，给 component 对应的参数位设置为字面值类型。
 
-##使用方法
+## 使用方法
 
 1. 定义`defaultProps`的值:
     ```typescript
     const defaultProps = {
         hide: true,
-    }
+    };
     ```
 2. 定义 component 的 props 类型:
     ```typescript
     type IExample = {
-        motd: string
-    } & Readonly<typeof defaultProps>
+        motd: string;
+    } & Readonly<typeof defaultProps>;
     ```
     注意这里要用 type 而不是 interface。
 3. 定义 component，这个不是直接用来导出的。这里用 functional component 作为例子:
 
     ```typescript
-    import React, { FC } from "react"
+    import React, { FC } from "react";
 
     const TExample: FC<IExample> = props => {
         return (
             <div style={props.hide ? { display: "none" } : {}}>
                 <p>{props.motd}</p>
             </div>
-        )
-    }
+        );
+    };
     ```
 
 4. 最后调用 withDefaultProps, 并且 export
     ```typescript
-    import withDefaultProps from "./DefaultPropsUtil"
-    const Example = withDefaultProps(defaultProps, TExample)
-    export default Example
+    import withDefaultProps from "./DefaultPropsUtil";
+    const Example = withDefaultProps(defaultProps, TExample);
+    export default Example;
     ```
 
 ## 更复杂的例子:
@@ -70,31 +70,31 @@ export default withDefaultProps
 
 ```typescript
 // SEO.tsx
-import React, { FC } from "react"
-import withDefaultProps from "./DefaultPropsUtil"
+import React, { FC } from "react";
+import withDefaultProps from "./DefaultPropsUtil";
 
-type LangSpec = "zh" | "en"
-type TypeSpec = "article" | "website"
-type KwdType = string | string[]
+type LangSpec = "zh" | "en";
+type TypeSpec = "article" | "website";
+type KwdType = string | string[];
 
 // default props
 const defaultProps = {
     keywords: "" as KwdType,
     lang: "zh" as LangSpec,
     type: "article" as TypeSpec,
-}
-type DefaultProps = Readonly<typeof defaultProps>
+};
+type DefaultProps = Readonly<typeof defaultProps>;
 type ISEOData = {
-    description?: string
-    title?: string
-    location: Location
-} & DefaultProps
+    description?: string;
+    title?: string;
+    location: Location;
+} & DefaultProps;
 
 const SEO_: FC<ISEOData> = props => {
     // do whatever you want
-}
+};
 
-const SEO = withDefaultProps(defaultProps, SEO_)
+const SEO = withDefaultProps(defaultProps, SEO_);
 
-export default SEO
+export default SEO;
 ```

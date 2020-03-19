@@ -29,7 +29,7 @@ module.exports = {
         //sass支持, 其他例如purgecss、remark之类的插件一定要在这个之后加载
         "gatsby-plugin-sass",
     ],
-}
+};
 ```
 
 ## 配置 Bootstrap4
@@ -47,8 +47,8 @@ yarn add bootstrap4 react-bootstrap gatsby-plugin-purgecss
 
 ```javascript
 //在`cssWhiteList`里添加想要忽略的selector
-const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"]
-const cssWhitePattern = [/^nav/, /^bg-/]
+const cssWhiteList = ["fixed-top", "collapsed", "container", "collapse"];
+const cssWhitePattern = [/^nav/, /^bg-/];
 
 module.exports = {
     plugins: [
@@ -66,7 +66,7 @@ module.exports = {
             },
         },
     ],
-}
+};
 ```
 
 然后在 src 里创建一个 styles 文件夹, 新建`_custom_vars.scss`以及`bootstrap4_custom.scss`
@@ -122,18 +122,18 @@ module.exports = {
 然后在项目根目录创建`gatsby-browser.js`, 把刚刚创建的 scss 作为全局样式。
 
 ```javascript
-import "./src/styles/bootstrap4_custom.scss"
+import "./src/styles/bootstrap4_custom.scss";
 ```
 
 到这里, 就可以愉快的使用 Bootstrap 啦, react-bootstrap 提供了很多 component 可以用来解放双手, 例如:
 
 ```typescript jsx
-import React from "react"
+import React from "react";
 //官方推荐直接从对应的submodule import
-import Navbar from "react-bootstrap/Navbar"
+import Navbar from "react-bootstrap/Navbar";
 const Comp = props => {
-    return <Navbar>{/*other code*/}</Navbar>
-}
+    return <Navbar>{/*other code*/}</Navbar>;
+};
 ```
 
 注意, purgecss 的工作原理是检查源代码里的 className property, 这个和 react-bootstrap 的实现方式有些冲突。
@@ -154,17 +154,17 @@ const Comp = props => {
             if (process.env.NODE_ENV === "production") {
                 for (const component of headComponents) {
                     if (component.type === "style") {
-                        const index = headComponents.indexOf(component)
-                        const link = <link rel={"stylesheet"} href={component.props["data-href"]} />
-                        headComponents.splice(index, 1, link)
+                        const index = headComponents.indexOf(component);
+                        const link = <link rel={"stylesheet"} href={component.props["data-href"]} />;
+                        headComponents.splice(index, 1, link);
                     }
                 }
             }
-        }
+        };
 
-        processHeadComp(props.headComponents)
+        processHeadComp(props.headComponents);
 
-        return //下面保留原有代码不变
+        return; //下面保留原有代码不变
     }
     ```
 

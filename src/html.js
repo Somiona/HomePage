@@ -1,20 +1,20 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function HTML(props) {
     const processHeadComp = headComponents => {
         if (process.env.NODE_ENV === "production") {
             for (const component of headComponents) {
                 if (component.type === "style") {
-                    const index = headComponents.indexOf(component)
-                    const link = <link rel={"stylesheet"} href={component.props["data-href"]} />
-                    headComponents.splice(index, 1, link)
+                    const index = headComponents.indexOf(component);
+                    const link = <link rel={"stylesheet"} href={component.props["data-href"]} />;
+                    headComponents.splice(index, 1, link);
                 }
             }
         }
-    }
+    };
 
-    processHeadComp(props.headComponents)
+    processHeadComp(props.headComponents);
 
     return (
         <html {...props.htmlAttributes}>
@@ -30,7 +30,7 @@ export default function HTML(props) {
                 {props.postBodyComponents}
             </body>
         </html>
-    )
+    );
 }
 
 HTML.propTypes = {
@@ -40,4 +40,4 @@ HTML.propTypes = {
     preBodyComponents: PropTypes.array,
     body: PropTypes.string,
     postBodyComponents: PropTypes.array,
-}
+};
