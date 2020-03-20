@@ -35,7 +35,7 @@
         "typed.js": "^2.0.11"
     },
     "devDependencies": {
-        "@babel/core": "^7.7.7",
+        "@babel/core": "^7.9.0",
         "@types/bootstrap": "^4.3.1",
         "@types/node": "^13.9.1",
         "@types/prismjs": "^1.16.0",
