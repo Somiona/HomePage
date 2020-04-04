@@ -28,7 +28,9 @@ module.exports = {
                 schemaJsonFilepath: path.resolve(__dirname, "src/@types/gatsby-introspection.json"),
             },
         ],
-        "@typescript-eslint/interface-name-prefix": "warn",
+        "@typescript-eslint/interface-name-prefix": {
+          "prefixWithI": "always", "allowUnderscorePrefix": true
+        },
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
