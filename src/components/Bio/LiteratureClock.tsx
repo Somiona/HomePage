@@ -45,12 +45,12 @@ class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClo
         const url = "https://raw.githubusercontent.com/lbngoc/literature-clock" + `/master/docs/times/${time}.json`;
 
         fetch(url)
-            .then(response => response.json())
-            .then(resultJson => {
+            .then((response) => response.json())
+            .then((resultJson) => {
                 const i = Math.floor(Math.random() * resultJson.length);
                 return resultJson[i];
             })
-            .then(finalQuote => {
+            .then((finalQuote) => {
                 this.setState({
                     quote: finalQuote,
                 });

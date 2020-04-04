@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
-    const processHeadComp = headComponents => {
+    const processHeadComp = (headComponents) => {
         if (process.env.NODE_ENV === "production") {
             for (const component of headComponents) {
                 if (component.type === "style") {

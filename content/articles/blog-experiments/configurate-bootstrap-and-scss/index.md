@@ -131,7 +131,7 @@ import "./src/styles/bootstrap4_custom.scss";
 import React from "react";
 //官方推荐直接从对应的submodule import
 import Navbar from "react-bootstrap/Navbar";
-const Comp = props => {
+const Comp = (props) => {
     return <Navbar>{/*other code*/}</Navbar>;
 };
 ```
@@ -150,7 +150,7 @@ const Comp = props => {
     ```typescript jsx
     //上面不动
     export default function HTML(props) {
-        const processHeadComp = headComponents => {
+        const processHeadComp = (headComponents) => {
             if (process.env.NODE_ENV === "production") {
                 for (const component of headComponents) {
                     if (component.type === "style") {

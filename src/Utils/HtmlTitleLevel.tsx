@@ -14,7 +14,7 @@ interface IHn {
     type: HtmlTitleLevel;
 }
 
-const Hn: FC<IHn> = props => {
+const Hn: FC<IHn> = (props) => {
     switch (props.type) {
         case HtmlTitleLevel.H1:
             return <h1>{props.children}</h1>;

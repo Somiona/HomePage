@@ -24,7 +24,7 @@ function isString(x: any): x is string {
     return typeof x === "string";
 }
 
-const SEORaw: FC<ISEOData> = props => {
+const SEORaw: FC<ISEOData> = (props) => {
     // functions
     const stringOrDefault = (x: Maybe<string>): string => {
         if (isString(x)) {

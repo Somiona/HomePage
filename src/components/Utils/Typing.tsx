@@ -37,7 +37,7 @@ class Typing extends Component<IPropTyping, {}> {
             <div className={`typed-wrap ${className}`}>
                 <span
                     style={{ whiteSpace: "pre" }}
-                    ref={el => {
+                    ref={(el) => {
                         this.ele = el as HTMLSpanElement;
                     }}
                 />

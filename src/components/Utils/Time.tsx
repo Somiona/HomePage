@@ -2,28 +2,27 @@ class Time {
     private readonly hour: string;
     private readonly minute: string;
 
-    constructor(hh: number, mm: number) {
-        // fuxxxxk
+    public constructor(hh: number, mm: number) {
         this.toString = this.toString.bind(this);
-        this.to_str = this.to_str.bind(this);
-        this._range = this._range.bind(this);
+        this.toStr = this.toStr.bind(this);
+        this.range = this.range.bind(this);
 
-        this.hour = this.to_str(hh);
-        this.minute = this.to_str(mm);
+        this.hour = this.toStr(hh);
+        this.minute = this.toStr(mm);
     }
 
-    public toString() {
+    public toString(): string {
         return this.hour + ":" + this.minute;
     }
 
-    private to_str(time: number) {
-        if (time in this._range(0, 60)) {
+    private toStr(time: number): string {
+        if (time in this.range(0, 60)) {
             return time < 10 ? "0" + time : time.toString();
         }
         return "00";
     }
 
-    private _range(from = 0, to: number) {
+    private range(from = 0, to: number): number[] {
         const arr = [...Array(to).keys()];
         arr.splice(0, from);
         return arr;

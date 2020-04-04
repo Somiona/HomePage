@@ -48,7 +48,7 @@ export default withDefaultProps;
     ```typescript
     import React, { FC } from "react";
 
-    const TExample: FC<IExample> = props => {
+    const TExample: FC<IExample> = (props) => {
         return (
             <div style={props.hide ? { display: "none" } : {}}>
                 <p>{props.motd}</p>
@@ -90,7 +90,7 @@ type ISEOData = {
     location: Location;
 } & DefaultProps;
 
-const SEO_: FC<ISEOData> = props => {
+const SEO_: FC<ISEOData> = (props) => {
     // do whatever you want
 };
 

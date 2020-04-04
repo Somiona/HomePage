@@ -28,9 +28,13 @@ module.exports = {
                 schemaJsonFilepath: path.resolve(__dirname, "src/@types/gatsby-introspection.json"),
             },
         ],
-        "@typescript-eslint/interface-name-prefix": {
-          "prefixWithI": "always", "allowUnderscorePrefix": true
-        },
+        "@typescript-eslint/interface-name-prefix": [
+            "warn",
+            {
+                prefixWithI: "always",
+                allowUnderscorePrefix: true,
+            },
+        ],
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -39,7 +43,7 @@ module.exports = {
                 accessibility: "explicit",
             },
         ],
-        "@typescript-eslint/indent": "off",
+        // "@typescript-eslint/indent": "off",
         "@typescript-eslint/member-delimiter-style": [
             "off",
             {
@@ -143,11 +147,6 @@ module.exports = {
             {
                 rules: {
                     "jsdoc-format": [true, "check-multiline-start"],
-                    "jsx-boolean-value": true,
-                    "jsx-key": true,
-                    "jsx-no-bind": true,
-                    "jsx-no-string-ref": true,
-                    "jsx-self-close": true,
                     "no-reference-import": true,
                     "object-literal-sort-keys": true,
                     "prefer-conditional-expression": true,
