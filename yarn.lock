@@ -6433,10 +6433,10 @@ gatsby-plugin-manifest@^2.3.3:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-minify-classnames@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-minify-classnames/-/gatsby-plugin-minify-classnames-0.1.2.tgz#64b2f9f1e979217ee0ed39fe72b0752b9ed9cc72"
-  integrity sha512-0wANA/6azi7wPLGECK8jS+Dc69o6cf/7l/M86mGmMdc0XoNRWNKHiOgADGJw0OlnteGu3dnP3zw9vDGIsnupcA==
+gatsby-plugin-minify-classnames@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-minify-classnames/-/gatsby-plugin-minify-classnames-0.2.0.tgz#5e2c36d53993337c9a900f37a5ad3dc2549c9955"
+  integrity sha512-U8KC24vuKsolqmvTwlx/nUQ1KJIQi4t1ur4+KApcbU65zEXWBRqbVhWdYorP1/k/O4GbWv4gy9JoEOmAmZltbw==
   dependencies:
     incstr "^1.2.3"
 
