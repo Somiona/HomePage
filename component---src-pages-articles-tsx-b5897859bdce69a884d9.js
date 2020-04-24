@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"4FPD":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),c=a.n(n),o=a("Tsi6"),i=a("vT/v");t.default=function(e){var t=e.location;return c.a.createElement(c.a.Fragment,null,c.a.createElement(i.a,{location:t}),c.a.createElement(o.a,{location:t,title:"articles"}))}}}]);
