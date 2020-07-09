@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/somion
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.somiona.live
+  * I am somion (https://keybase.io/somion) on keybase.
+  * I have a public key ASBdYmel3f-xZSvx4w10YfwxfVEqesRJltHjkH4MPt_0jQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01205d6267a5ddffb1652bf1e30d7461fc317d512a7ac44996d1e3907e0c3edff48d0a",
+      "host": "keybase.io",
+      "kid": "01205d6267a5ddffb1652bf1e30d7461fc317d512a7ac44996d1e3907e0c3edff48d0a",
+      "uid": "d4a56dd19609ab6100d8a8cf37969919",
+      "username": "somion"
+    },
+    "merkle_root": {
+      "ctime": 1587742609,
+      "hash": "a2ae341f6cb63d2c774ef968591c5457fafddef737651cdbdd0cec03e087c72b1cc0e6add519ea9780196b7ef4b54d15d21d318e3b0b99170b48f002b996f2a2",
+      "hash_meta": "5bf9ba151c7d0b87fa3c098c69721f69fba2c7c3b2c38012ebd946a2edb33f64",
+      "seqno": 16039095
+    },
+    "service": {
+      "entropy": "N4zOm3azfBGJ8yv2xfDVj/Ga",
+      "hostname": "blog.somiona.live",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.4.0"
+  },
+  "ctime": 1587742622,
+  "expire_in": 504576000,
+  "prev": "e3c458ac0327aa995194314c033350352743837de6e53196273f82ef0c96eb21",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXWJnpd3/sWUr8eMNdGH8MX1RKnrESZbR45B+DD7f9I0Kp3BheWxvYWTESpcCBcQg48RYrAMnqplRlDFMAzNQNSdDg33m5TGWJz+C7wyW6yHEIKm1ATcoRy7ohhcyC2pT60pYp6B2G609wr87+TNSB6iCAgHCo3NpZ8RAw8SvxIXM+5wtOcAnwBb2VDcwV2JVFO9HV/d2Em7mlVG/7Wn+JiYKNznlHdLiupGPGo7X61uXmZlcgwsmpdsIAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKnpVnM/9Ix6ZzXAhlMwmSmeHbsF24P+kX89lotM6Kz1o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/somion
+
+==================================================================

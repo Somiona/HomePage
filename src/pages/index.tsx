@@ -11,7 +11,7 @@ const Index: FC<{ location: Location }> = ({ location }) => (
                     see: https://www.w3schools.com/jsref/obj_location.asp
                 */}
             <div>
-                Hi, this is Somiona <br />
+                Hi, this is Somion <br />
                 <hr />
                 <div>
                     all Possible Links:
@@ -40,9 +40,9 @@ function renderLinks(): ReactNode {
     );
 
     const listItems = data.allSitePage.edges
-        .map(node => node.node.path)
+        .map((node) => node.node.path)
         .sort()
-        .map(path => {
+        .map((path) => {
             if (typeof path === "string" && path.includes("/articles/")) {
                 return (
                     <li>

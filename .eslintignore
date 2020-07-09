@@ -1,0 +1,14 @@
+*.scss
+*.css
+*.svg
+
+yarn.lock
+LICENSE
+package-lock.json
+README.md
+
+.cache
+public
+node_modules
+
+serviceWorker.ts

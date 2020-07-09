@@ -1,41 +1,41 @@
 @import "src/styles/custom_vars";
 
 .header {
-  z-index: 20;
+    z-index: 20;
 }
 
 //star between site name and author when screen enough big
 .header-title::after {
-  content: " ";
+    content: " ";
 }
 
 .header-author::before {
-  content: $SiteName-Author-Delimiter + " ";
+    content: $SiteName-Author-Delimiter + " ";
 }
 
 //when using cellphone, mostly, hide site name and change decoration
 @media screen and (max-width: $Max-NavBreak-Width) {
-  .header-title {
-    display: none;
-  }
-  .header-author::after {
-    content: " " + $After-Author-Decorator;
-  }
-  .header-author::before {
-    display: none;
-  }
+    .header-title {
+        display: none;
+    }
+    .header-author::after {
+        content: " " + $After-Author-Decorator;
+    }
+    .header-author::before {
+        display: none;
+    }
 }
 
 //well, smaller screen
 @media screen and (max-width: $Next-NavBreak-Width) {
-  .header-author::after {
-    display: none;
-  }
+    .header-author::after {
+        display: none;
+    }
 }
 
 //hmm I believe no one would hit this
 @media screen and (max-width: $Final-NavBreak-Width) {
-  .header-author {
-    display: none;
-  }
+    .header-author {
+        display: none;
+    }
 }

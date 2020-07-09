@@ -1,5 +1,5 @@
 vscode:
-  extensions:
-    - zhuangtongfa.material-theme@3.2.0:V6TgkmwoK0esnmQ/oe5C/A==
-    - VisualStudioExptTeam.vscodeintellicode@1.2.0:ZVy7XFOZUd4m0FZb3PUFbA==
-    - PKief.material-icon-theme@3.9.2:xeHlNzPEF04yFqz/xKCD5w==
+    extensions:
+        - zhuangtongfa.material-theme@3.2.0:V6TgkmwoK0esnmQ/oe5C/A==
+        - VisualStudioExptTeam.vscodeintellicode@1.2.0:ZVy7XFOZUd4m0FZb3PUFbA==
+        - PKief.material-icon-theme@3.9.2:xeHlNzPEF04yFqz/xKCD5w==
