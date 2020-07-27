@@ -29,12 +29,17 @@ interface IArticle {
 
 const Article: FC<IArticle> = ({ pageContext, location }) => {
     const article = pageContext.current.html;
-    const title = pageContext.current.frontmatter.title;
+    const { title } = pageContext.current.frontmatter;
     const description = pageContext.current.excerpt;
     const keywords = pageContext.current.frontmatter.keyWords;
     return (
         <>
-            <SEO description={description} title={title} location={location} keywords={keywords} />
+            <SEO
+                description={description}
+                title={title}
+                location={location}
+                keywords={keywords}
+            />
             <MainLayout location={location} title={title}>
                 <PostLayout>
                     <section dangerouslySetInnerHTML={{ __html: article }} />

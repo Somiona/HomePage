@@ -7,8 +7,12 @@ export const HeaderTitle: FC<{}> = () => {
 
     return (
         <>
-            <span className={"header-title"}>{siteMetadata?.siteName as string}</span>
-            <span className={"header-author"}>{siteMetadata?.author as string}</span>
+            <span className="header-title">
+                {siteMetadata?.siteName as string}
+            </span>
+            <span className="header-author">
+                {siteMetadata?.author as string}
+            </span>
         </>
     );
 };
@@ -27,9 +31,14 @@ export const FooterContent: FC<{}> = () => {
                 </b>
             </div>
             <div>
-                <OutboundLink href={"https://www.pixiv.net/artworks/75393550"}>Main Background Picture </OutboundLink>
+                <OutboundLink href="https://www.pixiv.net/artworks/75393550">
+                    Main Background Picture{" "}
+                </OutboundLink>
                 BY
-                <OutboundLink href={"https://www.pixiv.net/member.php?id=16600489"}> Leiq @ Pixiv</OutboundLink>
+                <OutboundLink href="https://www.pixiv.net/member.php?id=16600489">
+                    {" "}
+                    Leiq @ Pixiv
+                </OutboundLink>
             </div>
         </>
     );

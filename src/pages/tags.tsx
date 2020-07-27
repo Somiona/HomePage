@@ -9,7 +9,7 @@ interface ITags {
 const Tags: FC<ITags> = ({ location }) => (
     <>
         <SEO location={location} />
-        <MainLayout location={location} title={"Tags"} />
+        <MainLayout location={location} title="Tags" />
     </>
 );
 

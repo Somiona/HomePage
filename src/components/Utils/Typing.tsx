@@ -8,6 +8,7 @@ interface IPropTyping {
 
 class Typing extends Component<IPropTyping, {}> {
     private typed?: Typed;
+
     private ele?: HTMLElement;
 
     public componentDidMount() {

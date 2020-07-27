@@ -17,7 +17,8 @@ module.exports = {
             "Some class Notes, java, rust, html, reactjs, sass, gatsby and more. " +
             "这里是索麦恩的个人博客，由Gatsby构建。一些学习笔记，生活记录",
         siteUrl: "https://blog.somiona.live",
-        keyWords: "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
+        keyWords:
+            "blog,somiona,somion,博客,reactjs,java,diary,日志,日记,python,sass",
     },
     plugins: [
         "gatsby-plugin-catch-links",
@@ -122,7 +123,12 @@ module.exports = {
             resolve: `gatsby-plugin-sitemap`,
             options: {
                 sitemapSize: 500,
-                exclude: ["/404", "/404.html", "/dev-404-page", "/offline-plugin-app-shell-fallback"],
+                exclude: [
+                    "/404",
+                    "/404.html",
+                    "/dev-404-page",
+                    "/offline-plugin-app-shell-fallback",
+                ],
             },
         },
         {

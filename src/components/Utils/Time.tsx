@@ -1,5 +1,6 @@
 class Time {
     private readonly hour: string;
+
     private readonly minute: string;
 
     public constructor(hh: number, mm: number) {
@@ -12,12 +13,12 @@ class Time {
     }
 
     public toString(): string {
-        return this.hour + ":" + this.minute;
+        return `${this.hour}:${this.minute}`;
     }
 
     private toStr(time: number): string {
         if (time in this.range(0, 60)) {
-            return time < 10 ? "0" + time : time.toString();
+            return time < 10 ? `0${time}` : time.toString();
         }
         return "00";
     }

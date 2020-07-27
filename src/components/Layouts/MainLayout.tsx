@@ -20,15 +20,17 @@ const MainLayout: FC<IMainLayout> = ({ location, children, title }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     // ``和““是不同的。``会执行里面${}的东西
     const isRoot = location.pathname === rootPath;
-    const articleTitle = <Hn type={isRoot ? HtmlTitleLevel.H1 : HtmlTitleLevel.H2}>{title}</Hn>;
+    const articleTitle = (
+        <Hn type={isRoot ? HtmlTitleLevel.H1 : HtmlTitleLevel.H2}>{title}</Hn>
+    );
 
     return (
-        <div className={"flex-column d-flex min-vh-100"}>
+        <div className="flex-column d-flex min-vh-100">
             <Header topTrans={isRoot}>
                 <HeaderTitle />
             </Header>
             {isRoot ? <FullPageBio /> : null}
-            <main role={"main"} className={"main flex-shrink-0 flex-grow-1"}>
+            <main role="main" className="main flex-shrink-0 flex-grow-1">
                 <div className={`container ${MainContent.mainContent}`}>
                     {articleTitle}
                     {children}

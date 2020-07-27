@@ -6,8 +6,8 @@ interface IFooterProps {
 }
 
 const Footer: FC<IFooterProps> = ({ children }) => (
-    <footer className={"footer mt-auto py-3"}>
-        <Container className={"text-center"}>{children}</Container>
+    <footer className="footer mt-auto py-3">
+        <Container className="text-center">{children}</Container>
     </footer>
 );
 

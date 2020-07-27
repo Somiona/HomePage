@@ -155,7 +155,12 @@ const Comp = (props) => {
                 for (const component of headComponents) {
                     if (component.type === "style") {
                         const index = headComponents.indexOf(component);
-                        const link = <link rel={"stylesheet"} href={component.props["data-href"]} />;
+                        const link = (
+                            <link
+                                rel={"stylesheet"}
+                                href={component.props["data-href"]}
+                            />
+                        );
                         headComponents.splice(index, 1, link);
                     }
                 }

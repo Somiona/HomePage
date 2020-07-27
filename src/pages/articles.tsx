@@ -9,7 +9,7 @@ interface IArticles {
 const Articles: FC<IArticles> = ({ location }) => (
     <>
         <SEO location={location} />
-        <MainLayout location={location} title={"articles"} />
+        <MainLayout location={location} title="articles" />
     </>
 );
 

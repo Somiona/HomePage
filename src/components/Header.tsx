@@ -51,26 +51,31 @@ class HeaderD extends React.Component<IHeaderProps, { trans: boolean }> {
 
     public render() {
         return (
-            <header className={"header"}>
-                <Navbar variant={"dark"} bg={this.state.trans ? "transparent" : "primary"} expand={"md"} fixed={"top"}>
-                    <Link to={"/"} className={"navbar-brand"}>
+            <header className="header">
+                <Navbar
+                    variant="dark"
+                    bg={this.state.trans ? "transparent" : "primary"}
+                    expand="md"
+                    fixed="top"
+                >
+                    <Link to="/" className="navbar-brand">
                         {this.props.children}
                     </Link>
-                    <Navbar.Toggle aria-controls={"navCollapse"} />
-                    <Navbar.Collapse id={"navCollapse"}>
-                        <Nav className={"mr-auto"}>
+                    <Navbar.Toggle aria-controls="navCollapse" />
+                    <Navbar.Collapse id="navCollapse">
+                        <Nav className="mr-auto">
                             <Nav.Item>
-                                <Link to={"/"} className={"nav-link"}>
+                                <Link to="/" className="nav-link">
                                     Home
                                 </Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href={"#"} className={"disabled"}>
+                                <Nav.Link href="#" className="disabled">
                                     About
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href={"#"} className={"disabled"}>
+                                <Nav.Link href="#" className="disabled">
                                     Tag
                                 </Nav.Link>
                             </Nav.Item>

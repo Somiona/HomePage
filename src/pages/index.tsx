@@ -6,7 +6,7 @@ import SEO from "../components/Utils/SEO";
 const Index: FC<{ location: Location }> = ({ location }) => (
     <>
         <SEO location={location} />
-        <MainLayout location={location} title={"Main Page"}>
+        <MainLayout location={location} title="Main Page">
             {/* here, location is indeed a Location Object of html dom
                     see: https://www.w3schools.com/jsref/obj_location.asp
                 */}
@@ -49,9 +49,8 @@ function renderLinks(): ReactNode {
                         <Link to={path}>{path}</Link>
                     </li>
                 );
-            } else {
-                return null;
             }
+            return null;
         });
 
     return <ul>{listItems}</ul>;

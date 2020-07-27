@@ -20,7 +20,10 @@ interface IPropLiteratureCLock {
     className?: string;
 }
 
-class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClock> {
+class LiteratureClock extends Component<
+    IPropLiteratureCLock,
+    IStatLiteratureClock
+> {
     // @ts-ignore
     private timerID: NodeJS.Timeout;
 
@@ -42,7 +45,9 @@ class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClo
 
     public fetchQuote() {
         const time = this.nowTime().toString();
-        const url = "https://raw.githubusercontent.com/lbngoc/literature-clock" + `/master/docs/times/${time}.json`;
+        const url =
+            "https://raw.githubusercontent.com/lbngoc/literature-clock" +
+            `/master/docs/times/${time}.json`;
 
         fetch(url)
             .then((response) => response.json())
@@ -71,17 +76,20 @@ class LiteratureClock extends Component<IPropLiteratureCLock, IStatLiteratureClo
 
     public render() {
         const time = this.state.currentTime.toString();
-        const quote = this.state.quote;
+        const { quote } = this.state;
 
         return (
             <blockquote className={`literature-main ${this.props.className}`}>
-                <div className={"literature-timer"}>{time}</div>
-                <div className={"literature-quote text-wrap"}>
+                <div className="literature-timer">{time}</div>
+                <div className="literature-quote text-wrap">
                     {quote.quote_first}
-                    <span className={"literature-time-case"}>{quote.quote_time_case}</span>
+                    <span className="literature-time-case">
+                        {quote.quote_time_case}
+                    </span>
                     {quote.quote_last}
-                    <footer className={"text-white literature-author blockquote-footer text-right"}>
-                        {quote.author} @ <cite title={quote.title}>{quote.title}</cite>
+                    <footer className="text-white literature-author blockquote-footer text-right">
+                        {quote.author} @
+                        <cite title={quote.title}>{quote.title}</cite>
                     </footer>
                 </div>
             </blockquote>

@@ -29,9 +29,8 @@ const SEORaw: FC<ISEOData> = (props) => {
     const stringOrDefault = (x: Maybe<string>): string => {
         if (isString(x)) {
             return x;
-        } else {
-            return "";
         }
+        return "";
     };
 
     // data
@@ -40,26 +39,30 @@ const SEORaw: FC<ISEOData> = (props) => {
     const siteName = siteMetadata?.siteName;
     const author = siteMetadata?.author;
     // eslint-disable-next-line no-underscore-dangle
-    const _des = description ? description : siteMetadata?.description;
+    const _des = description || siteMetadata?.description;
     const metaDescription: string = stringOrDefault(_des);
     let kwd: string = isString(keywords) ? keywords : keywords.join(",");
     kwd += siteMetadata?.keyWords as string;
 
     return (
-        <Helmet htmlAttributes={{ lang }} defaultTitle={`${siteName}`} titleTemplate={`%s | ${siteName}`}>
+        <Helmet
+            htmlAttributes={{ lang }}
+            defaultTitle={`${siteName}`}
+            titleTemplate={`%s | ${siteName}`}
+        >
             <title>{title}</title>
-            <link rel={"canonical"} href={location.href} />
-            {/* classic*/}
-            <meta name={"description"} content={metaDescription} />
-            <meta name={"author"} content={author as string} />
-            <meta name={"keywords"} content={kwd} />
+            <link rel="canonical" href={location.href} />
+            {/* classic */}
+            <meta name="description" content={metaDescription} />
+            <meta name="author" content={author as string} />
+            <meta name="keywords" content={kwd} />
             <meta charSet="UTF-8" />
-            {/* ogp*/}
-            <meta property={"og:description"} content={metaDescription} />
-            <meta property={"og:title"} content={title} />
-            <meta property={"og:locale"} content={lang} />
-            <meta property={"og:type"} content={type} />
-            <meta property={"og:site_name"} content={siteName as string} />
+            {/* ogp */}
+            <meta property="og:description" content={metaDescription} />
+            <meta property="og:title" content={title} />
+            <meta property="og:locale" content={lang} />
+            <meta property="og:type" content={type} />
+            <meta property="og:site_name" content={siteName as string} />
         </Helmet>
     );
 };
