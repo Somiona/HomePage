@@ -19,6 +19,6 @@ module.exports = {
     plugins: ["@typescript-eslint", "react-hooks", "graphql"],
     rules: {
         "react/jsx-indent": [0],
-        "react/jsx-indent-props": [0]
+        "react/jsx-indent-props": [0],
     },
 };

@@ -144,14 +144,14 @@ module.exports = {
                 ],
             },
         },
-        {
-            resolve: "gatsby-plugin-typegen",
-            options: {
-                outputPath: "src/@types/graphql-types.d.ts",
-                emitSchema: {
-                    "src/@types/gatsby-introspection.json": true,
-                },
-            },
-        },
+        // {
+        //     resolve: "gatsby-plugin-typegen",
+        //     options: {
+        //         outputPath: "src/@types/graphql-types.d.ts",
+        //         emitSchema: {
+        //             "src/@types/gatsby-introspection.json": true,
+        //         },
+        //     },
+        // },
     ],
 };
