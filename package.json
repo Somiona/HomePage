@@ -59,7 +59,7 @@
         "@types/react-helmet": "^6.1.0",
         "@types/remarkable": "^1.7.4",
         "@typescript-eslint/eslint-plugin": "^4.0.1",
-        "@typescript-eslint/parser": "^4.0.1",
+        "@typescript-eslint/parser": "^4.1.1",
         "eslint-config-airbnb-typescript": "^9.0.0",
         "eslint-config-prettier": "^6.11.0",
         "eslint-loader": "^4.0.2",
