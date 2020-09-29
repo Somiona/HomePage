@@ -83,7 +83,7 @@
         "gatsby-plugin-sitemap": "^2.4.12",
         "gatsby-plugin-typegen": "^2.2.1",
         "gatsby-plugin-typescript": "^2.4.18",
-        "gatsby-remark-copy-linked-files": "^2.3.13",
+        "gatsby-remark-copy-linked-files": "^2.3.17",
         "gatsby-remark-images": "^3.3.28",
         "gatsby-remark-prismjs": "^3.5.11",
         "gatsby-remark-responsive-iframe": "^2.4.12",
