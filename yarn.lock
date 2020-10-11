@@ -15879,10 +15879,10 @@ type@^2.0.0:
   resolved "https://registry.npm.taobao.org/type/download/type-2.1.0.tgz?cache=0&sync_timestamp=1598016548076&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftype%2Fdownload%2Ftype-2.1.0.tgz#9bdc22c648cf8cf86dd23d32336a41cfb6475e3f"
   integrity sha1-m9wixkjPjPht0j0yM2pBz7ZHXj8=
 
-typed-scss-modules@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npm.taobao.org/typed-scss-modules/download/typed-scss-modules-3.2.0.tgz#295f46e755a783882fc7dc5c12b5225df814ece0"
-  integrity sha1-KV9G51Wng4gvx9xcErUiXfgU7OA=
+typed-scss-modules@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/typed-scss-modules/-/typed-scss-modules-3.2.1.tgz#2c0b4a0afdbdcbb53742094a051b42474f1556cc"
+  integrity sha512-Obtkx7r31hAysQ+FmXbADDlhXRZjS4HVQtoGbIjJVUw4tgxvh33mK5/3Fp4Bzp58oHFrD2tMtmqKOEh897RG+A==
   dependencies:
     camelcase "^5.0.0"
     chalk "^3.0.0"
