@@ -10,7 +10,7 @@ enum HtmlTitleLevel {
 }
 
 interface IHn {
-    children?: ReactNode;
+    children: ReactNode;
     type: HtmlTitleLevel;
 }
 

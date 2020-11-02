@@ -20,6 +20,11 @@ interface IPropLiteratureCLock {
     className?: string;
 }
 
+function nowTime() {
+    const date = new Date();
+    return new Time(date.getHours(), date.getMinutes());
+}
+
 class LiteratureClock extends Component<
     IPropLiteratureCLock,
     IStatLiteratureClock
@@ -43,8 +48,20 @@ class LiteratureClock extends Component<
         };
     }
 
+    public componentDidMount() {
+        this.setState({
+            currentTime: nowTime(),
+        });
+        this.fetchQuote();
+        this.timerID = setInterval(() => this.tick(), 10000);
+    }
+
+    public componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
     public fetchQuote() {
-        const time = this.nowTime().toString();
+        const time = nowTime().toString();
         const url =
             "https://raw.githubusercontent.com/lbngoc/literature-clock" +
             `/master/docs/times/${time}.json`;
@@ -62,16 +79,11 @@ class LiteratureClock extends Component<
             });
     }
 
-    public componentDidMount() {
+    private tick() {
         this.setState({
-            currentTime: this.nowTime(),
+            currentTime: nowTime(),
         });
         this.fetchQuote();
-        this.timerID = setInterval(() => this.tick(), 10000);
-    }
-
-    public componentWillUnmount() {
-        clearInterval(this.timerID);
     }
 
     public render() {
@@ -88,24 +100,12 @@ class LiteratureClock extends Component<
                     </span>
                     {quote.quote_last}
                     <footer className="text-white literature-author blockquote-footer text-right">
-                        {quote.author} @
+                        {quote.author}
                         <cite title={quote.title}>{quote.title}</cite>
                     </footer>
                 </div>
             </blockquote>
         );
-    }
-
-    private tick() {
-        this.setState({
-            currentTime: this.nowTime(),
-        });
-        this.fetchQuote();
-    }
-
-    private nowTime() {
-        const date = new Date();
-        return new Time(date.getHours(), date.getMinutes());
     }
 }
 

@@ -12,3 +12,5 @@ public
 node_modules
 
 serviceWorker.ts
+
+gatsby-introspection.json

@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import MainLayout from "../components/Layouts/MainLayout";
 import SEO from "../components/Utils/SEO";
 
 interface ITags {
@@ -9,7 +8,7 @@ interface ITags {
 const Tags: FC<ITags> = ({ location }) => (
     <>
         <SEO location={location} />
-        <MainLayout location={location} title="Tags" />
+        {/* <MainLayout location={location} title="Tags" /> */}
     </>
 );
 

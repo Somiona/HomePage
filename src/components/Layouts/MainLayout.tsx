@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import MainContent from "../../styles/layouts/_main.module.scss";
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel";
 import FullPageBio from "../Bio/FullPageBio";
@@ -10,12 +10,11 @@ interface IMainLayout {
     location: Location;
     // the Location object of HTML DOM.
     // see: https://www.w3schools.com/jsref/obj_location.asp
-    children?: ReactNode;
+    children: ReactNode;
     title: string;
 }
 
-const MainLayout: FC<IMainLayout> = ({ location, children, title }) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+const MainLayout = ({ location, children, title }: IMainLayout) => {
     // @ts-ignore
     const rootPath = `${__PATH_PREFIX__}/`;
     // ``和““是不同的。``会执行里面${}的东西

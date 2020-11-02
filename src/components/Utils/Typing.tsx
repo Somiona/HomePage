@@ -16,11 +16,9 @@ class Typing extends Component<IPropTyping, {}> {
         const options = {
             strings,
             typeSpeed: 1000,
-            // tslint:disable-next-line:object-literal-sort-keys
             backSpeed: 100,
             loop: true,
         };
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
         // @ts-ignore
         this.typed = new Typed(this.ele, options);
     }

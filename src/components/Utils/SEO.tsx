@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import withDefaultProps from "../../Utils/DefaultPropsUtil";
 import useSiteMeta from "../../Utils/SiteMeta";
@@ -24,7 +24,7 @@ function isString(x: any): x is string {
     return typeof x === "string";
 }
 
-const SEORaw: FC<ISEOData> = (props) => {
+const SEORaw = (props: ISEOData) => {
     // functions
     const stringOrDefault = (x: Maybe<string>): string => {
         if (isString(x)) {
@@ -38,9 +38,8 @@ const SEORaw: FC<ISEOData> = (props) => {
     const siteMetadata = useSiteMeta();
     const siteName = siteMetadata?.siteName;
     const author = siteMetadata?.author;
-    // eslint-disable-next-line no-underscore-dangle
-    const _des = description || siteMetadata?.description;
-    const metaDescription: string = stringOrDefault(_des);
+    const DES = description || siteMetadata?.description;
+    const metaDescription: string = stringOrDefault(DES);
     let kwd: string = isString(keywords) ? keywords : keywords.join(",");
     kwd += siteMetadata?.keyWords as string;
 

@@ -1,33 +1,12 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode, FC } from "react";
 import MainLayout from "../components/Layouts/MainLayout";
 import SEO from "../components/Utils/SEO";
 
-const Index: FC<{ location: Location }> = ({ location }) => (
-    <>
-        <SEO location={location} />
-        <MainLayout location={location} title="Main Page">
-            {/* here, location is indeed a Location Object of html dom
-                    see: https://www.w3schools.com/jsref/obj_location.asp
-                */}
-            <div>
-                Hi, this is Somion <br />
-                <hr />
-                <div>
-                    all Possible Links:
-                    {renderLinks()}
-                </div>
-            </div>
-        </MainLayout>
-    </>
-);
-
-export default Index;
-
 function renderLinks(): ReactNode {
-    const data = useStaticQuery<GatsbyTypes.AvaliableLinksQuery>(
+    const data = useStaticQuery<GatsbyTypes.AvailableLinksQuery>(
         graphql`
-            query AvaliableLinks {
+            query AvailableLinks {
                 allSitePage {
                     edges {
                         node {
@@ -55,3 +34,25 @@ function renderLinks(): ReactNode {
 
     return <ul>{listItems}</ul>;
 }
+
+const Index: FC<{ location: Location }> = ({ location }) => (
+    <>
+        <SEO location={location} />
+        <MainLayout location={location} title="Main Page">
+            {/* here, location is indeed a Location Object of html dom
+                    see: https://www.w3schools.com/jsref/obj_location.asp
+                */}
+            <div>
+                Hi, this is Somion
+                <br />
+                <hr />
+                <div>
+                    all Possible Links:
+                    {renderLinks()}
+                </div>
+            </div>
+        </MainLayout>
+    </>
+);
+
+export default Index;

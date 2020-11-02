@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-restricted-syntax */
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -19,10 +21,19 @@ export default function HTML(props) {
         }
     };
 
-    processHeadComp(props.headComponents);
+    const {
+        headComponents,
+        htmlAttributes,
+        bodyAttributes,
+        preBodyComponents,
+        body,
+        postBodyComponents,
+    } = props;
+
+    processHeadComp(headComponents);
 
     return (
-        <html {...props.htmlAttributes}>
+        <html lang="zh-CN" {...htmlAttributes}>
             <head>
                 <meta charSet="utf-8" />
                 <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -30,26 +41,27 @@ export default function HTML(props) {
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
                 />
-                {props.headComponents}
+                {headComponents}
             </head>
-            <body {...props.bodyAttributes}>
-                {props.preBodyComponents}
+            <body {...bodyAttributes}>
+                {preBodyComponents}
                 <div
                     key="body"
                     id="___gatsby"
-                    dangerouslySetInnerHTML={{ __html: props.body }}
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: body }}
                 />
-                {props.postBodyComponents}
+                {postBodyComponents}
             </body>
         </html>
     );
 }
 
 HTML.propTypes = {
-    htmlAttributes: PropTypes.object,
-    headComponents: PropTypes.array,
-    bodyAttributes: PropTypes.object,
-    preBodyComponents: PropTypes.array,
-    body: PropTypes.string,
-    postBodyComponents: PropTypes.array,
+    htmlAttributes: PropTypes.object.isRequired,
+    headComponents: PropTypes.array.isRequired,
+    bodyAttributes: PropTypes.object.isRequired,
+    preBodyComponents: PropTypes.array.isRequired,
+    body: PropTypes.string.isRequired,
+    postBodyComponents: PropTypes.array.isRequired,
 };
