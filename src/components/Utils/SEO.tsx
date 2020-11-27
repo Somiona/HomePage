@@ -12,11 +12,11 @@ const defaultProps = {
     keywords: "" as KwdType,
     lang: "zh" as LangSpec,
     type: "article" as TypeSpec,
+    description: "" as string,
+    title: "" as string,
 };
 type DefaultProps = Readonly<typeof defaultProps>;
 type ISEOData = {
-    description?: string;
-    title?: string;
     location: Location;
 } & DefaultProps;
 
