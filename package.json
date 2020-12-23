@@ -71,7 +71,7 @@
         "gatsby-image": "^2.8.0",
         "gatsby-plugin-catch-links": "^2.7.0",
         "gatsby-plugin-eslint": "^2.0.8",
-        "gatsby-plugin-manifest": "^2.9.0",
+        "gatsby-plugin-manifest": "^2.9.1",
         "gatsby-plugin-minify-classnames": "^0.2.0",
         "gatsby-plugin-offline": "^3.7.0",
         "gatsby-plugin-purgecss": "^5.0.0",
