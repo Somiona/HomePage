@@ -1,6 +1,7 @@
 *.scss
 *.css
 *.svg
+*.scss.d.ts
 
 yarn.lock
 LICENSE
