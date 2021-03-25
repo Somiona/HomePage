@@ -6,11 +6,7 @@ module.exports = {
         es6: true,
         node: true,
     },
-    extends: [
-        "airbnb-typescript",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended",
-    ],
+    extends: ["airbnb-typescript", "prettier", "plugin:prettier/recommended"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         project: "./tsconfig.json",

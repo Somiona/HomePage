@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import MainContent from "../../styles/layouts/_main.module.scss";
+import { mainContent } from "../../styles/layouts/_main.module.scss";
 import { Hn, HtmlTitleLevel } from "../../Utils/HtmlTitleLevel";
 import FullPageBio from "../Bio/FullPageBio";
 import Footer from "../Footer";
@@ -30,7 +30,7 @@ const MainLayout = ({ location, children, title }: IMainLayout) => {
             </Header>
             {isRoot ? <FullPageBio /> : null}
             <main role="main" className="main flex-shrink-0 flex-grow-1">
-                <div className={`container ${MainContent.mainContent}`}>
+                <div className={`container ${mainContent}`}>
                     {articleTitle}
                     {children}
                 </div>

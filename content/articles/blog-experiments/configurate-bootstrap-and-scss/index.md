@@ -127,7 +127,7 @@ import "./src/styles/bootstrap4_custom.scss";
 
 到这里, 就可以愉快的使用 Bootstrap 啦, react-bootstrap 提供了很多 component 可以用来解放双手, 例如:
 
-```typescript jsx
+```typescript
 import React from "react";
 //官方推荐直接从对应的submodule import
 import Navbar from "react-bootstrap/Navbar";
@@ -147,7 +147,7 @@ const Comp = (props) => {
 2. 重命名为`html.js`
 3. 修改代码 ([感谢 Glinkis 的思路](https://github.com/gatsbyjs/gatsby/issues/2289#issuecomment-517276598))：
 
-    ```typescript jsx
+    ```typescript
     //上面不动
     export default function HTML(props) {
         const processHeadComp = (headComponents) => {
