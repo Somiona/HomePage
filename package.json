@@ -39,7 +39,7 @@
         "bootstrap": "^4.6.0",
         "gatsby": "^3.1.2",
         "gatsby-plugin-google-analytics": "^3.1.0",
-        "prismjs": "^1.23.0",
+        "prismjs": "^1.25.0",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-bootstrap": "^1.5.2",
